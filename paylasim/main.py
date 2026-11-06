@@ -105,6 +105,11 @@ def paylas(args) -> int:
     durum = durum_oku()
     platformlar = acik_platformlar(args.platform)
     if not platformlar:
+        if os.environ.get("GITHUB_EVENT_NAME") == "schedule":
+            # Kurulum bitmeden zamanlanmış çalışmalar hata e-postası göndermesin
+            log("Henüz hiçbir platformun anahtarı girilmemiş; zamanlanmış paylaşım atlandı.")
+            ozet("⏸️ Anahtarlar henüz girilmedi (Settings → Secrets and variables → Actions); paylaşım atlandı.")
+            return 0
         ortak.hata_cik("Hiçbir platform ayarlı değil (GitHub sırları eksik).")
     slot = slot_sec(slotlar, durum, platformlar, args.slot or None)
     if not slot:
@@ -325,6 +330,10 @@ def istatistik(args) -> int:
     cikti = {"guncelleme": an.isoformat(timespec="minutes"), "hesap": {}, "slotlar": {}}
     sorun = []
     platformlar = acik_platformlar()
+    if not platformlar:
+        log("Anahtarlar henüz girilmedi; istatistik toplanmadı.")
+        ozet("⏸️ Anahtarlar henüz girilmedi; istatistik toplanmadı.")
+        return 0
     if "instagram" in platformlar:
         try:
             ig = instagram_istemcisi()
