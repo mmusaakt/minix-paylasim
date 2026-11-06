@@ -1,0 +1,78 @@
+name: Paylaş
+
+on:
+  schedule:
+    # GitHub saatleri UTC'dir. Türkiye UTC+3 (yaz saati yok).
+    - cron: "20 9 * * *"   # 12:20 İstanbul -> 12:30 paylaşımı
+    - cron: "50 16 * * *"  # 19:50 İstanbul -> 20:00 paylaşımı
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot (ör. 2026-11-20-1230). Boş bırakırsan saati gelen slot."
+        required: false
+        default: ""
+      platform:
+        description: "Platform"
+        type: choice
+        options: [hepsi, instagram, youtube]
+        default: hepsi
+      deneme:
+        description: "Deneme: Instagram'a yüklenir ama yayınlanmaz, YouTube'a gizli yüklenir"
+        type: boolean
+        default: false
+
+concurrency:
+  group: paylas
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Paylaş
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          PLATFORMLAR: ${{ vars.PLATFORMLAR }}
+          MUZIK: ${{ vars.MUZIK }}
+          MUZIK_SES: ${{ vars.MUZIK_SES }}
+          VIDEO_SES: ${{ vars.VIDEO_SES }}
+          SLOT: ${{ inputs.slot }}
+          PLATFORM: ${{ inputs.platform }}
+          DENEME: ${{ inputs.deneme }}
+        run: |
+          ARGS=(paylas --platform "${PLATFORM:-hepsi}")
+          if [ -n "$SLOT" ]; then ARGS+=(--slot "$SLOT"); fi
+          if [ "$DENEME" = "true" ]; then ARGS+=(--deneme); fi
+          python -m paylasim "${ARGS[@]}"
+
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add durum.json 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Paylaşım durumu: ${SLOT:-planlı}"
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push --quiet && exit 0
+            sleep 5
+          done
+          exit 1
+        env:
+          SLOT: ${{ inputs.slot }}

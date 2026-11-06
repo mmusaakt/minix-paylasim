@@ -1,0 +1,42 @@
+name: YouTube kanal ayarları
+
+on:
+  workflow_dispatch:
+    inputs:
+      kapaksiz:
+        description: "Kapak görselini yükleme, sadece açıklamayı güncelle"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  kanal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            paylasim
+            kanal
+            takvim.json
+            requirements.txt
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Kapak, açıklama ve anahtar kelimeler
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          KAPAKSIZ: ${{ inputs.kapaksiz }}
+        run: |
+          if [ "$KAPAKSIZ" = "true" ]; then python -m paylasim kanal --kapaksiz; else python -m paylasim kanal; fi

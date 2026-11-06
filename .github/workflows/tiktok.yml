@@ -1,0 +1,68 @@
+name: TikTok paketi
+
+on:
+  schedule:
+    - cron: "40 6 * * *"  # her gün 09:40 İstanbul; paket sadece gerektiğinde hazırlanır
+  workflow_dispatch:
+    inputs:
+      zorla:
+        description: "Önceki paket yetse de yenisini hazırla"
+        type: boolean
+        default: false
+
+concurrency:
+  group: tiktok
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  paket:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Paketi hazırla
+        id: paket
+        env:
+          ZORLA: ${{ inputs.zorla }}
+        run: |
+          if [ "$ZORLA" = "true" ]; then python -m paylasim tiktok --zorla; else python -m paylasim tiktok; fi
+
+      - name: Yayınla ve haber ver
+        if: steps.paket.outputs.zip != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ZIP: ${{ steps.paket.outputs.zip }}
+          MD: ${{ steps.paket.outputs.md }}
+          BASLIK: ${{ steps.paket.outputs.baslik }}
+          ETIKET: ${{ steps.paket.outputs.etiket }}
+        run: |
+          gh label create tiktok --color 000000 --force >/dev/null
+          gh release create "$ETIKET" "$ZIP" --title "$BASLIK" --notes "TikTok Studio'da planlanacak videolar ve açıklamalar."
+          URL=$(gh release view "$ETIKET" --json assets --jq '.assets[0].url')
+          printf '\n**İndir:** [%s](%s)\n' "$(basename "$ZIP")" "$URL" >> "$MD"
+          for n in $(gh issue list --label tiktok --state open --json number --jq '.[].number'); do gh issue close "$n" --reason completed; done
+          gh issue create --title "$BASLIK" --body-file "$MD" --label tiktok --assignee "$GITHUB_REPOSITORY_OWNER"
+
+      - name: Kaydet
+        if: steps.paket.outputs.zip != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tiktok.json
+          git commit -m "TikTok paketi: ${{ steps.paket.outputs.baslik }}"
+          for i in 1 2 3; do
+            git pull --rebase --quiet && git push --quiet && exit 0
+            sleep 5
+          done
+          exit 1

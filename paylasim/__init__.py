@@ -1,0 +1,1 @@
+"""minix otomatik paylaşım paketi."""
