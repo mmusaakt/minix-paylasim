@@ -20,8 +20,9 @@ ISTANBUL = ZoneInfo("Europe/Istanbul")
 
 # Planlı çalışmada bir slot en fazla bu kadar gecikmeyle paylaşılır; daha eskisi atlanır.
 GEC_KALMA_SINIRI = timedelta(hours=3)
-# Planlı çalışma slottan bu kadar önce başlarsa slotu bekler.
-ERKEN_BASLAMA = timedelta(minutes=45)
+# Planlı çalışma slottan en fazla bu kadar önce başlarsa slotu bekler; daha erken başlayan hemen çıkar.
+# (Paylaş işi slot çevresinde 10 dakikada bir tetiklenir, çünkü GitHub'ın zamanlayıcısı 45–60 dk gecikebiliyor.)
+ERKEN_BASLAMA = timedelta(minutes=12)
 
 
 def log(*parca) -> None:

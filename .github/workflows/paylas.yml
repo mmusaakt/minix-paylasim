@@ -3,8 +3,12 @@ name: Paylaş
 on:
   schedule:
     # GitHub saatleri UTC'dir. Türkiye UTC+3 (yaz saati yok).
-    - cron: "20 9 * * *"   # 12:20 İstanbul -> 12:30 paylaşımı
-    - cron: "50 16 * * *"  # 19:50 İstanbul -> 20:00 paylaşımı
+    # GitHub'ın zamanlayıcısı 45–60 dakika gecikebildiği için iş slot çevresinde 10 dakikada bir tetiklenir.
+    # Slottan 12 dakikadan daha erken başlayan çalışma hemen çıkar; slot paylaşıldıktan sonrakiler de bir şey yapmaz.
+    - cron: "3-59/10 8-9 * * *"    # 11:03–12:53 İstanbul -> 12:30 paylaşımı
+    - cron: "33-59/10 15 * * *"    # 18:33–18:53 İstanbul -> 20:00 paylaşımı
+    - cron: "3-59/10 16 * * *"     # 19:03–19:53 İstanbul
+    - cron: "3-23/10 17 * * *"     # 20:03–20:23 İstanbul
   workflow_dispatch:
     inputs:
       slot:
