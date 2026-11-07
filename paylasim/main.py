@@ -391,13 +391,7 @@ def ana(argv=None) -> int:
     pk = alt.add_parser("kanal")
     pk.add_argument("--kapaksiz", action="store_true")
     alt.add_parser("istatistik")
-    pt = alt.add_parser("tiktok")
-    pt.add_argument("--zorla", action="store_true")
     args = p.parse_args(argv)
-    if args.komut == "tiktok":
-        from .tiktok import paket_hazirla
-        paket_hazirla(zorla=args.zorla)
-        return 0
     return {"paylas": paylas, "kontrol": kontrol, "kanal": kanal, "istatistik": istatistik}[args.komut](args)
 
 
