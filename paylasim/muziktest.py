@@ -10,16 +10,7 @@ import json
 import os
 import time
 
-from .ortak import ApiHatasi, KOK, log, ozet, takvim_oku
-
-
-def video_adresi(yol: str, kaynak: str = "raw") -> str:
-    """Depodaki videonun herkese açık adresi (depo açık olduğu için Instagram indirebilir)."""
-    depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
-    surum = os.environ.get("GITHUB_SHA") or "main"
-    if kaynak == "jsdelivr":
-        return f"https://cdn.jsdelivr.net/gh/{depo}@{surum}/{yol}"
-    return f"https://raw.githubusercontent.com/{depo}/{surum}/{yol}"
+from .ortak import ApiHatasi, KOK, log, ozet, takvim_oku, video_adresi
 
 
 def _bekle(ig, kid: str, sure_sn: int = 420) -> dict:
@@ -43,24 +34,30 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
     aid = str(muzik_id or slot.get("muzik_id") or "")
     trend = ig.muzik_ara("")
     trend_id = str(trend[0]["audio_id"]) if trend else ""
-    log(f"Parça: {aid} · trend parça: {trend_id} ({trend[0].get('title') if trend else '-'})")
+    log(f"Parça: {aid} · trend parça: {trend_id}")
     tam = {"audio_id": aid, "audio_volume": 40, "video_volume": 70}
+    kapak = slot.get("kapak_ms")
+    gercek = slot["aciklama"]
+    # (ad, yöntem, adres, ses ayarı, kapak karesi ms, açıklama)
     varyantlar = [
-        ("resumable · yalnız audio_id", "resumable", None, {"audio_id": aid}),
-        ("video_url (raw.githubusercontent) · ses 40/70", "url", video_adresi(slot["video"]), tam),
-        ("video_url (jsDelivr) · ses 40/70", "url", video_adresi(slot["video"], "jsdelivr"), tam),
-        ("resumable · trend parça · ses 40/70", "resumable", None,
-         {"audio_id": trend_id, "audio_volume": 40, "video_volume": 70}),
-        ("video_url (raw) · yalnız audio_id", "url", video_adresi(slot["video"]), {"audio_id": aid}),
-        ("video_url (raw) · müziksiz (kontrol)", "url", video_adresi(slot["video"]), None),
+        ("ses 40/70 · kapak son kare · gerçek açıklama (paylaşımın aynısı)", "resumable", None, tam, kapak, gercek),
+        ("ses 40/70 · kapak son kare · kısa açıklama", "resumable", None, tam, kapak, "deneme"),
+        ("ses 40/70 · kapak yok · gerçek açıklama", "resumable", None, tam, None, gercek),
+        ("ses 40/70 · kapak son kareden 1 sn önce · gerçek açıklama", "resumable", None, tam,
+         (kapak - 1000) if kapak else None, gercek),
+        ("yalnız audio_id · kapak son kare · gerçek açıklama", "resumable", None, {"audio_id": aid}, kapak, gercek),
     ]
+    if os.environ.get("URL_DENE"):
+        varyantlar.append(("video_url (raw) · müziksiz", "url", video_adresi(slot["video"]), None, None, "deneme"))
     sonuclar = []
-    for ad, yontem, adres, ses in varyantlar:
-        veri = {"media_type": "REELS", "caption": "deneme", "share_to_feed": "true"}
+    for ad, yontem, adres, ses, kapak_ms, aciklama in varyantlar:
+        veri = {"media_type": "REELS", "caption": aciklama, "share_to_feed": "true"}
         if yontem == "resumable":
             veri["upload_type"] = "resumable"
         else:
             veri["video_url"] = adres
+        if kapak_ms is not None:
+            veri["thumb_offset"] = str(int(kapak_ms))
         if ses:
             veri["audio_configuration"] = json.dumps(ses)
         sonuc = "?"
