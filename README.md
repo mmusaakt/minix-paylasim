@@ -12,6 +12,8 @@ Kurulum rehberi: https://claude.ai/artifact/N2q7RZswzuAQ5uZuVkt6VX
 | İstatistik | Her gün 23:35 | İzlenme, erişim, beğeni, kaydetme… `istatistik/` klasörüne yazar. |
 | Kontrol | Pazartesi 10:10 + elle | Anahtarları, şarkıları, videoları ve takvimin bitişini kontrol eder. |
 | YouTube kanal ayarları | Elle | Kanal kapağı, açıklama ve anahtar kelimeler (`kanal/`). |
+| Müzik kataloğu | Elle | Instagram'ın lisanslı müzik kütüphanesini tarar, parçaların temposunu ve tonunu çıkarır (`muzik/`). |
+| Müzik testi | Elle | Şarkının videoya eklenip eklenmediğini yayın yapmadan dener. |
 
 Elle çalıştırma: **Actions → işlem → Run workflow**. Paylaş'ta *deneme* seçilirse Instagram'a yüklenir ama
 yayınlanmaz, YouTube'a gizli yüklenir.
@@ -31,4 +33,7 @@ yayınlanmaz, YouTube'a gizli yüklenir.
 Değişkenler (Variables, isteğe bağlı): `MUZIK` (`kapali`), `MUZIK_SES` (40), `VIDEO_SES` (70), `PLATFORMLAR`.
 
 Müzik: Instagram API'si yalnızca lisanslı kütüphane parçalarını veriyor. `Müzik kataloğu` işlemi kütüphaneyi tarayıp
-`muzik/katalog.json`'a yazar; her slotun parçası `takvim.json`'daki `muzik_id` alanında.
+`muzik/katalog.json`'a yazar; her slotun parçası `takvim.json`'daki `muzik_id` alanında. Şarkı %40, videonun efekt
+sesi %70 çalar (`MUZIK_SES`, `VIDEO_SES` ile değişir). Müzikli yükleme ara sıra reddedilirse üç kez denenir, yine
+olmazsa video müziksiz paylaşılır (özette "Müzik: yok" yazar). `Müzik testi` işlemi müziğin eklenip eklenmediğini
+yayın yapmadan dener.

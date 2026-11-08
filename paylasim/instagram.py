@@ -171,10 +171,12 @@ class Instagram:
                 ses_adi: str | None = None) -> tuple[str, dict | None]:
         """Konteyneri oluşturup videoyu yükler ve işlenmesini bekler.
 
-        Müzikle başarısız olursa bir kez müziksiz dener. (konteyner_id, kullanılan_müzik) döndürür."""
-        denemeler = [muzik, None] if muzik else [None]
+        Müzikli yükleme ara sıra "Request processing failed" ile reddediliyor (aynı ayarlar birkaç
+        dakika sonra sorunsuz geçiyor). Bu yüzden müzikle üç kez, yeni bir konteynerle dener;
+        yine olmazsa müziksiz paylaşır. (konteyner_id, kullanılan_müzik) döndürür."""
+        denemeler = [muzik, muzik, muzik, None] if muzik else [None]
         son_hata: Exception | None = None
-        for m in denemeler:
+        for i, m in enumerate(denemeler):
             try:
                 k = self.konteyner_olustur(aciklama, kapak_ms, m and m.get("audio_id"),
                                            muzik_ses, video_ses, ses_adi)
@@ -189,7 +191,10 @@ class Instagram:
             except ApiHatasi as e:
                 son_hata = e
                 if m:
-                    log(f"  müzikli hazırlık başarısız ({e}); müziksiz deneniyor")
+                    tekrar = denemeler[i + 1] is not None
+                    log(f"  müzikli hazırlık başarısız ({e}); "
+                        f"{'müzikle yeniden deneniyor' if tekrar else 'müziksiz deneniyor'}")
+                    time.sleep(20 * (i + 1))
                     continue
                 raise
         assert son_hata is not None
