@@ -2,67 +2,8 @@
  "not": "Bu dosya Claude tarafından paylaşım takviminden üretildi. Elle düzenlenebilir.",
  "slotlar": [
   {
-   "id": "2026-11-06-2000",
-   "tarih": "2026-11-06",
-   "saat": "20:00",
-   "baslik": "AYNI İLGİ.",
-   "etiketler": "FARK ETMEYEN / FARK EDEN",
-   "konu": "Aşk",
-   "slug": "ayni-ilgi",
-   "video": "videolar/ayni-ilgi.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Sevilmek, önce fark edilmektir.\n\nYeni bir saç, yeni bir kıyafet, küçük bir başarı… Sevdiğimiz insan bunu gösterdiğinde ekrandan başımızı kaldırmamak küçük bir şey gibi görünür. Ama karşımızdaki her seferinde biraz daha solar.\n\nDikkat et: Soldaki partner ikinci kez döndüğünde, sağdaki de aynı anda dönüyordu. Biri alkışlandı, biri fark edilmedi.\n\nBugün sevdiğin kişide yeni bir şey fark et ve söyle.\n\nEn son ne zaman fark edildiğini hissettin? 👇\n\n#minixanima #ilgi #aşk",
-   "muzik": "Just the Way You Are – Bruno Mars",
-   "sabitYorum": "Seni hep fark eden birini etiketle 🧣"
-  },
-  {
-   "id": "2026-11-07-1230",
-   "tarih": "2026-11-07",
-   "saat": "12:30",
-   "baslik": "AYNI KREDİ KARTI.",
-   "etiketler": "ASGARİSİNİ ÖDEYEN / TAMAMINI ÖDEYEN",
-   "konu": "Para",
-   "slug": "ayni-kredi-karti",
-   "video": "videolar/ayni-kredi-karti.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Asgari ödeme borcu bitirmez. Sadece erteler.\n\nKredi kartında asgari tutarı ödeyince içimiz rahatlar: “Bu ayı da kurtardım.” Ama kalan borç faiziyle birlikte bir sonraki aya devreder. Her ay küçük bir parça ödenirken borç büyüyerek geri gelir.\n\nDikkat et: İkisinin de ilk ekstresi aynı boydaydı.\n\nBu ay kartının ekstresine bak: asgari tutarla toplam borç arasındaki farkı gör ve onu kapatmak için küçük bir plan yap.\n\nSen ekstrenin tamamını mı ödersin, asgarisini mi? 👇\n\n#minixanima #kredikartı #para",
-   "muzik": "Bills, Bills, Bills – Destiny's Child",
-   "sabitYorum": "Kaydet, ekstre günü gelince bir daha izle 📌"
-  },
-  {
-   "id": "2026-11-07-2000",
-   "tarih": "2026-11-07",
-   "saat": "20:00",
-   "baslik": "AYNI KAVGA.",
-   "etiketler": "BEKLEYEN / İLK ADIMI ATAN",
-   "konu": "İlişkiler",
-   "slug": "ayni-kavga",
-   "video": "videolar/ayni-kavga.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Kavgadan sonra en uzun süren şey sessizliktir.\n\n“O önce gelsin” diye beklerken günler geçer. İki taraf da aynı şeyi bekler; aradaki mesafe her gün biraz daha büyür. İlk adımı atmak haklılığından vazgeçmek değildir. İlişkiyi gururunun önüne koymaktır.\n\nDikkat et: Soldakilerin ikisi de dönüp baktı. Sadece hiçbir zaman aynı anda değil.\n\nBugün küs olduğun birine tek bir mesaj at. Uzun olması gerekmez.\n\nSen ilk adımı atan mısın, bekleyen mi? 👇\n\n#minixanima #ilişkiler #barışmak",
-   "muzik": "Fix You – Coldplay",
-   "sabitYorum": "İlk adım bu olabilir: bunu küs olduğun kişiye gönder 🤝"
-  },
-  {
-   "id": "2026-11-08-1230",
-   "tarih": "2026-11-08",
-   "saat": "12:30",
-   "baslik": "AYNI 30 YAŞ.",
-   "etiketler": "GEÇ KALDIM DİYEN / BAŞLAYAN",
-   "konu": "Zihin",
-   "slug": "ayni-30-yas",
-   "video": "videolar/ayni-30-yas.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "“Artık çok geç” dediğin gün de yıllar geçmeye devam eder.\n\n30'unda gitar öğrenmek için geç mi? Değil. Ama başlamazsan 35'inde de aynı cümleyi kuruyor olursun. Fark, o 5 yılı nasıl geçirdiğinde.\n\nDikkat et: Soldaki de “geç kaldım” dediğinde 30 yaşındaydı. Aynı 5 yıl onun için de geçti.\n\nBugün “geç kaldım” dediğin şey için 15 dakikalık ilk adımı at: bir ders videosu izle ya da bir kursa kaydol.\n\nSenin “geç kaldım” dediğin şey ne? 👇\n\n#minixanima #cesaret #yenibaşlangıç",
-   "muzik": "Blackbird – The Beatles",
-   "sabitYorum": "Bugün başlayacaksan bir 🎸 bırak. 5 yıl sonra bu yoruma döneriz."
-  },
-  {
    "id": "2026-11-08-2000",
+   "takvim_belgesi": "2026-11-08-2000",
    "tarih": "2026-11-08",
    "saat": "20:00",
    "baslik": "AYNI BAKIŞ.",
@@ -78,6 +19,7 @@
   },
   {
    "id": "2026-11-09-1230",
+   "takvim_belgesi": "2026-11-09-1230",
    "tarih": "2026-11-09",
    "saat": "12:30",
    "baslik": "AYNI YARIŞ.",
@@ -93,6 +35,7 @@
   },
   {
    "id": "2026-11-09-2000",
+   "takvim_belgesi": "2026-11-09-2000",
    "tarih": "2026-11-09",
    "saat": "20:00",
    "baslik": "AYNI TARTIŞMA.",
@@ -108,6 +51,7 @@
   },
   {
    "id": "2026-11-10-1230",
+   "takvim_belgesi": "2026-11-10-1230",
    "tarih": "2026-11-10",
    "saat": "12:30",
    "baslik": "AYNI DÜŞÜNCE.",
@@ -123,6 +67,7 @@
   },
   {
    "id": "2026-11-10-2000",
+   "takvim_belgesi": "2026-11-10-2000",
    "tarih": "2026-11-10",
    "saat": "20:00",
    "baslik": "AYNI ANNE.",
@@ -138,6 +83,7 @@
   },
   {
    "id": "2026-11-11-1230",
+   "takvim_belgesi": "2026-11-11-1230",
    "tarih": "2026-11-11",
    "saat": "12:30",
    "baslik": "AYNI EV.",
@@ -153,6 +99,7 @@
   },
   {
    "id": "2026-11-11-2000",
+   "takvim_belgesi": "2026-11-11-2000",
    "tarih": "2026-11-11",
    "saat": "20:00",
    "baslik": "AYNI GEÇMİŞ.",
@@ -168,6 +115,7 @@
   },
   {
    "id": "2026-11-12-1230",
+   "takvim_belgesi": "2026-11-12-1230",
    "tarih": "2026-11-12",
    "saat": "12:30",
    "baslik": "AYNI İÇ SES.",
@@ -183,6 +131,7 @@
   },
   {
    "id": "2026-11-12-2000",
+   "takvim_belgesi": "2026-11-12-2000",
    "tarih": "2026-11-12",
    "saat": "20:00",
    "baslik": "AYNI KALP.",
@@ -198,6 +147,7 @@
   },
   {
    "id": "2026-11-13-1230",
+   "takvim_belgesi": "2026-11-13-1230",
    "tarih": "2026-11-13",
    "saat": "12:30",
    "baslik": "AYNI KIŞ.",
@@ -213,6 +163,7 @@
   },
   {
    "id": "2026-11-13-2000",
+   "takvim_belgesi": "2026-11-13-2000",
    "tarih": "2026-11-13",
    "saat": "20:00",
    "baslik": "AYNI HAYAL.",
@@ -228,6 +179,7 @@
   },
   {
    "id": "2026-11-14-1230",
+   "takvim_belgesi": "2026-11-14-1230",
    "tarih": "2026-11-14",
    "saat": "12:30",
    "baslik": "AYNI DOĞUM GÜNÜ.",
@@ -243,6 +195,7 @@
   },
   {
    "id": "2026-11-14-2000",
+   "takvim_belgesi": "2026-11-14-2000",
    "tarih": "2026-11-14",
    "saat": "20:00",
    "baslik": "AYNI YÜRÜYÜŞ.",
@@ -258,6 +211,7 @@
   },
   {
    "id": "2026-11-15-1230",
+   "takvim_belgesi": "2026-11-15-1230",
    "tarih": "2026-11-15",
    "saat": "12:30",
    "baslik": "AYNI FIRTINA.",
@@ -273,6 +227,7 @@
   },
   {
    "id": "2026-11-15-2000",
+   "takvim_belgesi": "2026-11-15-2000",
    "tarih": "2026-11-15",
    "saat": "20:00",
    "baslik": "AYNI MESAJ.",
@@ -288,6 +243,7 @@
   },
   {
    "id": "2026-11-16-1230",
+   "takvim_belgesi": "2026-11-16-1230",
    "tarih": "2026-11-16",
    "saat": "12:30",
    "baslik": "AYNI ÖFKE.",
@@ -303,6 +259,7 @@
   },
   {
    "id": "2026-11-16-2000",
+   "takvim_belgesi": "2026-11-16-2000",
    "tarih": "2026-11-16",
    "saat": "20:00",
    "baslik": "AYNI GECE YARISI.",
@@ -318,6 +275,7 @@
   },
   {
    "id": "2026-11-17-1230",
+   "takvim_belgesi": "2026-11-17-1230",
    "tarih": "2026-11-17",
    "saat": "12:30",
    "baslik": "AYNI KUTU.",
@@ -333,6 +291,7 @@
   },
   {
    "id": "2026-11-17-2000",
+   "takvim_belgesi": "2026-11-17-2000",
    "tarih": "2026-11-17",
    "saat": "20:00",
    "baslik": "AYNI ELEŞTİRİ.",
@@ -348,6 +307,7 @@
   },
   {
    "id": "2026-11-18-1230",
+   "takvim_belgesi": "2026-11-18-1230",
    "tarih": "2026-11-18",
    "saat": "12:30",
    "baslik": "AYNI ABONELİK.",
@@ -363,6 +323,7 @@
   },
   {
    "id": "2026-11-18-2000",
+   "takvim_belgesi": "2026-11-18-2000",
    "tarih": "2026-11-18",
    "saat": "20:00",
    "baslik": "AYNI MERDİVEN.",
@@ -378,6 +339,7 @@
   },
   {
    "id": "2026-11-19-1230",
+   "takvim_belgesi": "2026-11-19-1230",
    "tarih": "2026-11-19",
    "saat": "12:30",
    "baslik": "AYNI DİL.",
@@ -393,6 +355,7 @@
   },
   {
    "id": "2026-11-19-2000",
+   "takvim_belgesi": "2026-11-19-2000",
    "tarih": "2026-11-19",
    "saat": "20:00",
    "baslik": "AYNI MERAK.",
@@ -408,6 +371,7 @@
   },
   {
    "id": "2026-11-20-1230",
+   "takvim_belgesi": "2026-11-20-1230",
    "tarih": "2026-11-20",
    "saat": "12:30",
    "baslik": "AYNI KAPI.",
@@ -423,6 +387,7 @@
   },
   {
    "id": "2026-11-20-2000",
+   "takvim_belgesi": "2026-11-20-2000",
    "tarih": "2026-11-20",
    "saat": "20:00",
    "baslik": "AYNI ALKIŞ.",
@@ -438,6 +403,7 @@
   },
   {
    "id": "2026-11-21-1230",
+   "takvim_belgesi": "2026-11-21-1230",
    "tarih": "2026-11-21",
    "saat": "12:30",
    "baslik": "AYNI YOLCULUK.",
@@ -453,6 +419,7 @@
   },
   {
    "id": "2026-11-21-2000",
+   "takvim_belgesi": "2026-11-21-2000",
    "tarih": "2026-11-21",
    "saat": "20:00",
    "baslik": "AYNI SINAV.",
@@ -468,6 +435,7 @@
   },
   {
    "id": "2026-11-22-1230",
+   "takvim_belgesi": "2026-11-22-1230",
    "tarih": "2026-11-22",
    "saat": "12:30",
    "baslik": "AYNI AYNA.",
@@ -483,6 +451,7 @@
   },
   {
    "id": "2026-11-22-2000",
+   "takvim_belgesi": "2026-11-22-2000",
    "tarih": "2026-11-22",
    "saat": "20:00",
    "baslik": "AYNI GÜN.",
@@ -498,6 +467,7 @@
   },
   {
    "id": "2026-11-23-1230",
+   "takvim_belgesi": "2026-11-23-1230",
    "tarih": "2026-11-23",
    "saat": "12:30",
    "baslik": "AYNI KÖPRÜ.",
@@ -513,6 +483,7 @@
   },
   {
    "id": "2026-11-23-2000",
+   "takvim_belgesi": "2026-11-23-2000",
    "tarih": "2026-11-23",
    "saat": "20:00",
    "baslik": "AYNI SEPET.",
@@ -528,6 +499,7 @@
   },
   {
    "id": "2026-11-24-1230",
+   "takvim_belgesi": "2026-11-24-1230",
    "tarih": "2026-11-24",
    "saat": "12:30",
    "baslik": "AYNI HESAP.",
@@ -543,6 +515,7 @@
   },
   {
    "id": "2026-11-24-2000",
+   "takvim_belgesi": "2026-11-24-2000",
    "tarih": "2026-11-24",
    "saat": "20:00",
    "baslik": "AYNI HATA.",
@@ -558,6 +531,7 @@
   },
   {
    "id": "2026-11-25-1230",
+   "takvim_belgesi": "2026-11-25-1230",
    "tarih": "2026-11-25",
    "saat": "12:30",
    "baslik": "AYNI DOSTLUK.",
@@ -573,6 +547,7 @@
   },
   {
    "id": "2026-11-25-2000",
+   "takvim_belgesi": "2026-11-25-2000",
    "tarih": "2026-11-25",
    "saat": "20:00",
    "baslik": "AYNI ASANSÖR.",
@@ -588,6 +563,7 @@
   },
   {
    "id": "2026-11-26-1230",
+   "takvim_belgesi": "2026-11-26-1230",
    "tarih": "2026-11-26",
    "saat": "12:30",
    "baslik": "AYNI SAKSI.",
@@ -603,6 +579,7 @@
   },
   {
    "id": "2026-11-26-2000",
+   "takvim_belgesi": "2026-11-26-2000",
    "tarih": "2026-11-26",
    "saat": "20:00",
    "baslik": "AYNI SORU.",
@@ -618,6 +595,7 @@
   },
   {
    "id": "2026-11-27-1230",
+   "takvim_belgesi": "2026-11-27-1230",
    "tarih": "2026-11-27",
    "saat": "12:30",
    "baslik": "AYNI KALABALIK.",
@@ -633,6 +611,7 @@
   },
   {
    "id": "2026-11-27-2000",
+   "takvim_belgesi": "2026-11-27-2000",
    "tarih": "2026-11-27",
    "saat": "20:00",
    "baslik": "AYNI YOL.",
@@ -648,6 +627,7 @@
   },
   {
    "id": "2026-11-28-1230",
+   "takvim_belgesi": "2026-11-28-1230",
    "tarih": "2026-11-28",
    "saat": "12:30",
    "baslik": "AYNI FİKİR.",
@@ -663,6 +643,7 @@
   },
   {
    "id": "2026-11-28-2000",
+   "takvim_belgesi": "2026-11-28-2000",
    "tarih": "2026-11-28",
    "saat": "20:00",
    "baslik": "AYNI SESSİZLİK.",
@@ -678,6 +659,7 @@
   },
   {
    "id": "2026-11-29-1230",
+   "takvim_belgesi": "2026-11-29-1230",
    "tarih": "2026-11-29",
    "saat": "12:30",
    "baslik": "AYNI SU.",
@@ -693,6 +675,7 @@
   },
   {
    "id": "2026-11-29-2000",
+   "takvim_belgesi": "2026-11-29-2000",
    "tarih": "2026-11-29",
    "saat": "20:00",
    "baslik": "AYNI SÖZ.",
@@ -708,6 +691,7 @@
   },
   {
    "id": "2026-11-30-1230",
+   "takvim_belgesi": "2026-11-30-1230",
    "tarih": "2026-11-30",
    "saat": "12:30",
    "baslik": "AYNI LİSTE.",
@@ -723,6 +707,7 @@
   },
   {
    "id": "2026-11-30-2000",
+   "takvim_belgesi": "2026-11-30-2000",
    "tarih": "2026-11-30",
    "saat": "20:00",
    "baslik": "AYNI FOTOĞRAF.",
@@ -738,6 +723,7 @@
   },
   {
    "id": "2026-12-01-1230",
+   "takvim_belgesi": "2026-12-01-1230",
    "tarih": "2026-12-01",
    "saat": "12:30",
    "baslik": "AYNI BORÇ.",
@@ -753,6 +739,7 @@
   },
   {
    "id": "2026-12-01-2000",
+   "takvim_belgesi": "2026-12-01-2000",
    "tarih": "2026-12-01",
    "saat": "20:00",
    "baslik": "AYNI SOFRA.",
@@ -768,6 +755,7 @@
   },
   {
    "id": "2026-12-02-1230",
+   "takvim_belgesi": "2026-12-02-1230",
    "tarih": "2026-12-02",
    "saat": "12:30",
    "baslik": "AYNI DOLAP.",
@@ -783,6 +771,7 @@
   },
   {
    "id": "2026-12-02-2000",
+   "takvim_belgesi": "2026-12-02-2000",
    "tarih": "2026-12-02",
    "saat": "20:00",
    "baslik": "AYNI GÜVEN.",
@@ -798,6 +787,7 @@
   },
   {
    "id": "2026-12-03-1230",
+   "takvim_belgesi": "2026-12-03-1230",
    "tarih": "2026-12-03",
    "saat": "12:30",
    "baslik": "AYNI NEFES.",
@@ -813,6 +803,7 @@
   },
   {
    "id": "2026-12-03-2000",
+   "takvim_belgesi": "2026-12-03-2000",
    "tarih": "2026-12-03",
    "saat": "20:00",
    "baslik": "AYNI KOMŞU.",
@@ -828,6 +819,7 @@
   },
   {
    "id": "2026-12-04-1230",
+   "takvim_belgesi": "2026-12-04-1230",
    "tarih": "2026-12-04",
    "saat": "12:30",
    "baslik": "AYNI GELEN KUTUSU.",
@@ -843,6 +835,7 @@
   },
   {
    "id": "2026-12-04-2000",
+   "takvim_belgesi": "2026-12-04-2000",
    "tarih": "2026-12-04",
    "saat": "20:00",
    "baslik": "AYNI DANS.",
@@ -858,6 +851,7 @@
   },
   {
    "id": "2026-12-05-1230",
+   "takvim_belgesi": "2026-12-05-1230",
    "tarih": "2026-12-05",
    "saat": "12:30",
    "baslik": "AYNI ÖVGÜ.",
@@ -873,6 +867,7 @@
   },
   {
    "id": "2026-12-05-2000",
+   "takvim_belgesi": "2026-12-05-2000",
    "tarih": "2026-12-05",
    "saat": "20:00",
    "baslik": "AYNI OYUN.",
@@ -888,6 +883,7 @@
   },
   {
    "id": "2026-12-06-1230",
+   "takvim_belgesi": "2026-12-06-1230",
    "tarih": "2026-12-06",
    "saat": "12:30",
    "baslik": "AYNI MASA.",
@@ -903,6 +899,7 @@
   },
   {
    "id": "2026-12-06-2000",
+   "takvim_belgesi": "2026-12-06-2000",
    "tarih": "2026-12-06",
    "saat": "20:00",
    "baslik": "AYNI GÖRÜLDÜ.",
@@ -918,6 +915,7 @@
   },
   {
    "id": "2026-12-07-1230",
+   "takvim_belgesi": "2026-12-07-1230",
    "tarih": "2026-12-07",
    "saat": "12:30",
    "baslik": "AYNI MÜLAKAT.",
@@ -933,6 +931,7 @@
   },
   {
    "id": "2026-12-07-2000",
+   "takvim_belgesi": "2026-12-07-2000",
    "tarih": "2026-12-07",
    "saat": "20:00",
    "baslik": "AYNI HİKÂYE.",
@@ -948,6 +947,7 @@
   },
   {
    "id": "2026-12-08-1230",
+   "takvim_belgesi": "2026-12-08-1230",
    "tarih": "2026-12-08",
    "saat": "12:30",
    "baslik": "AYNI SPOR SALONU.",
@@ -963,6 +963,7 @@
   },
   {
    "id": "2026-12-08-2000",
+   "takvim_belgesi": "2026-12-08-2000",
    "tarih": "2026-12-08",
    "saat": "20:00",
    "baslik": "AYNI ÇAY.",
@@ -978,6 +979,7 @@
   },
   {
    "id": "2026-12-09-1230",
+   "takvim_belgesi": "2026-12-09-1230",
    "tarih": "2026-12-09",
    "saat": "12:30",
    "baslik": "AYNI DERS.",
@@ -993,6 +995,7 @@
   },
   {
    "id": "2026-12-09-2000",
+   "takvim_belgesi": "2026-12-09-2000",
    "tarih": "2026-12-09",
    "saat": "20:00",
    "baslik": "AYNI MÜJDE.",
@@ -1008,6 +1011,7 @@
   },
   {
    "id": "2026-12-10-1230",
+   "takvim_belgesi": "2026-12-10-1230",
    "tarih": "2026-12-10",
    "saat": "12:30",
    "baslik": "AYNI SUNUM.",
@@ -1023,6 +1027,7 @@
   },
   {
    "id": "2026-12-10-2000",
+   "takvim_belgesi": "2026-12-10-2000",
    "tarih": "2026-12-10",
    "saat": "20:00",
    "baslik": "AYNI KAR.",
@@ -1038,6 +1043,7 @@
   },
   {
    "id": "2026-12-11-1230",
+   "takvim_belgesi": "2026-12-11-1230",
    "tarih": "2026-12-11",
    "saat": "12:30",
    "baslik": "AYNI ARIZA.",
@@ -1053,6 +1059,7 @@
   },
   {
    "id": "2026-12-11-2000",
+   "takvim_belgesi": "2026-12-11-2000",
    "tarih": "2026-12-11",
    "saat": "20:00",
    "baslik": "AYNI BİSİKLET.",
@@ -1068,6 +1075,7 @@
   },
   {
    "id": "2026-12-12-1230",
+   "takvim_belgesi": "2026-12-12-1230",
    "tarih": "2026-12-12",
    "saat": "12:30",
    "baslik": "AYNI ŞANS.",
@@ -1083,6 +1091,7 @@
   },
   {
    "id": "2026-12-12-2000",
+   "takvim_belgesi": "2026-12-12-2000",
    "tarih": "2026-12-12",
    "saat": "20:00",
    "baslik": "AYNI DEDİKODU.",
@@ -1098,6 +1107,7 @@
   },
   {
    "id": "2026-12-13-1230",
+   "takvim_belgesi": "2026-12-13-1230",
    "tarih": "2026-12-13",
    "saat": "12:30",
    "baslik": "AYNI ÖĞLE ARASI.",
@@ -1113,6 +1123,7 @@
   },
   {
    "id": "2026-12-13-2000",
+   "takvim_belgesi": "2026-12-13-2000",
    "tarih": "2026-12-13",
    "saat": "20:00",
    "baslik": "AYNI SABAH.",
@@ -1128,6 +1139,7 @@
   },
   {
    "id": "2026-12-14-1230",
+   "takvim_belgesi": "2026-12-14-1230",
    "tarih": "2026-12-14",
    "saat": "12:30",
    "baslik": "AYNI YIL SONU.",
@@ -1143,6 +1155,7 @@
   },
   {
    "id": "2026-12-14-2000",
+   "takvim_belgesi": "2026-12-14-2000",
    "tarih": "2026-12-14",
    "saat": "20:00",
    "baslik": "AYNI TABLET.",
@@ -1158,6 +1171,7 @@
   },
   {
    "id": "2026-12-15-1230",
+   "takvim_belgesi": "2026-12-15-1230",
    "tarih": "2026-12-15",
    "saat": "12:30",
    "baslik": "AYNI YENİ YIL.",
@@ -1173,6 +1187,7 @@
   },
   {
    "id": "2026-12-15-2000",
+   "takvim_belgesi": "2026-12-15-2000",
    "tarih": "2026-12-15",
    "saat": "20:00",
    "baslik": "AYNI 50 YIL.",
@@ -1188,6 +1203,7 @@
   },
   {
    "id": "2026-12-16-1230",
+   "takvim_belgesi": "2026-12-16-1230",
    "tarih": "2026-12-16",
    "saat": "12:30",
    "baslik": "AYNI DÜĞÜM.",
@@ -1203,6 +1219,7 @@
   },
   {
    "id": "2026-12-16-2000",
+   "takvim_belgesi": "2026-12-16-2000",
    "tarih": "2026-12-16",
    "saat": "20:00",
    "baslik": "AYNI ÖZÜR.",
@@ -1218,6 +1235,7 @@
   },
   {
    "id": "2026-12-17-1230",
+   "takvim_belgesi": "2026-12-17-1230",
    "tarih": "2026-12-17",
    "saat": "12:30",
    "baslik": "AYNI TUVAL.",
@@ -1233,6 +1251,7 @@
   },
   {
    "id": "2026-12-17-2000",
+   "takvim_belgesi": "2026-12-17-2000",
    "tarih": "2026-12-17",
    "saat": "20:00",
    "baslik": "AYNI HEDİYE.",
@@ -1248,6 +1267,7 @@
   },
   {
    "id": "2026-12-18-1230",
+   "takvim_belgesi": "2026-12-18-1230",
    "tarih": "2026-12-18",
    "saat": "12:30",
    "baslik": "AYNI BULAŞIK.",
@@ -1263,6 +1283,7 @@
   },
   {
    "id": "2026-12-18-2000",
+   "takvim_belgesi": "2026-12-18-2000",
    "tarih": "2026-12-18",
    "saat": "20:00",
    "baslik": "AYNI ÖDEV.",
@@ -1278,6 +1299,7 @@
   },
   {
    "id": "2026-12-19-1230",
+   "takvim_belgesi": "2026-12-19-1230",
    "tarih": "2026-12-19",
    "saat": "12:30",
    "baslik": "AYNI MÜŞTERİ.",
@@ -1293,6 +1315,7 @@
   },
   {
    "id": "2026-12-19-2000",
+   "takvim_belgesi": "2026-12-19-2000",
    "tarih": "2026-12-19",
    "saat": "20:00",
    "baslik": "AYNI KURABİYE.",
@@ -1308,6 +1331,7 @@
   },
   {
    "id": "2026-12-20-1230",
+   "takvim_belgesi": "2026-12-20-1230",
    "tarih": "2026-12-20",
    "saat": "12:30",
    "baslik": "AYNI BİRİKİM.",
@@ -1323,6 +1347,7 @@
   },
   {
    "id": "2026-12-20-2000",
+   "takvim_belgesi": "2026-12-20-2000",
    "tarih": "2026-12-20",
    "saat": "20:00",
    "baslik": "AYNI ŞARKI.",
@@ -1338,6 +1363,7 @@
   },
   {
    "id": "2026-12-21-1230",
+   "takvim_belgesi": "2026-12-21-1230",
    "tarih": "2026-12-21",
    "saat": "12:30",
    "baslik": "AYNI BAŞARI.",
@@ -1353,6 +1379,7 @@
   },
   {
    "id": "2026-12-21-2000",
+   "takvim_belgesi": "2026-12-21-2000",
    "tarih": "2026-12-21",
    "saat": "20:00",
    "baslik": "AYNI NOT.",
@@ -1368,6 +1395,7 @@
   },
   {
    "id": "2026-12-22-1230",
+   "takvim_belgesi": "2026-12-22-1230",
    "tarih": "2026-12-22",
    "saat": "12:30",
    "baslik": "AYNI YOL AYRIMI.",
@@ -1383,6 +1411,7 @@
   },
   {
    "id": "2026-12-22-2000",
+   "takvim_belgesi": "2026-12-22-2000",
    "tarih": "2026-12-22",
    "saat": "20:00",
    "baslik": "AYNI KARDEŞ.",
@@ -1398,6 +1427,7 @@
   },
   {
    "id": "2026-12-23-1230",
+   "takvim_belgesi": "2026-12-23-1230",
    "tarih": "2026-12-23",
    "saat": "12:30",
    "baslik": "AYNI BROKOLİ.",
@@ -1413,6 +1443,7 @@
   },
   {
    "id": "2026-12-23-2000",
+   "takvim_belgesi": "2026-12-23-2000",
    "tarih": "2026-12-23",
    "saat": "20:00",
    "baslik": "AYNI ŞAKA.",
@@ -1428,6 +1459,7 @@
   },
   {
    "id": "2026-12-24-1230",
+   "takvim_belgesi": "2026-12-24-1230",
    "tarih": "2026-12-24",
    "saat": "12:30",
    "baslik": "AYNI YAZICI.",
@@ -1443,6 +1475,7 @@
   },
   {
    "id": "2026-12-24-2000",
+   "takvim_belgesi": "2026-12-24-2000",
    "tarih": "2026-12-24",
    "saat": "20:00",
    "baslik": "AYNI SOĞUK.",
@@ -1458,6 +1491,7 @@
   },
   {
    "id": "2026-12-25-1230",
+   "takvim_belgesi": "2026-12-25-1230",
    "tarih": "2026-12-25",
    "saat": "12:30",
    "baslik": "AYNI YEDEK.",
@@ -1473,6 +1507,7 @@
   },
   {
    "id": "2026-12-25-2000",
+   "takvim_belgesi": "2026-12-25-2000",
    "tarih": "2026-12-25",
    "saat": "20:00",
    "baslik": "AYNI SOKAK.",
@@ -1488,6 +1523,7 @@
   },
   {
    "id": "2026-12-26-1230",
+   "takvim_belgesi": "2026-12-26-1230",
    "tarih": "2026-12-26",
    "saat": "12:30",
    "baslik": "AYNI TEBRİK.",
@@ -1500,6 +1536,102 @@
    "aciklama": "Herkese giden mesaj kimseye dokunmaz.\n\nYılbaşı gecesi aynı mesajı yüz kişiye göndermek birkaç saniye sürer; cevaplar da aynı hızla gelir ve unutulur. Üç kişiyi aramak belki yarım saat alır, ama o seslerin sıcaklığı yılın ilk anısı olur.\n\nDikkat et: Büyükannesi soldakine de sesli mesaj göndermişti; o mesaj hiç açılmadı.\n\nBu yılbaşı toplu mesaj yerine en az üç kişiyi ara.\n\nYılbaşı gecesi ilk kimi ararsın? 👇\n\n#minixanima #yılbaşı #ilişkiler #aile",
    "muzik": "Happy New Year – ABBA",
    "sabitYorum": "Yılbaşı gecesi ilk arayacağın kişiyi etiketle 🎆"
+  },
+  {
+   "id": "2026-12-26-2000",
+   "takvim_belgesi": "2026-11-05-2000",
+   "tarih": "2026-12-26",
+   "saat": "20:00",
+   "baslik": "AYNI DERT.",
+   "etiketler": "ÇÖZÜM SUNAN / DİNLEYEN",
+   "konu": "İlişkiler",
+   "slug": "ayni-dert",
+   "video": "videolar/ayni-dert.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Dert anlatan çoğu zaman çözüm değil, dinlenmek ister.\n\nSevdiğimiz insan üzgün olduğunda hemen düzeltmek isteriz: \"Şöyle yap, böyle yapma.\" İyi niyetliyizdir ama karşımızdaki kendini anlaşılmamış hisseder. Bazen yapılacak en iyi şey yanına oturmak ve susmaktır.\n\nDikkat et: Sağdakinin başında bir kez bile ampul yanmadı.\n\nBugün biri sana derdini anlattığında önce şunu sor: \"Çözüm mü istiyorsun, dinlenmek mi?\"\n\nSen dert anlatınca ne duymak istersin? 👇\n\n#minixanima #dinlemek #ilişkiler",
+   "muzik": "Here With Me – d4vd",
+   "sabitYorum": "Dürüst ol: 👈 hemen çözüm sunan mısın, 👉 dinleyen mi? 🫂"
+  },
+  {
+   "id": "2026-12-27-1230",
+   "takvim_belgesi": "2026-11-06-1230",
+   "tarih": "2026-12-27",
+   "saat": "12:30",
+   "baslik": "AYNI TRAFİK.",
+   "etiketler": "KORNA ÇALAN / MÜZİK AÇAN",
+   "konu": "Zihin",
+   "slug": "ayni-trafik",
+   "video": "videolar/ayni-trafik.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Trafiği değiştiremezsin. Arabanın içini değiştirebilirsin.\n\nKorna, sinir, yumruk… Hiçbiri trafiği bir saniye bile hızlandırmaz; sadece aynı 45 dakikayı daha ağır geçirir. Sağdaki de aynı yolda, aynı saatte. Tek farkı o süreyi kendisi için kullanması.\n\nDikkat et: Trafik ikisi için de aynı anda açıldı. Korna kimseyi daha erken götürmedi.\n\nBir dahaki trafikte hazırlıklı ol: bir çalma listesi, bir podcast ya da sevdiğin birine bir telefon.\n\nTrafikte sen hangisisin? 👇\n\n#minixanima #sakinlik #stres",
+   "muzik": "Hadi Bakalım – Sezen Aksu",
+   "sabitYorum": "Soldaki direksiyona kaç kez vurdu? Bir daha izle, sayıyı yaz 🚗"
+  },
+  {
+   "id": "2026-12-27-2000",
+   "takvim_belgesi": "2026-11-06-2000",
+   "tarih": "2026-12-27",
+   "saat": "20:00",
+   "baslik": "AYNI İLGİ.",
+   "etiketler": "FARK ETMEYEN / FARK EDEN",
+   "konu": "Aşk",
+   "slug": "ayni-ilgi",
+   "video": "videolar/ayni-ilgi.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Sevilmek, önce fark edilmektir.\n\nYeni bir saç, yeni bir kıyafet, küçük bir başarı… Sevdiğimiz insan bunu gösterdiğinde ekrandan başımızı kaldırmamak küçük bir şey gibi görünür. Ama karşımızdaki her seferinde biraz daha solar.\n\nDikkat et: Soldaki partner ikinci kez döndüğünde, sağdaki de aynı anda dönüyordu. Biri alkışlandı, biri fark edilmedi.\n\nBugün sevdiğin kişide yeni bir şey fark et ve söyle.\n\nEn son ne zaman fark edildiğini hissettin? 👇\n\n#minixanima #ilgi #aşk",
+   "muzik": "Just the Way You Are – Bruno Mars",
+   "sabitYorum": "Seni hep fark eden birini etiketle 🧣"
+  },
+  {
+   "id": "2026-12-28-1230",
+   "takvim_belgesi": "2026-11-07-1230",
+   "tarih": "2026-12-28",
+   "saat": "12:30",
+   "baslik": "AYNI KREDİ KARTI.",
+   "etiketler": "ASGARİSİNİ ÖDEYEN / TAMAMINI ÖDEYEN",
+   "konu": "Para",
+   "slug": "ayni-kredi-karti",
+   "video": "videolar/ayni-kredi-karti.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Asgari ödeme borcu bitirmez. Sadece erteler.\n\nKredi kartında asgari tutarı ödeyince içimiz rahatlar: “Bu ayı da kurtardım.” Ama kalan borç faiziyle birlikte bir sonraki aya devreder. Her ay küçük bir parça ödenirken borç büyüyerek geri gelir.\n\nDikkat et: İkisinin de ilk ekstresi aynı boydaydı.\n\nBu ay kartının ekstresine bak: asgari tutarla toplam borç arasındaki farkı gör ve onu kapatmak için küçük bir plan yap.\n\nSen ekstrenin tamamını mı ödersin, asgarisini mi? 👇\n\n#minixanima #kredikartı #para",
+   "muzik": "Bills, Bills, Bills – Destiny's Child",
+   "sabitYorum": "Kaydet, ekstre günü gelince bir daha izle 📌"
+  },
+  {
+   "id": "2026-12-28-2000",
+   "takvim_belgesi": "2026-11-07-2000",
+   "tarih": "2026-12-28",
+   "saat": "20:00",
+   "baslik": "AYNI KAVGA.",
+   "etiketler": "BEKLEYEN / İLK ADIMI ATAN",
+   "konu": "İlişkiler",
+   "slug": "ayni-kavga",
+   "video": "videolar/ayni-kavga.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Kavgadan sonra en uzun süren şey sessizliktir.\n\n“O önce gelsin” diye beklerken günler geçer. İki taraf da aynı şeyi bekler; aradaki mesafe her gün biraz daha büyür. İlk adımı atmak haklılığından vazgeçmek değildir. İlişkiyi gururunun önüne koymaktır.\n\nDikkat et: Soldakilerin ikisi de dönüp baktı. Sadece hiçbir zaman aynı anda değil.\n\nBugün küs olduğun birine tek bir mesaj at. Uzun olması gerekmez.\n\nSen ilk adımı atan mısın, bekleyen mi? 👇\n\n#minixanima #ilişkiler #barışmak",
+   "muzik": "Fix You – Coldplay",
+   "sabitYorum": "İlk adım bu olabilir: bunu küs olduğun kişiye gönder 🤝"
+  },
+  {
+   "id": "2026-12-29-1230",
+   "takvim_belgesi": "2026-11-08-1230",
+   "tarih": "2026-12-29",
+   "saat": "12:30",
+   "baslik": "AYNI 30 YAŞ.",
+   "etiketler": "GEÇ KALDIM DİYEN / BAŞLAYAN",
+   "konu": "Zihin",
+   "slug": "ayni-30-yas",
+   "video": "videolar/ayni-30-yas.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "“Artık çok geç” dediğin gün de yıllar geçmeye devam eder.\n\n30'unda gitar öğrenmek için geç mi? Değil. Ama başlamazsan 35'inde de aynı cümleyi kuruyor olursun. Fark, o 5 yılı nasıl geçirdiğinde.\n\nDikkat et: Soldaki de “geç kaldım” dediğinde 30 yaşındaydı. Aynı 5 yıl onun için de geçti.\n\nBugün “geç kaldım” dediğin şey için 15 dakikalık ilk adımı at: bir ders videosu izle ya da bir kursa kaydol.\n\nSenin “geç kaldım” dediğin şey ne? 👇\n\n#minixanima #cesaret #yenibaşlangıç",
+   "muzik": "Blackbird – The Beatles",
+   "sabitYorum": "Bugün başlayacaksan bir 🎸 bırak. 5 yıl sonra bu yoruma döneriz."
   }
  ]
 }
