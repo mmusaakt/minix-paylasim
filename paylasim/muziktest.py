@@ -7,10 +7,9 @@ konteynerler Instagram'da kendiliğinden silinir.
 from __future__ import annotations
 
 import json
-import os
 import time
 
-from .ortak import ApiHatasi, KOK, log, ozet, takvim_oku, video_adresi
+from .ortak import ApiHatasi, KOK, log, ozet, takvim_oku
 
 
 def _bekle(ig, kid: str, sure_sn: int = 420) -> dict:
@@ -47,8 +46,6 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
          (kapak - 1000) if kapak else None, gercek),
         ("yalnız audio_id · kapak son kare · gerçek açıklama", "resumable", None, {"audio_id": aid}, kapak, gercek),
     ]
-    if os.environ.get("URL_DENE"):
-        varyantlar.append(("video_url (raw) · müziksiz", "url", video_adresi(slot["video"]), None, None, "deneme"))
     sonuclar = []
     for ad, yontem, adres, ses, kapak_ms, aciklama in varyantlar:
         veri = {"media_type": "REELS", "caption": aciklama, "share_to_feed": "true"}
