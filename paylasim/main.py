@@ -280,6 +280,13 @@ def kontrol(args) -> int:
                 ozet(f"- Instagram 24 saatlik paylaşım kullanımı: {lim.get('quota_usage', '?')}")
             except ApiHatasi:
                 pass
+            try:
+                for m in ig.son_paylasimlar(3):
+                    z = m.get("timestamp", "")[:16].replace("T", " ")
+                    ilk = ((m.get("caption") or "").strip().splitlines() or [""])[0][:70]
+                    ozet(f"- Son Instagram gönderisi ({z} UTC): {ilk}")
+            except ApiHatasi:
+                pass
             for s in gelecek[:3]:
                 m = ig.muzik_bul(s.get("muzik", ""))
                 isim = f"{m.get('title')} – {m.get('display_artist')}" if m else "bulunamadı (müziksiz paylaşılır)"

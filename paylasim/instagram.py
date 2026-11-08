@@ -189,13 +189,14 @@ class Instagram:
         v = self._get(f"{self.ig_id}/media", fields="id,caption,timestamp,permalink", limit=adet)
         return v.get("data", [])
 
-    def zaten_paylasilmis(self, aciklama: str, saat: int = 12) -> dict | None:
-        """Aynı açıklamayla son saatlerde paylaşılmış bir gönderi varsa döndürür."""
+    def zaten_paylasilmis(self, aciklama: str, saat: int = 24 * 60) -> dict | None:
+        """Aynı açıklamayla (ilk satırı aynı) yakın zamanda paylaşılmış bir gönderi varsa döndürür.
+        Her bölümün ilk satırı farklı olduğundan elle paylaşılmış bölümler de yakalanır."""
         ilk_satir = aciklama.strip().splitlines()[0].strip() if aciklama.strip() else ""
         if not ilk_satir:
             return None
         sinir = datetime.now(timezone.utc) - timedelta(hours=saat)
-        for m in self.son_paylasimlar():
+        for m in self.son_paylasimlar(50):
             try:
                 zaman = datetime.strptime(m.get("timestamp", ""), "%Y-%m-%dT%H:%M:%S%z")
             except ValueError:
