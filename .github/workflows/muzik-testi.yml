@@ -1,0 +1,34 @@
+name: Müzik testi
+
+# Instagram'da lisanslı müziğin hangi yöntemle eklenebildiğini dener. Hiçbir şey yayınlamaz.
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Denenecek slotun videosu (ör. 2026-11-09-1230)"
+        required: true
+      muzik:
+        description: "audio_id (boşsa slottaki parça)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Test
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          SLOT: ${{ inputs.slot }}
+          MUZIK_ID: ${{ inputs.muzik }}
+        run: python -m paylasim muziktest --slot "$SLOT" --muzik "$MUZIK_ID"

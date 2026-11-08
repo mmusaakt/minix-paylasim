@@ -413,10 +413,16 @@ def ana(argv=None) -> int:
     pk.add_argument("--kapaksiz", action="store_true")
     alt.add_parser("istatistik")
     alt.add_parser("katalog")
+    pm = alt.add_parser("muziktest")
+    pm.add_argument("--slot", required=True)
+    pm.add_argument("--muzik", default="")
     args = p.parse_args(argv)
     if args.komut == "katalog":
         from .katalog import katalog_olustur
         return katalog_olustur()
+    if args.komut == "muziktest":
+        from .muziktest import muzik_testi
+        return muzik_testi(args.slot, args.muzik or None)
     return {"paylas": paylas, "kontrol": kontrol, "kanal": kanal, "istatistik": istatistik}[args.komut](args)
 
 
