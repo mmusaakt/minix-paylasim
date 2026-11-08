@@ -165,6 +165,19 @@ def paylas(args) -> int:
     return 1 if hatalar else 0
 
 
+# Instagram'da şarkı ve efekt sesinin seviyesi (0–100); GitHub değişkenleriyle değiştirilebilir.
+VARSAYILAN_MUZIK_SES = 40
+VARSAYILAN_VIDEO_SES = 70
+
+
+def slot_muzigi(slot: dict) -> dict | None:
+    """Takvimde lisanslı kütüphaneden seçilmiş parça varsa onu döndürür."""
+    if slot.get("muzik_id"):
+        return {"audio_id": str(slot["muzik_id"]), "title": slot.get("muzik_baslik"),
+                "display_artist": slot.get("muzik_sanatci")}
+    return None
+
+
 def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: bool) -> list[str]:
     sid = slot["id"]
     ig = instagram_istemcisi()
@@ -180,10 +193,11 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
             return []
     muzik = None
     if os.environ.get("MUZIK", "acik").lower() not in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
-        muzik = ig.muzik_bul(slot.get("muzik", ""))
+        muzik = slot_muzigi(slot) or ig.muzik_bul(slot.get("muzik", ""))
     kid, kullanilan = ig.hazirla(
         video, slot["aciklama"], slot.get("kapak_ms"), muzik,
-        muzik_ses=int(os.environ.get("MUZIK_SES") or 35), video_ses=int(os.environ.get("VIDEO_SES") or 100),
+        muzik_ses=int(os.environ.get("MUZIK_SES") or VARSAYILAN_MUZIK_SES),
+        video_ses=int(os.environ.get("VIDEO_SES") or VARSAYILAN_VIDEO_SES),
         ses_adi=f"minix • {slot['baslik'].strip()}")
     muzik_metni = f"{kullanilan.get('title')} – {kullanilan.get('display_artist')}" if kullanilan else "yok"
     if deneme:
@@ -288,7 +302,7 @@ def kontrol(args) -> int:
             except ApiHatasi:
                 pass
             for s in gelecek[:3]:
-                m = ig.muzik_bul(s.get("muzik", ""))
+                m = slot_muzigi(s) or ig.muzik_bul(s.get("muzik", ""))
                 isim = f"{m.get('title')} – {m.get('display_artist')}" if m else "bulunamadı (müziksiz paylaşılır)"
                 ozet(f"- Müzik · {s['baslik']}: {isim}")
         except Exception as e:  # noqa: BLE001
@@ -398,7 +412,11 @@ def ana(argv=None) -> int:
     pk = alt.add_parser("kanal")
     pk.add_argument("--kapaksiz", action="store_true")
     alt.add_parser("istatistik")
+    alt.add_parser("katalog")
     args = p.parse_args(argv)
+    if args.komut == "katalog":
+        from .katalog import katalog_olustur
+        return katalog_olustur()
     return {"paylas": paylas, "kontrol": kontrol, "kanal": kanal, "istatistik": istatistik}[args.komut](args)
 
 

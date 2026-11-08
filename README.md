@@ -28,4 +28,7 @@ yayınlanmaz, YouTube'a gizli yüklenir.
 
 `META_TOKEN` · `YT_CLIENT_ID` · `YT_CLIENT_SECRET` · `YT_REFRESH_TOKEN` (isteğe bağlı: `IG_USER_ID`)
 
-Değişkenler (Variables, isteğe bağlı): `MUZIK` (`kapali`), `MUZIK_SES` (35), `VIDEO_SES` (100), `PLATFORMLAR`.
+Değişkenler (Variables, isteğe bağlı): `MUZIK` (`kapali`), `MUZIK_SES` (40), `VIDEO_SES` (70), `PLATFORMLAR`.
+
+Müzik: Instagram API'si yalnızca lisanslı kütüphane parçalarını veriyor. `Müzik kataloğu` işlemi kütüphaneyi tarayıp
+`muzik/katalog.json`'a yazar; her slotun parçası `takvim.json`'daki `muzik_id` alanında.

@@ -73,11 +73,22 @@ class Instagram:
         return self._get(self.ig_id, fields="id,username,followers_count,media_count")
 
     # ------------------------------------------------------------------ müzik
-    def muzik_ara(self, sorgu: str) -> list[dict]:
+    def muzik_ara(self, sorgu: str, sayfa: int = 1) -> list[dict]:
+        """Lisanslı müzik kütüphanesinde arar; sorgu boşsa trend parçaları döndürür."""
         assert self.ig_id
-        v = self._get("ig_audio", audio_type="music", user_id=self.ig_id, search_query=sorgu)
+        params = {"audio_type": "music", "user_id": self.ig_id}
+        if sorgu:
+            params["search_query"] = sorgu
+        v = self._get("ig_audio", **params)
         # Belgelere göre sonuçlar "audio" dizisinde gelir ("data" değil).
-        return v.get("audio") or v.get("data") or []
+        sonuc = list(v.get("audio") or v.get("data") or [])
+        for _ in range(sayfa - 1):
+            sonraki = (v.get("paging") or {}).get("next")
+            if not sonraki:
+                break
+            v = istek("GET", sonraki).json()
+            sonuc += v.get("audio") or v.get("data") or []
+        return sonuc
 
     def muzik_bul(self, muzik: str) -> dict | None:
         """'Şarkı Adı – Sanatçı' metnine en iyi uyan Instagram müziğini döndürür; yoksa None."""
