@@ -35,8 +35,7 @@ def ozet(satir: str) -> None:
     if yol:
         with open(yol, "a", encoding="utf-8") as f:
             f.write(satir + "\n")
-    else:
-        log("[özet]", satir)
+    log("[özet]", satir)  # günlükte de görünsün
 
 
 def simdi() -> datetime:

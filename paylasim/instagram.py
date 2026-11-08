@@ -76,7 +76,8 @@ class Instagram:
     def muzik_ara(self, sorgu: str) -> list[dict]:
         assert self.ig_id
         v = self._get("ig_audio", audio_type="music", user_id=self.ig_id, search_query=sorgu)
-        return v.get("data", [])
+        # Belgelere göre sonuçlar "audio" dizisinde gelir ("data" değil).
+        return v.get("audio") or v.get("data") or []
 
     def muzik_bul(self, muzik: str) -> dict | None:
         """'Şarkı Adı – Sanatçı' metnine en iyi uyan Instagram müziğini döndürür; yoksa None."""
