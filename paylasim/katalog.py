@@ -101,9 +101,13 @@ def katalog_olustur() -> int:
             analiz = False
         liste = KOK / "muzik" / "analiz_listesi.json"
         istenen = set(json.loads(liste.read_text(encoding="utf-8"))) if liste.exists() else None
+        sira = list(onizleme)
+        if istenen is not None:  # listede verilen sırayla, sadece listedekiler
+            sira = [a for a in json.loads(liste.read_text(encoding="utf-8")) if a in onizleme]
         if analiz:
-            for i, (aid, url) in enumerate(onizleme.items(), 1):
-                if parcalar[aid].get("ozellik") or (istenen is not None and aid not in istenen):
+            for i, aid in enumerate(sira, 1):
+                url = onizleme[aid]
+                if parcalar[aid].get("ozellik"):
                     continue
                 try:
                     parcalar[aid]["ozellik"] = ozellikler(url)
