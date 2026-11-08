@@ -1,6 +1,6 @@
 {
- "guncelleme": "2026-11-08T13:06+00:00",
- "sorgu_sayisi": 108,
+ "guncelleme": "2026-11-08T13:12+00:00",
+ "sorgu_sayisi": 168,
  "parcalar": {
   "961252022944392": {
    "baslik": "Sadece Fenerbahçe",
@@ -27,7 +27,8 @@
    "sure_sn": 234,
    "reklam_uygun": false,
    "sorgular": [
-    "(trend)"
+    "(trend)",
+    "arabesk"
    ]
   },
   "2547384362403055": {
@@ -99,7 +100,8 @@
    "sure_sn": 149,
    "reklam_uygun": false,
    "sorgular": [
-    "(trend)"
+    "(trend)",
+    "Hümeyra"
    ]
   },
   "1115857888092269": {
@@ -117,7 +119,8 @@
    "sure_sn": 165,
    "reklam_uygun": false,
    "sorgular": [
-    "(trend)"
+    "(trend)",
+    "Kıraç"
    ]
   },
   "1606262104294873": {
@@ -186,22 +189,12 @@
     "(trend)"
    ]
   },
-  "191791583688195": {
-   "baslik": "Passport",
-   "sanatci": "Sara Jaramillo",
-   "sure_sn": 151,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
-   ]
-  },
   "646196751261518": {
    "baslik": "Reflection (Reels Sound - Reflection)",
    "sanatci": "Sam Marshall",
    "sure_sn": 22,
    "reklam_uygun": null,
    "sorgular": [
-    "(trend)",
     "reflection"
    ]
   },
@@ -211,26 +204,7 @@
    "sure_sn": 144,
    "reklam_uygun": null,
    "sorgular": [
-    "(trend)",
     "heart"
-   ]
-  },
-  "8196916917049261": {
-   "baslik": "Legends In My Head",
-   "sanatci": "The Poison Oaks",
-   "sure_sn": 234,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
-   ]
-  },
-  "837061227803019": {
-   "baslik": "Good Morning Sun",
-   "sanatci": "Jonny Houlihan",
-   "sure_sn": 146,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
    ]
   },
   "1388161098514399": {
@@ -361,7 +335,9 @@
     "friends",
     "party",
     "aşk",
-    "sevgi"
+    "sevgi",
+    "Ajda Pekkan",
+    "Candan Erçetin"
    ]
   },
   "1256638451637432": {
@@ -594,7 +570,8 @@
     "home",
     "pop",
     "jazz",
-    "summer"
+    "summer",
+    "Athena"
    ]
   },
   "2007749439488316": {
@@ -638,7 +615,8 @@
     "violin",
     "cello",
     "motivational",
-    "piyano"
+    "piyano",
+    "Duman"
    ]
   },
   "975879893476442": {
@@ -1113,7 +1091,8 @@
     "success",
     "epic",
     "swing",
-    "busy"
+    "busy",
+    "Athena"
    ]
   },
   "1403284444689007": {
@@ -1224,7 +1203,8 @@
     "winter",
     "holiday",
     "family",
-    "clock"
+    "clock",
+    "bayram"
    ]
   },
   "1066877225925121": {
@@ -1428,7 +1408,8 @@
     "party",
     "celebration",
     "work",
-    "time"
+    "time",
+    "bayram"
    ]
   },
   "302055452405923": {
@@ -1490,7 +1471,8 @@
     "winter",
     "holiday",
     "kids",
-    "party"
+    "party",
+    "bayram"
    ]
   },
   "811408122543043": {
@@ -1503,7 +1485,8 @@
     "smile",
     "sunshine",
     "sunny",
-    "home"
+    "home",
+    "Duman"
    ]
   },
   "1511524456082021": {
@@ -1678,7 +1661,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "tender",
-    "guitar"
+    "guitar",
+    "Sıla"
    ]
   },
   "1009179166964923": {
@@ -1733,7 +1717,8 @@
    "sure_sn": 237,
    "reklam_uygun": null,
    "sorgular": [
-    "valentine"
+    "valentine",
+    "Sezen"
    ]
   },
   "1016943776416693": {
@@ -1891,7 +1876,8 @@
    "sorgular": [
     "happy",
     "playful",
-    "ukulele"
+    "ukulele",
+    "Duman"
    ]
   },
   "1057409882044849": {
@@ -1900,7 +1886,8 @@
    "sure_sn": 169,
    "reklam_uygun": null,
    "sorgular": [
-    "happy"
+    "happy",
+    "Yalın"
    ]
   },
   "676553584164254": {
@@ -2026,7 +2013,8 @@
     "snow",
     "holiday",
     "friends",
-    "celebration"
+    "celebration",
+    "bayram"
    ]
   },
   "1011939973829425": {
@@ -2321,7 +2309,8 @@
     "christmas",
     "holiday",
     "summer",
-    "party"
+    "party",
+    "bayram"
    ]
   },
   "999013767663569": {
@@ -2351,7 +2340,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "sunshine",
-    "funny"
+    "funny",
+    "Duman"
    ]
   },
   "692974534579513": {
@@ -2366,7 +2356,8 @@
     "upbeat",
     "bossa nova",
     "holiday",
-    "friends"
+    "friends",
+    "bayram"
    ]
   },
   "881565988138068": {
@@ -2447,7 +2438,8 @@
    "sure_sn": 141,
    "reklam_uygun": null,
    "sorgular": [
-    "sunshine"
+    "sunshine",
+    "Hümeyra"
    ]
   },
   "1507819277089239": {
@@ -2548,7 +2540,8 @@
    "sorgular": [
     "sunny",
     "quirky",
-    "new year"
+    "new year",
+    "Athena"
    ]
   },
   "392354088402489": {
@@ -2840,7 +2833,8 @@
    "sorgular": [
     "feel good",
     "coffee",
-    "bossa nova"
+    "bossa nova",
+    "Sıla"
    ]
   },
   "421348377170726": {
@@ -3009,7 +3003,8 @@
     "summer",
     "party",
     "celebration",
-    "work"
+    "work",
+    "Model"
    ]
   },
   "1362779189166314": {
@@ -3158,7 +3153,8 @@
     "lofi",
     "holiday",
     "time",
-    "huzur"
+    "huzur",
+    "bayram"
    ]
   },
   "622925966589454": {
@@ -3228,7 +3224,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "playful",
-    "mutlu"
+    "mutlu",
+    "Manifest"
    ]
   },
   "1540826030450846": {
@@ -3656,7 +3653,9 @@
     "guitar",
     "piano",
     "huzur",
-    "piyano"
+    "piyano",
+    "Sezen Aksu",
+    "Sezen"
    ]
   },
   "1681984019700492": {
@@ -3925,7 +3924,8 @@
     "rain",
     "winter",
     "holiday",
-    "autumn"
+    "autumn",
+    "bayram"
    ]
   },
   "1183861130553498": {
@@ -3940,7 +3940,8 @@
     "winter",
     "snow",
     "new year",
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "1834776351297778": {
@@ -4131,7 +4132,8 @@
    "sorgular": [
     "music box",
     "epic",
-    "hip hop"
+    "hip hop",
+    "Duman"
    ]
   },
   "646691936902863": {
@@ -4211,7 +4213,8 @@
     "new year",
     "holiday",
     "party",
-    "time"
+    "time",
+    "bayram"
    ]
   },
   "193842924859531": {
@@ -4222,7 +4225,8 @@
    "sorgular": [
     "bells",
     "new year",
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "322565551554019": {
@@ -4468,7 +4472,9 @@
     "chill",
     "night",
     "electronic",
-    "money"
+    "money",
+    "Model",
+    "Athena"
    ]
   },
   "1549844805388281": {
@@ -4823,7 +4829,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "dreamy",
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "1168932078782808": {
@@ -5372,7 +5379,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "rain",
-    "city"
+    "city",
+    "Duman"
    ]
   },
   "1576935387479845": {
@@ -5717,7 +5725,8 @@
    "sure_sn": 161,
    "reklam_uygun": null,
    "sorgular": [
-    "city"
+    "city",
+    "90'lar"
    ]
   },
   "1097279175274301": {
@@ -5935,7 +5944,9 @@
    "sure_sn": 270,
    "reklam_uygun": null,
    "sorgular": [
-    "inspirational"
+    "inspirational",
+    "Sezen Aksu",
+    "Sezen"
    ]
   },
   "1651039806442998": {
@@ -7195,7 +7206,8 @@
    "sure_sn": 202,
    "reklam_uygun": null,
    "sorgular": [
-    "memories"
+    "memories",
+    "Yalın"
    ]
   },
   "1226928310814160": {
@@ -7393,7 +7405,8 @@
    "sure_sn": 195,
    "reklam_uygun": null,
    "sorgular": [
-    "reflection"
+    "reflection",
+    "Duman"
    ]
   },
   "1444739239611336": {
@@ -7620,7 +7633,8 @@
    "sure_sn": 116,
    "reklam_uygun": null,
    "sorgular": [
-    "pop"
+    "pop",
+    "Mustafa Sandal"
    ]
   },
   "1905642733538802": {
@@ -8305,7 +8319,8 @@
    "sure_sn": 148,
    "reklam_uygun": null,
    "sorgular": [
-    "disco"
+    "disco",
+    "Tarkan"
    ]
   },
   "885981787901385": {
@@ -8341,7 +8356,9 @@
    "sure_sn": 177,
    "reklam_uygun": null,
    "sorgular": [
-    "disco"
+    "disco",
+    "Kenan Doğulu",
+    "Hadise"
    ]
   },
   "1089128231610320": {
@@ -8974,7 +8991,10 @@
    "reklam_uygun": null,
    "sorgular": [
     "new year",
-    "türkçe"
+    "türkçe",
+    "Tarkan",
+    "Türkçe pop",
+    "İstanbul"
    ]
   },
   "1004244204206724": {
@@ -9010,7 +9030,8 @@
    "sure_sn": 155,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "688875284948588": {
@@ -9019,7 +9040,8 @@
    "sure_sn": 168,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "1530388128384986": {
@@ -9028,7 +9050,8 @@
    "sure_sn": 146,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "839751875173902": {
@@ -9037,7 +9060,8 @@
    "sure_sn": 24,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "2595032297521317": {
@@ -9046,7 +9070,8 @@
    "sure_sn": 23,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "777750585091265": {
@@ -9055,7 +9080,8 @@
    "sure_sn": 19,
    "reklam_uygun": null,
    "sorgular": [
-    "holiday"
+    "holiday",
+    "bayram"
    ]
   },
   "254744998559329": {
@@ -9235,7 +9261,8 @@
    "sure_sn": 179,
    "reklam_uygun": null,
    "sorgular": [
-    "autumn"
+    "autumn",
+    "Simge"
    ]
   },
   "353485986552410": {
@@ -9488,7 +9515,8 @@
    "sure_sn": 152,
    "reklam_uygun": null,
    "sorgular": [
-    "friendship"
+    "friendship",
+    "Duman"
    ]
   },
   "1407211737277021": {
@@ -9578,6 +9606,7 @@
    "sure_sn": 131,
    "reklam_uygun": null,
    "sorgular": [
+    "(trend)",
     "party"
    ]
   },
@@ -9805,7 +9834,8 @@
    "sorgular": [
     "work",
     "office",
-    "busy"
+    "busy",
+    "Athena"
    ]
   },
   "775453565180480": {
@@ -10511,7 +10541,15 @@
    "sure_sn": 151,
    "reklam_uygun": null,
    "sorgular": [
-    "mutlu"
+    "mutlu",
+    "Sezen Aksu",
+    "Tarkan",
+    "Mabel Matiz",
+    "Hadise",
+    "Manifest",
+    "Sezen",
+    "Türkçe pop",
+    "İstanbul"
    ]
   },
   "793968266145087": {
@@ -10521,7 +10559,13 @@
    "reklam_uygun": null,
    "sorgular": [
     "mutlu",
-    "neşeli"
+    "neşeli",
+    "Mabel Matiz",
+    "Hadise",
+    "Manifest",
+    "Sezen",
+    "90'lar",
+    "düğün"
    ]
   },
   "921500047118751": {
@@ -10531,7 +10575,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "mutlu",
-    "huzur"
+    "huzur",
+    "Türkçe pop"
    ]
   },
   "1480430860008166": {
@@ -10567,7 +10612,8 @@
    "sure_sn": 105,
    "reklam_uygun": null,
    "sorgular": [
-    "huzur"
+    "huzur",
+    "Türkçe pop"
    ]
   },
   "254504446333649": {
@@ -10577,7 +10623,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "huzur",
-    "neşeli"
+    "neşeli",
+    "Yalın"
    ]
   },
   "555598323397477": {
@@ -10694,7 +10741,13 @@
    "sure_sn": 155,
    "reklam_uygun": null,
    "sorgular": [
-    "neşeli"
+    "neşeli",
+    "Sezen Aksu",
+    "Tarkan",
+    "Mabel Matiz",
+    "Nilüfer",
+    "Sezen",
+    "Candan Erçetin"
    ]
   },
   "334967000696723": {
@@ -10730,7 +10783,8 @@
    "sure_sn": 128,
    "reklam_uygun": null,
    "sorgular": [
-    "neşeli"
+    "neşeli",
+    "halay"
    ]
   },
   "1339877004854379": {
@@ -10739,7 +10793,8 @@
    "sure_sn": 62,
    "reklam_uygun": null,
    "sorgular": [
-    "neşeli"
+    "neşeli",
+    "Barış Manço"
    ]
   },
   "420496875230273": {
@@ -10892,7 +10947,9 @@
    "sure_sn": 132,
    "reklam_uygun": null,
    "sorgular": [
-    "türkçe"
+    "türkçe",
+    "Türkçe pop",
+    "İstanbul"
    ]
   },
   "1343098370370428": {
@@ -10910,7 +10967,1846 @@
    "sure_sn": 252,
    "reklam_uygun": null,
    "sorgular": [
-    "türkçe"
+    "türkçe",
+    "türkü",
+    "İstanbul"
+   ]
+  },
+  "1692090978122382": {
+   "baslik": "Here We Come A Wassailing",
+   "sanatci": "Global Genius",
+   "sure_sn": 139,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "1112904476241370": {
+   "baslik": "A Way Through",
+   "sanatci": "The Poison Oaks",
+   "sure_sn": 191,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "2288548518644538": {
+   "baslik": "It's A Bop",
+   "sanatci": "bbox",
+   "sure_sn": 59,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "3194618867507635": {
+   "baslik": "Moody",
+   "sanatci": "SIRMA",
+   "sure_sn": 188,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "1255021938307940": {
+   "baslik": "Aurora",
+   "sanatci": "Azam Ali, Loga Ramin Torkian",
+   "sure_sn": 181,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu",
+    "Müslüm Gürses",
+    "Sezen",
+    "Ceza",
+    "Türkçe pop",
+    "halay",
+    "İstanbul"
+   ]
+  },
+  "1095507091473045": {
+   "baslik": "Good Morning Remix (Dawn Beyer)",
+   "sanatci": "Sleeping Lion",
+   "sure_sn": 148,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu",
+    "Sezen"
+   ]
+  },
+  "1518819134839765": {
+   "baslik": "Bandolero",
+   "sanatci": "Carlos Murguía",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu",
+    "Barış Manço",
+    "Mabel Matiz",
+    "Hadise",
+    "Sezen"
+   ]
+  },
+  "2021243442027433": {
+   "baslik": "Nice (Instrumental)",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 111,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu"
+   ]
+  },
+  "596062960873023": {
+   "baslik": "Como Te Amo Yo",
+   "sanatci": "Kolektivo",
+   "sure_sn": 190,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu"
+   ]
+  },
+  "806963330392594": {
+   "baslik": "Beautiful Girls",
+   "sanatci": "Nick Gallant",
+   "sure_sn": 172,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen Aksu"
+   ]
+  },
+  "641264740306147": {
+   "baslik": "Tiempo",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 244,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan",
+    "Manifest"
+   ]
+  },
+  "3340305086199745": {
+   "baslik": "Dali",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 161,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan",
+    "Manifest"
+   ]
+  },
+  "744626673451524": {
+   "baslik": "Yalnızmışım Meğer",
+   "sanatci": "SIRMA",
+   "sure_sn": 231,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan",
+    "İstanbul"
+   ]
+  },
+  "940218566542537": {
+   "baslik": "El Bass",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 190,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan",
+    "Manifest"
+   ]
+  },
+  "614325052423196": {
+   "baslik": "Casino Caper",
+   "sanatci": "Global Genius",
+   "sure_sn": 161,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan"
+   ]
+  },
+  "945610686309286": {
+   "baslik": "Nomads",
+   "sanatci": "Dhruv Goel",
+   "sure_sn": 149,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Tarkan"
+   ]
+  },
+  "391643453121761": {
+   "baslik": "Puppet School",
+   "sanatci": "Global Genius",
+   "sure_sn": 150,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "1051022286028771": {
+   "baslik": "Lost Tribes (Instrumental)",
+   "sanatci": "Azam Ali",
+   "sure_sn": 199,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço",
+    "türkü"
+   ]
+  },
+  "1404312610977270": {
+   "baslik": "Dance Of The Swans",
+   "sanatci": "Mike Block",
+   "sure_sn": 175,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "3219124411680868": {
+   "baslik": "Moksha",
+   "sanatci": "Ross Lara",
+   "sure_sn": 269,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "1409961764249027": {
+   "baslik": "Shine",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 156,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "394116007845990": {
+   "baslik": "Hot Club de Paris (feat. Ramón Stagnaro)",
+   "sanatci": "Kolektivo",
+   "sure_sn": 170,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "446593850951013": {
+   "baslik": "Viver",
+   "sanatci": "Jasmine",
+   "sure_sn": 205,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço",
+    "Edis",
+    "Kayahan",
+    "Nilüfer"
+   ]
+  },
+  "2081212156099680": {
+   "baslik": "My World",
+   "sanatci": "LAVLO",
+   "sure_sn": 60,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Barış Manço"
+   ]
+  },
+  "355167224235792": {
+   "baslik": "Divino",
+   "sanatci": "Kolektivo",
+   "sure_sn": 263,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ajda Pekkan"
+   ]
+  },
+  "956282330847165": {
+   "baslik": "I Can Picture You",
+   "sanatci": "Bloom",
+   "sure_sn": 64,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ajda Pekkan"
+   ]
+  },
+  "170688130340793": {
+   "baslik": "The Elephant (feat. Yacouba Sissoko)",
+   "sanatci": "Jayme Stone (Producer)",
+   "sure_sn": 217,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ajda Pekkan"
+   ]
+  },
+  "736718192546126": {
+   "baslik": "Affluent Africa (Instrumental)",
+   "sanatci": "Yadi Camara",
+   "sure_sn": 190,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Teoman"
+   ]
+  },
+  "4016591241689672": {
+   "baslik": "Baila (feat. Pablo Watusi)",
+   "sanatci": "Gia Sky",
+   "sure_sn": 192,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Teoman"
+   ]
+  },
+  "1010300205196687": {
+   "baslik": "Making Moves",
+   "sanatci": "Jackson Whalan",
+   "sure_sn": 61,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "624153045900123": {
+   "baslik": "Okay (feat. d.higgs)",
+   "sanatci": "G7MBL3",
+   "sure_sn": 84,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "980215772965689": {
+   "baslik": "Smoke",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "739596606884017": {
+   "baslik": "Smoke 'em Out (feat. Drew Smithers, Josh Paul, Logan Todd, Spencer Thomson)",
+   "sanatci": "The K Club",
+   "sure_sn": 195,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "989325213083867": {
+   "baslik": "Foguette Solto (Instrumental)",
+   "sanatci": "Company Money",
+   "sure_sn": 143,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1070202782328321": {
+   "baslik": "Fog City Drip",
+   "sanatci": "Magnetic Sirens",
+   "sure_sn": 63,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "913285027579819": {
+   "baslik": "Foghorn (Reels Sound - Listicle)",
+   "sanatci": "Tucker Bryce",
+   "sure_sn": 19,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1290840325522561": {
+   "baslik": "Foguette Solto (feat. TyR3XX & Mc Framboesa)",
+   "sanatci": "Company Money",
+   "sure_sn": 143,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1036193945439673": {
+   "baslik": "Smokey Eye",
+   "sanatci": "Magnetic Sirens",
+   "sure_sn": 65,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "2991227727811560": {
+   "baslik": "Smoke One",
+   "sanatci": "Otis McDonald",
+   "sure_sn": 173,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "477100548452815": {
+   "baslik": "Smoke Em' If You Got Em'",
+   "sanatci": "Jonny Houlihan",
+   "sure_sn": 239,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1964992247539378": {
+   "baslik": "Fogo De Chao",
+   "sanatci": "Mark Rudin",
+   "sure_sn": 73,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "2173507173523676": {
+   "baslik": "Foggy Window",
+   "sanatci": "cloud cover",
+   "sure_sn": 57,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "568662669340529": {
+   "baslik": "Foghorn (Reels Sound - Photo Dump)",
+   "sanatci": "Tucker Bryce",
+   "sure_sn": 24,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1287473958450240": {
+   "baslik": "Smokey Treats (feat. Elliott Blaufuss, Jacquire King, Josh Paul, Logan Todd, Spencer Thomson)",
+   "sanatci": "The K Club",
+   "sure_sn": 131,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "387783919948735": {
+   "baslik": "Fogueira (feat. Heitor Branquinho)",
+   "sanatci": "Jaya Vitali",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1929257303833742": {
+   "baslik": "Smoke (Instrumental)",
+   "sanatci": "AirLands",
+   "sure_sn": 269,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Duman"
+   ]
+  },
+  "1317471185927032": {
+   "baslik": "Supersonic",
+   "sanatci": "bellabella",
+   "sure_sn": 145,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "2192287061137336": {
+   "baslik": "Boom (Reels Sound - Listicle)",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 21,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "1461777005779879": {
+   "baslik": "Transcend",
+   "sanatci": "NINI",
+   "sure_sn": 64,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "812685793986800": {
+   "baslik": "Wood And Stone",
+   "sanatci": "Symphonic Planet",
+   "sure_sn": 279,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla",
+    "90'lar"
+   ]
+  },
+  "322261532188390": {
+   "baslik": "Asuman (feat. Sinan Cem Eroğlu)",
+   "sanatci": "Azam Ali",
+   "sure_sn": 204,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "749796038706480": {
+   "baslik": "Huseyni Nakis",
+   "sanatci": "Mike Block (Producer)",
+   "sure_sn": 160,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "929270156149059": {
+   "baslik": "You're Good, You're Beautiful",
+   "sanatci": "Bryan Todd",
+   "sure_sn": 200,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "1153276916182315": {
+   "baslik": "Boi Na Roda (Instrumental)",
+   "sanatci": "Company Money",
+   "sure_sn": 180,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sıla"
+   ]
+  },
+  "315821023972649": {
+   "baslik": "Empire",
+   "sanatci": "Sam Marshall",
+   "sure_sn": 189,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kenan Doğulu",
+    "Kıraç"
+   ]
+  },
+  "3227534440795595": {
+   "baslik": "Un Beso",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 141,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kenan Doğulu"
+   ]
+  },
+  "563922014234187": {
+   "baslik": "Mala",
+   "sanatci": "Kolektivo",
+   "sure_sn": 160,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kenan Doğulu"
+   ]
+  },
+  "153693505359909": {
+   "baslik": "En El Amor",
+   "sanatci": "Kolektivo",
+   "sure_sn": 170,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kenan Doğulu"
+   ]
+  },
+  "339006244634459": {
+   "baslik": "Nasilda (feat. Nagme Yarkin)",
+   "sanatci": "Mike Block",
+   "sure_sn": 209,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz",
+    "Hadise",
+    "İstanbul"
+   ]
+  },
+  "311946654660917": {
+   "baslik": "Is This Love? (Instrumental)",
+   "sanatci": "Sugartapes",
+   "sure_sn": 146,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz"
+   ]
+  },
+  "1264279294642039": {
+   "baslik": "Where I'm From",
+   "sanatci": "Shuba",
+   "sure_sn": 172,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz",
+    "Yalın",
+    "Hadise",
+    "Yıldız Tilbe"
+   ]
+  },
+  "1027142506876855": {
+   "baslik": "Another Day",
+   "sanatci": "LAVLO",
+   "sure_sn": 61,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz"
+   ]
+  },
+  "586437170014537": {
+   "baslik": "Comuna 13",
+   "sanatci": "Ross Lara",
+   "sure_sn": 182,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz"
+   ]
+  },
+  "595910312145795": {
+   "baslik": "Is This Love?",
+   "sanatci": "Sugartapes",
+   "sure_sn": 146,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mabel Matiz"
+   ]
+  },
+  "622889908690386": {
+   "baslik": "Smuggler's Surf Cove",
+   "sanatci": "Dren McDonald",
+   "sure_sn": 210,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Zeki Müren"
+   ]
+  },
+  "494229613382119": {
+   "baslik": "Afrika (Instrumental)",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 227,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Müslüm Gürses"
+   ]
+  },
+  "1428592104211303": {
+   "baslik": "Kteer Tayebb",
+   "sanatci": "Azam Ali, Loga Ramin Torkian",
+   "sure_sn": 552,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Müslüm Gürses"
+   ]
+  },
+  "2360668604209487": {
+   "baslik": "Election Day",
+   "sanatci": "Nick Gallant",
+   "sure_sn": 143,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Edis"
+   ]
+  },
+  "517730708997312": {
+   "baslik": "Radio",
+   "sanatci": "Daramola",
+   "sure_sn": 175,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Edis"
+   ]
+  },
+  "1417197878984099": {
+   "baslik": "Get Down",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Simge",
+    "Hadise"
+   ]
+  },
+  "3535843219882619": {
+   "baslik": "Por Qué (Oh Why)",
+   "sanatci": "Emy Smith",
+   "sure_sn": 232,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Simge"
+   ]
+  },
+  "1545937276259878": {
+   "baslik": "Time Immemorial (feat. Ashley Jarmack)",
+   "sanatci": "Daria Novo",
+   "sure_sn": 194,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Gökhan Türkmen"
+   ]
+  },
+  "1068857198463368": {
+   "baslik": "Style (Instrumental)",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 110,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "1147766489613760": {
+   "baslik": "Chic & Sweet",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 136,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "2041402116082622": {
+   "baslik": "Real Life",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "1648815539871528": {
+   "baslik": "Fashion Icon (feat. Autumn Paige) (Instrumental)",
+   "sanatci": "ill Think in ink",
+   "sure_sn": 133,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "290874513433916": {
+   "baslik": "Camel",
+   "sanatci": "Trout Recording",
+   "sure_sn": 269,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "541489485587108": {
+   "baslik": "Glamour Walk",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 118,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "735410008358793": {
+   "baslik": "Fashion Week",
+   "sanatci": "Ella Joy Meir",
+   "sure_sn": 148,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "1115228880029100": {
+   "baslik": "Westside",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 140,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Model"
+   ]
+  },
+  "1438133440835310": {
+   "baslik": "Merci (Thank You) (Instrumental)",
+   "sanatci": "Afro Sound Machine",
+   "sure_sn": 217,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yalın"
+   ]
+  },
+  "5991485304268901": {
+   "baslik": "Midnight In Tokyo 10s",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 10,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yalın"
+   ]
+  },
+  "671308147619726": {
+   "baslik": "You Can Do It Too",
+   "sanatci": "Jennah Bell",
+   "sure_sn": 247,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yalın"
+   ]
+  },
+  "1017902739115303": {
+   "baslik": "Slow Motion",
+   "sanatci": "Kiri T",
+   "sure_sn": 154,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yalın"
+   ]
+  },
+  "389130718188553": {
+   "baslik": "Dervish (feat. Ehsan Matoori",
+   "sanatci": "Mike Block (Producer)",
+   "sure_sn": 155,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yalın",
+    "Murat Boz",
+    "Pinhani"
+   ]
+  },
+  "349991522078777": {
+   "baslik": "Vasona",
+   "sanatci": "Lyle Workman",
+   "sure_sn": 83,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Hadise"
+   ]
+  },
+  "480106054013539": {
+   "baslik": "La Da Di",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 151,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Hadise"
+   ]
+  },
+  "3313643642275560": {
+   "baslik": "Bam Bam Let's Fly",
+   "sanatci": "GEEZ",
+   "sure_sn": 175,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Hadise",
+    "Melike Şahin"
+   ]
+  },
+  "642225095462613": {
+   "baslik": "Armaani Remix (Arihan) (Instrumental)",
+   "sanatci": "Sleeping Lion",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Murat Boz"
+   ]
+  },
+  "302725063891544": {
+   "baslik": "Olvidate",
+   "sanatci": "Kolektivo",
+   "sure_sn": 182,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Murat Boz"
+   ]
+  },
+  "2158854871236705": {
+   "baslik": "To All My Girls (Instrumental)",
+   "sanatci": "Shanice",
+   "sure_sn": 164,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "1383932499216748": {
+   "baslik": "Blows",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 130,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "8319943151445527": {
+   "baslik": "Tatarara (Let Me Know)",
+   "sanatci": "Kolektivo",
+   "sure_sn": 123,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "1037964465285587": {
+   "baslik": "Strange Things",
+   "sanatci": "Company Money",
+   "sure_sn": 64,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "540214843312431": {
+   "baslik": "Manifest Jungle",
+   "sanatci": "Equanimous",
+   "sure_sn": 157,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "821935199844121": {
+   "baslik": "Manifest (feat. Brooklyn Basics)",
+   "sanatci": "Trout Recording",
+   "sure_sn": 113,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Manifest"
+   ]
+  },
+  "9498195570257877": {
+   "baslik": "Love Me",
+   "sanatci": "Company Money",
+   "sure_sn": 231,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Semicenk"
+   ]
+  },
+  "872923988151514": {
+   "baslik": "Lost In Candyland",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 118,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Semicenk"
+   ]
+  },
+  "1477001202431533": {
+   "baslik": "Whatever It Takes",
+   "sanatci": "The Sheen",
+   "sure_sn": 211,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Semicenk",
+    "Kayahan"
+   ]
+  },
+  "604321637187356": {
+   "baslik": "Runner",
+   "sanatci": "Black Box",
+   "sure_sn": 187,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Semicenk"
+   ]
+  },
+  "1030263145726523": {
+   "baslik": "Voices Of Victory (feat. Plum Soul)",
+   "sanatci": "Jumbo",
+   "sure_sn": 67,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "1951570361813593": {
+   "baslik": "March of the Toy Soldiers",
+   "sanatci": "Mike Block",
+   "sure_sn": 200,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç",
+    "türkü"
+   ]
+  },
+  "255992537058149": {
+   "baslik": "Silently Waiting",
+   "sanatci": "Marshall Watson",
+   "sure_sn": 229,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "907252617773606": {
+   "baslik": "Breaking News (feat. Poccex)",
+   "sanatci": "Jumbo",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "803868469816632": {
+   "baslik": "Pendulum",
+   "sanatci": "Apesaw",
+   "sure_sn": 281,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "256140930133248": {
+   "baslik": "We Rise In Peace",
+   "sanatci": "Mignon Geli",
+   "sure_sn": 210,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "1629473460916415": {
+   "baslik": "Fighter",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 139,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "1321574745845757": {
+   "baslik": "Euphoria",
+   "sanatci": "Symphonic Planet",
+   "sure_sn": 215,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "601093200265748": {
+   "baslik": "Contigo Me Gusta Más",
+   "sanatci": "Kolektivo",
+   "sure_sn": 150,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kıraç"
+   ]
+  },
+  "1873118796332841": {
+   "baslik": "Race The Rat",
+   "sanatci": "Global Genius",
+   "sure_sn": 126,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Cem Karaca"
+   ]
+  },
+  "495114918438567": {
+   "baslik": "Bulurum Bizi",
+   "sanatci": "SIRMA",
+   "sure_sn": 203,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Cem Karaca"
+   ]
+  },
+  "1347359892510006": {
+   "baslik": "Class Of '80",
+   "sanatci": "Ecklectic Music",
+   "sure_sn": 187,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Kayahan"
+   ]
+  },
+  "729074823965349": {
+   "baslik": "Lavender",
+   "sanatci": "SIMRIT",
+   "sure_sn": 243,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Nilüfer"
+   ]
+  },
+  "136431704380890": {
+   "baslik": "The Flowers",
+   "sanatci": "Jenny Conlee",
+   "sure_sn": 217,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Sezen"
+   ]
+  },
+  "1973912732738383": {
+   "baslik": "Morocco",
+   "sanatci": "Makana",
+   "sure_sn": 195,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "910163334615142": {
+   "baslik": "Seoul Me (Instrumental)",
+   "sanatci": "Sugartapes",
+   "sure_sn": 151,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "957987266746241": {
+   "baslik": "Lazy River (Instrumental)",
+   "sanatci": "Ruby Amanfu",
+   "sure_sn": 170,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "962120003568797": {
+   "baslik": "Show Me",
+   "sanatci": "NINI",
+   "sure_sn": 63,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "1234808081379484": {
+   "baslik": "En Somme Ne Uh (Instrumental)",
+   "sanatci": "Beni Haze",
+   "sure_sn": 167,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "887301639788220": {
+   "baslik": "Rondo Alla Turca Remix",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 109,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "693181922910715": {
+   "baslik": "Stories",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 144,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "1008845156750435": {
+   "baslik": "Take Me To Paris (Instrumental)",
+   "sanatci": "Jennah Bell",
+   "sure_sn": 222,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "448146382712918": {
+   "baslik": "Portland",
+   "sanatci": "Mani Draper",
+   "sure_sn": 184,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ceza"
+   ]
+  },
+  "680358900550051": {
+   "baslik": "Southern Rockstar (feat. JB Eckl)",
+   "sanatci": "Ecklectic Music",
+   "sure_sn": 257,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "2066615510241403": {
+   "baslik": "Ethiopia",
+   "sanatci": "Jayme Stone",
+   "sure_sn": 246,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "659863545963952": {
+   "baslik": "Taste (feat. Alan Avry)",
+   "sanatci": "d.higgs",
+   "sure_sn": 112,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1046015395803358": {
+   "baslik": "Grow For Me",
+   "sanatci": "Joelene Manuel",
+   "sure_sn": 264,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1593282984788835": {
+   "baslik": "Chopin Nocturne Op.9 No.2 Sunset Lofi",
+   "sanatci": "Sugartapes",
+   "sure_sn": 162,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1177348583200656": {
+   "baslik": "Look Of Love",
+   "sanatci": "5WEST",
+   "sure_sn": 199,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "874416264381929": {
+   "baslik": "5 Dollars (feat. DAHEE)",
+   "sanatci": "Jun Beck",
+   "sure_sn": 230,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1106804840896147": {
+   "baslik": "5:00 AM (Reels Sound - Before & After)",
+   "sanatci": "Kolektivo",
+   "sure_sn": 15,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1601326041241373": {
+   "baslik": "5:00 AM",
+   "sanatci": "Flow Loris",
+   "sure_sn": 115,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "24643649571984063": {
+   "baslik": "5am (Instrumental)",
+   "sanatci": "Flow Loris",
+   "sure_sn": 115,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "381183585875385": {
+   "baslik": "Athens",
+   "sanatci": "Jamie West-Oram",
+   "sure_sn": 190,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1094611194055189": {
+   "baslik": "5 AM",
+   "sanatci": "Kolektivo",
+   "sure_sn": 253,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Athena"
+   ]
+  },
+  "1323673098448295": {
+   "baslik": "My Youth, My Soul",
+   "sanatci": "SIRMA",
+   "sure_sn": 161,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Madrigal"
+   ]
+  },
+  "877458899468884": {
+   "baslik": "Kayaks and Margaritas",
+   "sanatci": "Nick Gallant",
+   "sure_sn": 120,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Madrigal"
+   ]
+  },
+  "2606554219417096": {
+   "baslik": "Darklit",
+   "sanatci": "Austin Woodward & Adam Griffith",
+   "sure_sn": 192,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Madrigal"
+   ]
+  },
+  "586286408808787": {
+   "baslik": "Tujhse Shuru (feat. Amber Malik)",
+   "sanatci": "Prateek Gandhi",
+   "sure_sn": 172,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Bengü"
+   ]
+  },
+  "312519049677820": {
+   "baslik": "Jarnana (feat. Sinan Cem Eroğlu)",
+   "sanatci": "Azam Ali",
+   "sure_sn": 195,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Bengü",
+    "halay"
+   ]
+  },
+  "1158774419496511": {
+   "baslik": "Spellbound",
+   "sanatci": "stereogully",
+   "sure_sn": 120,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "3211028105689199": {
+   "baslik": "Gece Gündüz (feat. Ahmet Yılmaz)",
+   "sanatci": "Mike Block",
+   "sure_sn": 195,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "1329767198568458": {
+   "baslik": "Garam Baraf (Instrumental)",
+   "sanatci": "Rapper Big Deal",
+   "sure_sn": 149,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "525728727003100": {
+   "baslik": "Good Morning Funk",
+   "sanatci": "F-MACK",
+   "sure_sn": 185,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "2038854687049934": {
+   "baslik": "Survivor Of Your Magic",
+   "sanatci": "Taimane",
+   "sure_sn": 166,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "1055133776790578": {
+   "baslik": "Diamond Drip",
+   "sanatci": "PiNKSHGRFNGR",
+   "sure_sn": 153,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "2461288514138994": {
+   "baslik": "Me & U",
+   "sanatci": "Kiri T",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "984085775998111": {
+   "baslik": "Deseo",
+   "sanatci": "Sara Jaramillo",
+   "sure_sn": 152,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "1886547135033586": {
+   "baslik": "Mayatma (Instrumental)",
+   "sanatci": "Azam Ali",
+   "sure_sn": 172,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Mustafa Sandal"
+   ]
+  },
+  "1049403093763665": {
+   "baslik": "Elysium",
+   "sanatci": "Tony Dark Eyes",
+   "sure_sn": 219,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yıldız Tilbe"
+   ]
+  },
+  "227413921723384": {
+   "baslik": "Llama, Llama",
+   "sanatci": "Kolektivo",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yıldız Tilbe",
+    "arabesk"
+   ]
+  },
+  "513034072924297": {
+   "baslik": "New Machine",
+   "sanatci": "Genticorum",
+   "sure_sn": 177,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yıldız Tilbe"
+   ]
+  },
+  "194435144513347": {
+   "baslik": "Rhythm Of The World",
+   "sanatci": "Global Genius",
+   "sure_sn": 162,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Yıldız Tilbe"
+   ]
+  },
+  "7430773493688473": {
+   "baslik": "Marrakesh",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 159,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Türkçe pop"
+   ]
+  },
+  "3050583615157177": {
+   "baslik": "Dragonfly",
+   "sanatci": "Symphonic Planet",
+   "sure_sn": 201,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Türkçe pop"
+   ]
+  },
+  "1314249549355763": {
+   "baslik": "Señorita",
+   "sanatci": "Ecklectic Music",
+   "sure_sn": 217,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Türkçe pop"
+   ]
+  },
+  "1406500831340843": {
+   "baslik": "In Waves",
+   "sanatci": "Auralux",
+   "sure_sn": 62,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Türkçe pop"
+   ]
+  },
+  "1214305965663814": {
+   "baslik": "Debussy Clair de Lune",
+   "sanatci": "Hugh Sung",
+   "sure_sn": 291,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "1062901872556581": {
+   "baslik": "Fasaane (Instrumental)",
+   "sanatci": "Derawat",
+   "sure_sn": 144,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "2277269892522332": {
+   "baslik": "Leviathan",
+   "sanatci": "Dhruv Goel",
+   "sure_sn": 154,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "234768217787258": {
+   "baslik": "Chopin Waltz No. 5 in Ab Major",
+   "sanatci": "Hugh Sung",
+   "sure_sn": 255,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "1965981556925251": {
+   "baslik": "Schubert Quintet",
+   "sanatci": "Mike Block",
+   "sure_sn": 205,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "481035606948086": {
+   "baslik": "Kindred Spirits",
+   "sanatci": "Lyle Workman",
+   "sure_sn": 242,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "715976962172240": {
+   "baslik": "Dar To'",
+   "sanatci": "Mechi Pieretti",
+   "sure_sn": 171,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "2395674037388487": {
+   "baslik": "Music Box Memory",
+   "sanatci": "Global Genius",
+   "sure_sn": 142,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "325284018277910": {
+   "baslik": "Hicaz Sirto",
+   "sanatci": "Mike Block (Producer)",
+   "sure_sn": 295,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "1656098875010186": {
+   "baslik": "Arabesque",
+   "sanatci": "Loga Ramin Torkian",
+   "sure_sn": 170,
+   "reklam_uygun": null,
+   "sorgular": [
+    "arabesk"
+   ]
+  },
+  "382714362656666": {
+   "baslik": "Sari Gelin",
+   "sanatci": "Mike Block",
+   "sure_sn": 278,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü",
+    "İstanbul"
+   ]
+  },
+  "2438392522866966": {
+   "baslik": "Garden Of Love",
+   "sanatci": "Sinan Cem Eroğlu & Azam Ali",
+   "sure_sn": 187,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü",
+    "İstanbul"
+   ]
+  },
+  "542440871593391": {
+   "baslik": "Hamza",
+   "sanatci": "Azam Ali",
+   "sure_sn": 195,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü"
+   ]
+  },
+  "291145420250021": {
+   "baslik": "Brainwaves",
+   "sanatci": "Sugartapes",
+   "sure_sn": 144,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü"
+   ]
+  },
+  "2536578916631704": {
+   "baslik": "Istanbul Sunset (feat. Sinan Cem Eroğlu)",
+   "sanatci": "Loga Ramin Torkian",
+   "sure_sn": 148,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü",
+    "İstanbul"
+   ]
+  },
+  "623269538527015": {
+   "baslik": "Ey Yare Ma",
+   "sanatci": "Kaveh Sarvarian",
+   "sure_sn": 281,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü"
+   ]
+  },
+  "3290758384559161": {
+   "baslik": "Kismet",
+   "sanatci": "Dhruv Goel",
+   "sure_sn": 127,
+   "reklam_uygun": null,
+   "sorgular": [
+    "türkü"
+   ]
+  },
+  "1092394746336029": {
+   "baslik": "End Of A Season (Instrumental)",
+   "sanatci": "Azam Ali",
+   "sure_sn": 175,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Anadolu rock"
+   ]
+  },
+  "633521140501547": {
+   "baslik": "Ana We Enta",
+   "sanatci": "Hadi Eldebek, Mike Block",
+   "sure_sn": 189,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Anadolu rock"
+   ]
+  },
+  "4650417888346814": {
+   "baslik": "Blue Danube",
+   "sanatci": "Mike Block",
+   "sure_sn": 213,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Anadolu rock"
+   ]
+  },
+  "1265802913911788": {
+   "baslik": "Le Moulin De Bristol (feat. Seamus Egan)",
+   "sanatci": "Yann Falquet",
+   "sure_sn": 176,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "1146019905501527": {
+   "baslik": "Dif",
+   "sanatci": "Mike Block (Producer)",
+   "sure_sn": 190,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "2660045577616284": {
+   "baslik": "Mi Fresita (feat. Barbasauce)",
+   "sanatci": "Neko Fuzz",
+   "sure_sn": 199,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "708228556576747": {
+   "baslik": "Golden Touch",
+   "sanatci": "The Sheen",
+   "sure_sn": 242,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "672409740985213": {
+   "baslik": "Champion",
+   "sanatci": "Adam Griffith",
+   "sure_sn": 141,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "495118832093885": {
+   "baslik": "In My Zone",
+   "sanatci": "424KP",
+   "sure_sn": 141,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "1059203621794087": {
+   "baslik": "High School Crush",
+   "sanatci": "TrackTribe",
+   "sure_sn": 62,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "913144029453173": {
+   "baslik": "Dulces Besos In My Head Remix (Benjamin Tucker, Chela Rivas) (Instrumental)",
+   "sanatci": "LauraG",
+   "sure_sn": 199,
+   "reklam_uygun": null,
+   "sorgular": [
+    "yaz şarkısı"
+   ]
+  },
+  "548879287364703": {
+   "baslik": "Special Thing",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 118,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "600554652272434": {
+   "baslik": "DaDaDa",
+   "sanatci": "Company Money",
+   "sure_sn": 141,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "961236788521828": {
+   "baslik": "Wedding Day (Instrumental)",
+   "sanatci": "Jonny Houlihan",
+   "sure_sn": 262,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "836810444487050": {
+   "baslik": "Ring Ring",
+   "sanatci": "Chela Rivas",
+   "sure_sn": 126,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "203005184279187": {
+   "baslik": "Çîrokbêjê Xweş",
+   "sanatci": "Kaveh Sarvarian",
+   "sure_sn": 202,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "324094749025269": {
+   "baslik": "Spiral",
+   "sanatci": "Jeff McIlwain",
+   "sure_sn": 187,
+   "reklam_uygun": null,
+   "sorgular": [
+    "düğün"
+   ]
+  },
+  "1124749654058979": {
+   "baslik": "With Me",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 138,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "656593546417181": {
+   "baslik": "Keep Basking",
+   "sanatci": "Agent 23",
+   "sure_sn": 174,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "1481058348685876": {
+   "baslik": "Yildiz Aksam",
+   "sanatci": "Mike Block",
+   "sure_sn": 259,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "1380859786668949": {
+   "baslik": "Are You Serious (Reels Sound - Photo Dump)",
+   "sanatci": "POTG",
+   "sure_sn": 15,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "928233038274848": {
+   "baslik": "The Last Pharaoh",
+   "sanatci": "Symphonic Planet",
+   "sure_sn": 207,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "2173805929555185": {
+   "baslik": "Nikriz Longa",
+   "sanatci": "Mike Block (Producer)",
+   "sure_sn": 281,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "2417641028513022": {
+   "baslik": "Ince Giyerim Ince",
+   "sanatci": "Mike Block",
+   "sure_sn": 202,
+   "reklam_uygun": null,
+   "sorgular": [
+    "halay"
+   ]
+  },
+  "732596883977972": {
+   "baslik": "Piano Sketch #5",
+   "sanatci": "Brent Bourgeois",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "İstanbul"
+   ]
+  },
+  "632211567750510": {
+   "baslik": "Istanbul, Gate To Prosperity (feat. The WonderTwins)",
+   "sanatci": "Charlie Peacock",
+   "sure_sn": 250,
+   "reklam_uygun": null,
+   "sorgular": [
+    "İstanbul"
    ]
   }
  }
