@@ -1,5 +1,5 @@
 {
- "guncelleme": "2026-11-08T13:12+00:00",
+ "guncelleme": "2026-11-08T13:20+00:00",
  "sorgu_sayisi": 168,
  "parcalar": {
   "961252022944392": {
@@ -227,7 +227,18 @@
     "work",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "F major",
+    "ton_guven": 0.67,
+    "enerji_db": -16.1,
+    "dinamik_db": 16.5,
+    "parlaklik_hz": 1935,
+    "vurmali_oran": 0.21,
+    "nota_yogunlugu": 5.18,
+    "onizleme_sn": 60.0
+   }
   },
   "2301778509958269": {
    "baslik": "Let Me Love You (feat. Ariza)",
@@ -243,7 +254,18 @@
     "pop",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "Eb major",
+    "ton_guven": 0.83,
+    "enerji_db": -18.5,
+    "dinamik_db": 13.3,
+    "parlaklik_hz": 1942,
+    "vurmali_oran": 0.19,
+    "nota_yogunlugu": 3.53,
+    "onizleme_sn": 60.0
+   }
   },
   "823145229909724": {
    "baslik": "Maya Maya (Instrumental)",
@@ -312,7 +334,18 @@
     "autumn",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 103.4,
+    "ton": "A major",
+    "ton_guven": 0.78,
+    "enerji_db": -15.3,
+    "dinamik_db": 5.0,
+    "parlaklik_hz": 1407,
+    "vurmali_oran": 0.11,
+    "nota_yogunlugu": 2.92,
+    "onizleme_sn": 60.0
+   }
   },
   "667025948686455": {
    "baslik": "Colors (Instrumental)",
@@ -388,7 +421,18 @@
     "kids",
     "sevgi",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 107.7,
+    "ton": "D major",
+    "ton_guven": 0.67,
+    "enerji_db": -13.3,
+    "dinamik_db": 5.1,
+    "parlaklik_hz": 586,
+    "vurmali_oran": 0.03,
+    "nota_yogunlugu": 4.18,
+    "onizleme_sn": 60.0
+   }
   },
   "1716416006230991": {
    "baslik": "Love",
@@ -400,7 +444,18 @@
     "romance",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 95.7,
+    "ton": "Bb major",
+    "ton_guven": 0.8,
+    "enerji_db": -16.2,
+    "dinamik_db": 10.3,
+    "parlaklik_hz": 944,
+    "vurmali_oran": 0.13,
+    "nota_yogunlugu": 4.55,
+    "onizleme_sn": 60.0
+   }
   },
   "258706708718711": {
    "baslik": "Love",
@@ -420,7 +475,18 @@
     "love",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 161.5,
+    "ton": "C major",
+    "ton_guven": 0.85,
+    "enerji_db": -18.3,
+    "dinamik_db": 16.2,
+    "parlaklik_hz": 2114,
+    "vurmali_oran": 0.19,
+    "nota_yogunlugu": 3.58,
+    "onizleme_sn": 50.2
+   }
   },
   "1368825558691650": {
    "baslik": "Lovely Life",
@@ -432,7 +498,18 @@
     "romance",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 107.7,
+    "ton": "Eb major",
+    "ton_guven": 0.74,
+    "enerji_db": -18.1,
+    "dinamik_db": 13.9,
+    "parlaklik_hz": 1203,
+    "vurmali_oran": 0.04,
+    "nota_yogunlugu": 5.13,
+    "onizleme_sn": 57.3
+   }
   },
   "1418770625449048": {
    "baslik": "Love Is Like The Wind",
@@ -513,7 +590,18 @@
     "love",
     "aşk",
     "sevgi"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 99.4,
+    "ton": "Eb major",
+    "ton_guven": 0.74,
+    "enerji_db": -14.6,
+    "dinamik_db": 11.4,
+    "parlaklik_hz": 1514,
+    "vurmali_oran": 0.23,
+    "nota_yogunlugu": 3.42,
+    "onizleme_sn": 60.0
+   }
   },
   "1201635935516260": {
    "baslik": "Love Me",
@@ -651,7 +739,18 @@
     "adventure",
     "winter",
     "snow"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 136.0,
+    "ton": "C major",
+    "ton_guven": 0.93,
+    "enerji_db": -16.9,
+    "dinamik_db": 4.7,
+    "parlaklik_hz": 1697,
+    "vurmali_oran": 0.07,
+    "nota_yogunlugu": 1.62,
+    "onizleme_sn": 60.0
+   }
   },
   "522994303350415": {
    "baslik": "Hey Baby (Your Lullaby Song) (Instrumental)",
@@ -710,8 +809,7 @@
    "sure_sn": 153,
    "reklam_uygun": null,
    "sorgular": [
-    "romance",
-    "new year"
+    "romance"
    ]
   },
   "1230234233801424": {
@@ -830,7 +928,18 @@
     "work",
     "time",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 49.7,
+    "ton": "D minor",
+    "ton_guven": 0.32,
+    "enerji_db": -16.1,
+    "dinamik_db": 14.1,
+    "parlaklik_hz": 741,
+    "vurmali_oran": 0.38,
+    "nota_yogunlugu": 2.27,
+    "onizleme_sn": 60.0
+   }
   },
   "2410807962410879": {
    "baslik": "Why Not Today",
@@ -935,7 +1044,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "heart"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 92.3,
+    "ton": "C minor",
+    "ton_guven": 0.83,
+    "enerji_db": -16.5,
+    "dinamik_db": 9.4,
+    "parlaklik_hz": 1568,
+    "vurmali_oran": 0.26,
+    "nota_yogunlugu": 4.0,
+    "onizleme_sn": 60.0
+   }
   },
   "1159616156174158": {
    "baslik": "Heart & Soul",
@@ -1067,7 +1187,18 @@
     "work",
     "time",
     "umut"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "C major",
+    "ton_guven": 0.81,
+    "enerji_db": -18.1,
+    "dinamik_db": 11.3,
+    "parlaklik_hz": 1934,
+    "vurmali_oran": 0.15,
+    "nota_yogunlugu": 3.95,
+    "onizleme_sn": 60.0
+   }
   },
   "1943538916453660": {
    "baslik": "We Belong Together (feat. Andy Leftwich)",
@@ -1093,7 +1224,18 @@
     "swing",
     "busy",
     "Athena"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 152.0,
+    "ton": "G major",
+    "ton_guven": 0.82,
+    "enerji_db": -21.1,
+    "dinamik_db": 8.4,
+    "parlaklik_hz": 2529,
+    "vurmali_oran": 0.29,
+    "nota_yogunlugu": 3.43,
+    "onizleme_sn": 60.0
+   }
   },
   "1403284444689007": {
    "baslik": "Good Time (feat. Lowen) (Instrumental)",
@@ -1205,7 +1347,18 @@
     "family",
     "clock",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 152.0,
+    "ton": "C major",
+    "ton_guven": 0.71,
+    "enerji_db": -16.2,
+    "dinamik_db": 9.0,
+    "parlaklik_hz": 1212,
+    "vurmali_oran": 0.12,
+    "nota_yogunlugu": 4.67,
+    "onizleme_sn": 52.9
+   }
   },
   "1066877225925121": {
    "baslik": "Way To Go",
@@ -1410,7 +1563,18 @@
     "work",
     "time",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 107.7,
+    "ton": "Ab major",
+    "ton_guven": 0.63,
+    "enerji_db": -16.6,
+    "dinamik_db": 15.6,
+    "parlaklik_hz": 2073,
+    "vurmali_oran": 0.39,
+    "nota_yogunlugu": 5.15,
+    "onizleme_sn": 60.0
+   }
   },
   "302055452405923": {
    "baslik": "Me Gusta (Instrumental)",
@@ -1487,7 +1651,18 @@
     "sunny",
     "home",
     "Duman"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "A major",
+    "ton_guven": 0.88,
+    "enerji_db": -17.3,
+    "dinamik_db": 8.8,
+    "parlaklik_hz": 2212,
+    "vurmali_oran": 0.23,
+    "nota_yogunlugu": 3.28,
+    "onizleme_sn": 60.0
+   }
   },
   "1511524456082021": {
    "baslik": "Sweet",
@@ -1878,7 +2053,18 @@
     "playful",
     "ukulele",
     "Duman"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "Eb major",
+    "ton_guven": 0.83,
+    "enerji_db": -17.4,
+    "dinamik_db": 11.7,
+    "parlaklik_hz": 1407,
+    "vurmali_oran": 0.07,
+    "nota_yogunlugu": 4.53,
+    "onizleme_sn": 60.0
+   }
   },
   "1057409882044849": {
    "baslik": "Happy Go Lucky",
@@ -2015,7 +2201,18 @@
     "friends",
     "celebration",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 143.6,
+    "ton": "B major",
+    "ton_guven": 0.69,
+    "enerji_db": -15.9,
+    "dinamik_db": 5.6,
+    "parlaklik_hz": 1204,
+    "vurmali_oran": 0.14,
+    "nota_yogunlugu": 4.35,
+    "onizleme_sn": 60.0
+   }
   },
   "1011939973829425": {
    "baslik": "A Big Mess",
@@ -2046,7 +2243,8 @@
    "reklam_uygun": null,
    "sorgular": [
     "joy",
-    "adventure"
+    "adventure",
+    "90'lar"
    ]
   },
   "986790718492294": {
@@ -2230,7 +2428,18 @@
     "bossa nova",
     "new year",
     "work"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 161.5,
+    "ton": "C major",
+    "ton_guven": 0.76,
+    "enerji_db": -24.0,
+    "dinamik_db": 14.0,
+    "parlaklik_hz": 1894,
+    "vurmali_oran": 0.24,
+    "nota_yogunlugu": 3.81,
+    "onizleme_sn": 48.0
+   }
   },
   "1032389999041500": {
    "baslik": "Smile",
@@ -2311,7 +2520,18 @@
     "summer",
     "party",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 129.2,
+    "ton": "Bb minor",
+    "ton_guven": 0.62,
+    "enerji_db": -14.0,
+    "dinamik_db": 7.6,
+    "parlaklik_hz": 1702,
+    "vurmali_oran": 0.22,
+    "nota_yogunlugu": 6.38,
+    "onizleme_sn": 60.0
+   }
   },
   "999013767663569": {
    "baslik": "Soulful Birthday",
@@ -2368,6 +2588,7 @@
    "sorgular": [
     "sunshine",
     "sunny",
+    "good vibes",
     "feel good",
     "soft piano",
     "lofi",
@@ -2728,7 +2949,6 @@
    "sure_sn": 56,
    "reklam_uygun": null,
    "sorgular": [
-    "good vibes",
     "ambient",
     "indie"
    ]
@@ -2739,19 +2959,20 @@
    "sure_sn": 129,
    "reklam_uygun": null,
    "sorgular": [
-    "good vibes",
     "feel good",
     "inspirational"
-   ]
-  },
-  "1020795546972533": {
-   "baslik": "Soft Saturday",
-   "sanatci": "Sbvce",
-   "sure_sn": 68,
-   "reklam_uygun": null,
-   "sorgular": [
-    "good vibes"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 95.7,
+    "ton": "F# major",
+    "ton_guven": 0.76,
+    "enerji_db": -16.0,
+    "dinamik_db": 9.2,
+    "parlaklik_hz": 1500,
+    "vurmali_oran": 0.17,
+    "nota_yogunlugu": 3.88,
+    "onizleme_sn": 60.0
+   }
   },
   "497518643975940": {
    "baslik": "We Fly High",
@@ -2759,12 +2980,22 @@
    "sure_sn": 161,
    "reklam_uygun": null,
    "sorgular": [
-    "good vibes",
     "hope",
     "adventure",
     "clock",
     "umut"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "G major",
+    "ton_guven": 0.8,
+    "enerji_db": -20.1,
+    "dinamik_db": 17.8,
+    "parlaklik_hz": 1751,
+    "vurmali_oran": 0.23,
+    "nota_yogunlugu": 2.98,
+    "onizleme_sn": 60.0
+   }
   },
   "4156242777853896": {
    "baslik": "Coastline",
@@ -2772,7 +3003,6 @@
    "sure_sn": 65,
    "reklam_uygun": null,
    "sorgular": [
-    "good vibes",
     "cinematic"
    ]
   },
@@ -2784,7 +3014,18 @@
    "sorgular": [
     "good vibes",
     "positive"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "Bb minor",
+    "ton_guven": 0.88,
+    "enerji_db": -15.6,
+    "dinamik_db": 6.5,
+    "parlaklik_hz": 1405,
+    "vurmali_oran": 0.1,
+    "nota_yogunlugu": 4.23,
+    "onizleme_sn": 60.0
+   }
   },
   "2477944699150252": {
    "baslik": "Peaceful Piano",
@@ -2807,7 +3048,18 @@
     "jazz",
     "autumn",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 129.2,
+    "ton": "G major",
+    "ton_guven": 0.76,
+    "enerji_db": -22.4,
+    "dinamik_db": 10.8,
+    "parlaklik_hz": 1149,
+    "vurmali_oran": 0.03,
+    "nota_yogunlugu": 0.6,
+    "onizleme_sn": 60.0
+   }
   },
   "920231970522157": {
    "baslik": "Open Air",
@@ -2985,7 +3237,18 @@
     "summer",
     "work",
     "time"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "A minor",
+    "ton_guven": 0.82,
+    "enerji_db": -15.9,
+    "dinamik_db": 9.7,
+    "parlaklik_hz": 1462,
+    "vurmali_oran": 0.23,
+    "nota_yogunlugu": 3.45,
+    "onizleme_sn": 60.0
+   }
   },
   "1418611098781784": {
    "baslik": "Too Cool",
@@ -3005,7 +3268,18 @@
     "celebration",
     "work",
     "Model"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 129.2,
+    "ton": "A minor",
+    "ton_guven": 0.72,
+    "enerji_db": -17.9,
+    "dinamik_db": 23.1,
+    "parlaklik_hz": 2317,
+    "vurmali_oran": 0.27,
+    "nota_yogunlugu": 5.4,
+    "onizleme_sn": 60.0
+   }
   },
   "1362779189166314": {
    "baslik": "Funky Junk",
@@ -3656,7 +3930,18 @@
     "piyano",
     "Sezen Aksu",
     "Sezen"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 129.2,
+    "ton": "Ab major",
+    "ton_guven": 0.87,
+    "enerji_db": -21.7,
+    "dinamik_db": 9.3,
+    "parlaklik_hz": 654,
+    "vurmali_oran": 0.02,
+    "nota_yogunlugu": 2.43,
+    "onizleme_sn": 60.0
+   }
   },
   "1681984019700492": {
    "baslik": "Feeling Good",
@@ -3746,7 +4031,18 @@
     "winter",
     "family",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "C major",
+    "ton_guven": 0.88,
+    "enerji_db": -18.2,
+    "dinamik_db": 9.1,
+    "parlaklik_hz": 1306,
+    "vurmali_oran": 0.11,
+    "nota_yogunlugu": 3.48,
+    "onizleme_sn": 60.0
+   }
   },
   "412971409445783": {
    "baslik": "Vivaldi’s Winter 1",
@@ -3769,7 +4065,18 @@
     "money",
     "time",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 136.0,
+    "ton": "F# major",
+    "ton_guven": 0.33,
+    "enerji_db": -26.9,
+    "dinamik_db": 16.8,
+    "parlaklik_hz": 1223,
+    "vurmali_oran": 0.07,
+    "nota_yogunlugu": 2.88,
+    "onizleme_sn": 60.0
+   }
   },
   "1337624016597307": {
    "baslik": "Piano for Brian",
@@ -3830,7 +4137,18 @@
    "sorgular": [
     "piano",
     "piyano"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 143.6,
+    "ton": "D minor",
+    "ton_guven": 0.74,
+    "enerji_db": -19.3,
+    "dinamik_db": 6.6,
+    "parlaklik_hz": 694,
+    "vurmali_oran": 0.02,
+    "nota_yogunlugu": 2.82,
+    "onizleme_sn": 60.0
+   }
   },
   "1065249204386881": {
    "baslik": "Piano For A Rainy Day",
@@ -3942,7 +4260,18 @@
     "new year",
     "holiday",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "B major",
+    "ton_guven": 0.86,
+    "enerji_db": -23.3,
+    "dinamik_db": 12.6,
+    "parlaklik_hz": 1434,
+    "vurmali_oran": 0.04,
+    "nota_yogunlugu": 2.03,
+    "onizleme_sn": 60.0
+   }
   },
   "1834776351297778": {
    "baslik": "Adore You",
@@ -4215,7 +4544,18 @@
     "party",
     "time",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "Eb major",
+    "ton_guven": 0.44,
+    "enerji_db": -17.0,
+    "dinamik_db": 8.4,
+    "parlaklik_hz": 2704,
+    "vurmali_oran": 0.26,
+    "nota_yogunlugu": 5.77,
+    "onizleme_sn": 60.0
+   }
   },
   "193842924859531": {
    "baslik": "Holiday Bells",
@@ -4702,7 +5042,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "peaceful"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 152.0,
+    "ton": "A major",
+    "ton_guven": 0.78,
+    "enerji_db": -15.8,
+    "dinamik_db": 11.9,
+    "parlaklik_hz": 1432,
+    "vurmali_oran": 0.33,
+    "nota_yogunlugu": 3.05,
+    "onizleme_sn": 60.0
+   }
   },
   "770161655994979": {
    "baslik": "Glow Up (Instrumental)",
@@ -4831,7 +5182,18 @@
     "dreamy",
     "holiday",
     "bayram"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "E major",
+    "ton_guven": 0.86,
+    "enerji_db": -21.3,
+    "dinamik_db": 11.8,
+    "parlaklik_hz": 1655,
+    "vurmali_oran": 0.21,
+    "nota_yogunlugu": 3.03,
+    "onizleme_sn": 60.0
+   }
   },
   "1168932078782808": {
    "baslik": "Lost In The Lights (Instrumental)",
@@ -5367,6 +5729,7 @@
    "sure_sn": 137,
    "reklam_uygun": null,
    "sorgular": [
+    "good vibes",
     "rain",
     "night",
     "funk"
@@ -5688,6 +6051,7 @@
    "sure_sn": 129,
    "reklam_uygun": null,
    "sorgular": [
+    "good vibes",
     "city",
     "duygusal"
    ]
@@ -5725,8 +6089,7 @@
    "sure_sn": 161,
    "reklam_uygun": null,
    "sorgular": [
-    "city",
-    "90'lar"
+    "city"
    ]
   },
   "1097279175274301": {
@@ -5936,7 +6299,18 @@
     "uplifting",
     "journey",
     "aşk"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "A major",
+    "ton_guven": 0.87,
+    "enerji_db": -19.9,
+    "dinamik_db": 11.0,
+    "parlaklik_hz": 736,
+    "vurmali_oran": 0.29,
+    "nota_yogunlugu": 2.77,
+    "onizleme_sn": 60.0
+   }
   },
   "1032148537422378": {
    "baslik": "Endless Hope",
@@ -6024,7 +6398,18 @@
     "motivational",
     "success",
     "dream"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "C major",
+    "ton_guven": 0.64,
+    "enerji_db": -15.0,
+    "dinamik_db": 11.7,
+    "parlaklik_hz": 1648,
+    "vurmali_oran": 0.18,
+    "nota_yogunlugu": 4.18,
+    "onizleme_sn": 60.0
+   }
   },
   "2080098105706052": {
    "baslik": "Motivational Funk",
@@ -6155,7 +6540,18 @@
    "sorgular": [
     "hope",
     "umut"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "C major",
+    "ton_guven": 0.73,
+    "enerji_db": -19.5,
+    "dinamik_db": 12.6,
+    "parlaklik_hz": 973,
+    "vurmali_oran": 0.02,
+    "nota_yogunlugu": 3.08,
+    "onizleme_sn": 60.0
+   }
   },
   "984456724611827": {
    "baslik": "Hope Begins",
@@ -6205,7 +6601,18 @@
    "sorgular": [
     "hope",
     "umut"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "Ab major",
+    "ton_guven": 0.86,
+    "enerji_db": -15.8,
+    "dinamik_db": 4.6,
+    "parlaklik_hz": 1887,
+    "vurmali_oran": 0.11,
+    "nota_yogunlugu": 6.18,
+    "onizleme_sn": 60.0
+   }
   },
   "1083107046342933": {
    "baslik": "Hopeful Nonsense",
@@ -6326,7 +6733,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "dream"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 161.5,
+    "ton": "C major",
+    "ton_guven": 0.76,
+    "enerji_db": -19.1,
+    "dinamik_db": 5.3,
+    "parlaklik_hz": 595,
+    "vurmali_oran": 0.03,
+    "nota_yogunlugu": 3.07,
+    "onizleme_sn": 60.0
+   }
   },
   "1827129954467579": {
    "baslik": "Dreams",
@@ -6415,7 +6833,9 @@
    "sure_sn": 137,
    "reklam_uygun": null,
    "sorgular": [
-    "journey"
+    "(trend)",
+    "journey",
+    "90'lar"
    ]
   },
   "425758769774050": {
@@ -6901,7 +7321,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "melancholy"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 152.0,
+    "ton": "A major",
+    "ton_guven": 0.5,
+    "enerji_db": -16.8,
+    "dinamik_db": 6.2,
+    "parlaklik_hz": 2162,
+    "vurmali_oran": 0.29,
+    "nota_yogunlugu": 4.9,
+    "onizleme_sn": 60.0
+   }
   },
   "624522329201744": {
    "baslik": "Moondust",
@@ -6995,7 +7426,18 @@
    "sorgular": [
     "nostalgia",
     "memories"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "G major",
+    "ton_guven": 0.87,
+    "enerji_db": -19.7,
+    "dinamik_db": 13.3,
+    "parlaklik_hz": 659,
+    "vurmali_oran": 0.02,
+    "nota_yogunlugu": 1.52,
+    "onizleme_sn": 60.0
+   }
   },
   "260694664772025": {
    "baslik": "Teotihuacán (feat. Ramón Stagnaro)",
@@ -7068,7 +7510,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "nostalgia"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 92.3,
+    "ton": "C# major",
+    "ton_guven": 0.92,
+    "enerji_db": -27.0,
+    "dinamik_db": 9.7,
+    "parlaklik_hz": 1169,
+    "vurmali_oran": 0.07,
+    "nota_yogunlugu": 3.07,
+    "onizleme_sn": 60.0
+   }
   },
   "1325009895390631": {
    "baslik": "Nostalgia In Kerala (feat. Prashanth Techno)",
@@ -7153,7 +7606,18 @@
     "memories",
     "lonely",
     "türkçe"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "E major",
+    "ton_guven": 0.82,
+    "enerji_db": -17.3,
+    "dinamik_db": 5.8,
+    "parlaklik_hz": 1863,
+    "vurmali_oran": 0.08,
+    "nota_yogunlugu": 4.12,
+    "onizleme_sn": 60.0
+   }
   },
   "1367491768595866": {
    "baslik": "Beautiful Moments",
@@ -7288,7 +7752,8 @@
    "sure_sn": 205,
    "reklam_uygun": null,
    "sorgular": [
-    "lonely"
+    "lonely",
+    "tick tock"
    ]
   },
   "1232349527592945": {
@@ -7352,7 +7817,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "lonely"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 92.3,
+    "ton": "D major",
+    "ton_guven": 0.78,
+    "enerji_db": -18.5,
+    "dinamik_db": 8.7,
+    "parlaklik_hz": 2384,
+    "vurmali_oran": 0.2,
+    "nota_yogunlugu": 1.8,
+    "onizleme_sn": 60.0
+   }
   },
   "412007483141148": {
    "baslik": "Lonely Heart",
@@ -7361,7 +7837,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "lonely"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 129.2,
+    "ton": "B major",
+    "ton_guven": 0.87,
+    "enerji_db": -17.1,
+    "dinamik_db": 9.5,
+    "parlaklik_hz": 2195,
+    "vurmali_oran": 0.12,
+    "nota_yogunlugu": 3.98,
+    "onizleme_sn": 60.0
+   }
   },
   "1020993105834965": {
    "baslik": "Float",
@@ -8139,7 +8626,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "groove"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 95.7,
+    "ton": "B minor",
+    "ton_guven": 0.76,
+    "enerji_db": -13.6,
+    "dinamik_db": 6.6,
+    "parlaklik_hz": 1638,
+    "vurmali_oran": 0.08,
+    "nota_yogunlugu": 3.45,
+    "onizleme_sn": 60.0
+   }
   },
   "1347593295584225": {
    "baslik": "Groove Remix (Trout Recording)",
@@ -8630,7 +9128,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "winter"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 69.8,
+    "ton": "A minor",
+    "ton_guven": 0.86,
+    "enerji_db": -16.6,
+    "dinamik_db": 6.8,
+    "parlaklik_hz": 1723,
+    "vurmali_oran": 0.18,
+    "nota_yogunlugu": 4.05,
+    "onizleme_sn": 60.0
+   }
   },
   "1366115658438553": {
    "baslik": "Winter Frost",
@@ -8639,7 +9148,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "winter"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 107.7,
+    "ton": "D minor",
+    "ton_guven": 0.76,
+    "enerji_db": -16.8,
+    "dinamik_db": 2.7,
+    "parlaklik_hz": 1074,
+    "vurmali_oran": 0.03,
+    "nota_yogunlugu": 2.98,
+    "onizleme_sn": 60.0
+   }
   },
   "1815729816131218": {
    "baslik": "Winter Sun",
@@ -9004,7 +9524,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "new year"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 95.7,
+    "ton": "Eb major",
+    "ton_guven": 0.42,
+    "enerji_db": -17.0,
+    "dinamik_db": 19.9,
+    "parlaklik_hz": 1178,
+    "vurmali_oran": 0.27,
+    "nota_yogunlugu": 2.92,
+    "onizleme_sn": 60.0
+   }
   },
   "895227573312654": {
    "baslik": "New Year",
@@ -9013,7 +9544,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "new year"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 136.0,
+    "ton": "G major",
+    "ton_guven": 0.93,
+    "enerji_db": -16.1,
+    "dinamik_db": 8.3,
+    "parlaklik_hz": 1420,
+    "vurmali_oran": 0.15,
+    "nota_yogunlugu": 4.12,
+    "onizleme_sn": 60.0
+   }
   },
   "1633077781888165": {
    "baslik": "New Year",
@@ -9022,7 +9564,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "new year"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 71.8,
+    "ton": "C major",
+    "ton_guven": 0.92,
+    "enerji_db": -19.3,
+    "dinamik_db": 7.6,
+    "parlaklik_hz": 893,
+    "vurmali_oran": 0.06,
+    "nota_yogunlugu": 1.72,
+    "onizleme_sn": 60.0
+   }
   },
   "131672240841552": {
    "baslik": "Holiday Eggnog",
@@ -9598,7 +10151,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "party"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "D major",
+    "ton_guven": 0.58,
+    "enerji_db": -17.9,
+    "dinamik_db": 14.1,
+    "parlaklik_hz": 2531,
+    "vurmali_oran": 0.4,
+    "nota_yogunlugu": 4.63,
+    "onizleme_sn": 60.0
+   }
   },
   "1521900551730982": {
    "baslik": "Party In The Jungle",
@@ -9606,7 +10170,6 @@
    "sure_sn": 131,
    "reklam_uygun": null,
    "sorgular": [
-    "(trend)",
     "party"
    ]
   },
@@ -9752,7 +10315,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "celebration"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 117.5,
+    "ton": "A minor",
+    "ton_guven": 0.58,
+    "enerji_db": -15.7,
+    "dinamik_db": 7.9,
+    "parlaklik_hz": 1887,
+    "vurmali_oran": 0.1,
+    "nota_yogunlugu": 4.25,
+    "onizleme_sn": 60.0
+   }
   },
   "1976973735934586": {
    "baslik": "Celebration of Distant Memories",
@@ -9770,7 +10344,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "celebration"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "G minor",
+    "ton_guven": 0.62,
+    "enerji_db": -18.4,
+    "dinamik_db": 5.5,
+    "parlaklik_hz": 1972,
+    "vurmali_oran": 0.21,
+    "nota_yogunlugu": 4.72,
+    "onizleme_sn": 60.0
+   }
   },
   "217084370036231": {
    "baslik": "Celebration In Freetown",
@@ -9836,7 +10421,18 @@
     "office",
     "busy",
     "Athena"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 103.4,
+    "ton": "C major",
+    "ton_guven": 0.85,
+    "enerji_db": -16.6,
+    "dinamik_db": 15.1,
+    "parlaklik_hz": 1478,
+    "vurmali_oran": 0.25,
+    "nota_yogunlugu": 4.02,
+    "onizleme_sn": 60.0
+   }
   },
   "775453565180480": {
    "baslik": "Working On The Weekend (Instrumental)",
@@ -10263,7 +10859,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "time"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 112.3,
+    "ton": "F minor",
+    "ton_guven": 0.61,
+    "enerji_db": -19.9,
+    "dinamik_db": 22.2,
+    "parlaklik_hz": 1832,
+    "vurmali_oran": 0.2,
+    "nota_yogunlugu": 4.25,
+    "onizleme_sn": 60.0
+   }
   },
   "986605808978918": {
    "baslik": "Time To Fly Remix (Violet Bell)",
@@ -10343,7 +10950,8 @@
    "sure_sn": 234,
    "reklam_uygun": null,
    "sorgular": [
-    "clock"
+    "clock",
+    "90'lar"
    ]
   },
   "1007761362070040": {
@@ -10362,7 +10970,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "clock"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 80.7,
+    "ton": "Eb minor",
+    "ton_guven": 0.29,
+    "enerji_db": -15.0,
+    "dinamik_db": 11.8,
+    "parlaklik_hz": 1820,
+    "vurmali_oran": 0.3,
+    "nota_yogunlugu": 4.28,
+    "onizleme_sn": 60.0
+   }
   },
   "752063233469021": {
    "baslik": "Clock Triggered",
@@ -10380,7 +10999,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "clock"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 152.0,
+    "ton": "G major",
+    "ton_guven": 0.87,
+    "enerji_db": -18.4,
+    "dinamik_db": 9.8,
+    "parlaklik_hz": 1032,
+    "vurmali_oran": 0.04,
+    "nota_yogunlugu": 2.78,
+    "onizleme_sn": 60.0
+   }
   },
   "1063189599534453": {
    "baslik": "Clockwork Dawn",
@@ -10389,7 +11019,18 @@
    "reklam_uygun": null,
    "sorgular": [
     "clock"
-   ]
+   ],
+   "ozellik": {
+    "tempo": 123.0,
+    "ton": "G major",
+    "ton_guven": 0.9,
+    "enerji_db": -16.8,
+    "dinamik_db": 11.0,
+    "parlaklik_hz": 1262,
+    "vurmali_oran": 0.11,
+    "nota_yogunlugu": 2.75,
+    "onizleme_sn": 60.0
+   }
   },
   "1480766716685385": {
    "baslik": "Tick Tock",
@@ -10774,7 +11415,8 @@
    "sure_sn": 219,
    "reklam_uygun": null,
    "sorgular": [
-    "neşeli"
+    "neşeli",
+    "yaz şarkısı"
    ]
   },
   "819068285857570": {
@@ -10830,6 +11472,7 @@
    "sure_sn": 175,
    "reklam_uygun": null,
    "sorgular": [
+    "new year",
     "duygusal"
    ]
   },
@@ -10970,42 +11613,6 @@
     "türkçe",
     "türkü",
     "İstanbul"
-   ]
-  },
-  "1692090978122382": {
-   "baslik": "Here We Come A Wassailing",
-   "sanatci": "Global Genius",
-   "sure_sn": 139,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
-   ]
-  },
-  "1112904476241370": {
-   "baslik": "A Way Through",
-   "sanatci": "The Poison Oaks",
-   "sure_sn": 191,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
-   ]
-  },
-  "2288548518644538": {
-   "baslik": "It's A Bop",
-   "sanatci": "bbox",
-   "sure_sn": 59,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
-   ]
-  },
-  "3194618867507635": {
-   "baslik": "Moody",
-   "sanatci": "SIRMA",
-   "sure_sn": 188,
-   "reklam_uygun": null,
-   "sorgular": [
-    "(trend)"
    ]
   },
   "1255021938307940": {
@@ -11438,8 +12045,7 @@
    "sure_sn": 279,
    "reklam_uygun": null,
    "sorgular": [
-    "Sıla",
-    "90'lar"
+    "Sıla"
    ]
   },
   "322261532188390": {
@@ -12135,7 +12741,8 @@
    "sure_sn": 112,
    "reklam_uygun": null,
    "sorgular": [
-    "Athena"
+    "Athena",
+    "90'lar"
    ]
   },
   "1046015395803358": {
@@ -12526,6 +13133,7 @@
    "reklam_uygun": null,
    "sorgular": [
     "türkü",
+    "90'lar",
     "İstanbul"
    ]
   },
@@ -12624,42 +13232,6 @@
    "baslik": "Mi Fresita (feat. Barbasauce)",
    "sanatci": "Neko Fuzz",
    "sure_sn": 199,
-   "reklam_uygun": null,
-   "sorgular": [
-    "90'lar"
-   ]
-  },
-  "708228556576747": {
-   "baslik": "Golden Touch",
-   "sanatci": "The Sheen",
-   "sure_sn": 242,
-   "reklam_uygun": null,
-   "sorgular": [
-    "90'lar"
-   ]
-  },
-  "672409740985213": {
-   "baslik": "Champion",
-   "sanatci": "Adam Griffith",
-   "sure_sn": 141,
-   "reklam_uygun": null,
-   "sorgular": [
-    "90'lar"
-   ]
-  },
-  "495118832093885": {
-   "baslik": "In My Zone",
-   "sanatci": "424KP",
-   "sure_sn": 141,
-   "reklam_uygun": null,
-   "sorgular": [
-    "90'lar"
-   ]
-  },
-  "1059203621794087": {
-   "baslik": "High School Crush",
-   "sanatci": "TrackTribe",
-   "sure_sn": 62,
    "reklam_uygun": null,
    "sorgular": [
     "90'lar"
@@ -12807,6 +13379,267 @@
    "reklam_uygun": null,
    "sorgular": [
     "İstanbul"
+   ]
+  },
+  "1524404852007456": {
+   "baslik": "Kaadinte Karachil (Instrumental)",
+   "sanatci": "Veno Miss",
+   "sure_sn": 157,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "1536446840309988": {
+   "baslik": "This Is Not The End",
+   "sanatci": "Ruby Amanfu",
+   "sure_sn": 170,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "696735626117175": {
+   "baslik": "Express It",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 116,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "1657151518935670": {
+   "baslik": "Don't Bleach",
+   "sanatci": "Afro Sound Machine",
+   "sure_sn": 163,
+   "reklam_uygun": null,
+   "sorgular": [
+    "(trend)"
+   ]
+  },
+  "556549580196820": {
+   "baslik": "Ocean Love",
+   "sanatci": "Giulio Cercato",
+   "sure_sn": 142,
+   "reklam_uygun": null,
+   "sorgular": [
+    "good vibes"
+   ]
+  },
+  "1744948239772680": {
+   "baslik": "Greatness",
+   "sanatci": "Jordan Olmos",
+   "sure_sn": 68,
+   "reklam_uygun": null,
+   "sorgular": [
+    "good vibes"
+   ]
+  },
+  "691567042780116": {
+   "baslik": "Hippie Jazz",
+   "sanatci": "Global Genius",
+   "sure_sn": 219,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1418160459212466": {
+   "baslik": "Hip Hop Beat (Reels Sound - Before And After)",
+   "sanatci": "POTG",
+   "sure_sn": 15,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "685839073889060": {
+   "baslik": "HipHop (Reels Sound - Before And After)",
+   "sanatci": "POTG",
+   "sure_sn": 12,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "478826528357397": {
+   "baslik": "Hip Hop Trip",
+   "sanatci": "bbox",
+   "sure_sn": 157,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1013794618078261": {
+   "baslik": "Hippo Hypnosis",
+   "sanatci": "anonymous audio",
+   "sure_sn": 59,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1762050514976941": {
+   "baslik": "Hips Go",
+   "sanatci": "Summer Islands",
+   "sure_sn": 65,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1355704320005214": {
+   "baslik": "Hips Betta Move",
+   "sanatci": "cloud cover",
+   "sure_sn": 64,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1025140303465102": {
+   "baslik": "Hipnotique",
+   "sanatci": "Max Holm",
+   "sure_sn": 69,
+   "reklam_uygun": null,
+   "sorgular": [
+    "hip hop"
+   ]
+  },
+  "1032171746983079": {
+   "baslik": "Feel Goods",
+   "sanatci": "Tickwanya",
+   "sure_sn": 220,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "1294866492254332": {
+   "baslik": "Tick Tock (Instrumental)",
+   "sanatci": "Arnold & Lane",
+   "sure_sn": 157,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "2465219763598471": {
+   "baslik": "It's All About Me",
+   "sanatci": "Tickwanya",
+   "sure_sn": 186,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "260246188253772": {
+   "baslik": "I Wanna Ride",
+   "sanatci": "Tickwanya",
+   "sure_sn": 199,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "728486377624928": {
+   "baslik": "Please Don't Tell Me No",
+   "sanatci": "Tickwanya",
+   "sure_sn": 183,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "2539062496185186": {
+   "baslik": "I Got A Secret",
+   "sanatci": "Tickwanya",
+   "sure_sn": 186,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "1895438827218141": {
+   "baslik": "Not That Girl",
+   "sanatci": "Tickwanya",
+   "sure_sn": 183,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "2438915149921209": {
+   "baslik": "Ticket To Space",
+   "sanatci": "anonymous audio",
+   "sure_sn": 66,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "1353630538125073": {
+   "baslik": "Make Up Your Mind",
+   "sanatci": "Tickwanya",
+   "sure_sn": 180,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "465642393839808": {
+   "baslik": "Turn Up",
+   "sanatci": "Tickwanya",
+   "sure_sn": 167,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "591157451695989": {
+   "baslik": "Don't Tell Me",
+   "sanatci": "Tickwanya",
+   "sure_sn": 156,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "329378898563979": {
+   "baslik": "Ticket To Nirvana",
+   "sanatci": "Brent Bourgeois",
+   "sure_sn": 158,
+   "reklam_uygun": null,
+   "sorgular": [
+    "tick tock"
+   ]
+  },
+  "2298044603779618": {
+   "baslik": "Way of the Clown",
+   "sanatci": "Rocky Dawuni",
+   "sure_sn": 150,
+   "reklam_uygun": null,
+   "sorgular": [
+    "Ajda Pekkan"
+   ]
+  },
+  "1174983090781223": {
+   "baslik": "Float In The Waves (Instrumental)",
+   "sanatci": "Company Money",
+   "sure_sn": 162,
+   "reklam_uygun": null,
+   "sorgular": [
+    "90'lar"
+   ]
+  },
+  "7020914167983902": {
+   "baslik": "Turkey In The Straw",
+   "sanatci": "Casey Driessen",
+   "sure_sn": 201,
+   "reklam_uygun": null,
+   "sorgular": [
+    "yaz şarkısı"
    ]
   }
  }
