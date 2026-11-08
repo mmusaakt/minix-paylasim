@@ -183,7 +183,7 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
         muzik = ig.muzik_bul(slot.get("muzik", ""))
     kid, kullanilan = ig.hazirla(
         video, slot["aciklama"], slot.get("kapak_ms"), muzik,
-        muzik_ses=int(os.environ.get("MUZIK_SES", "35")), video_ses=int(os.environ.get("VIDEO_SES", "100")),
+        muzik_ses=int(os.environ.get("MUZIK_SES") or 35), video_ses=int(os.environ.get("VIDEO_SES") or 100),
         ses_adi=f"minix • {slot['baslik'].strip()}")
     muzik_metni = f"{kullanilan.get('title')} – {kullanilan.get('display_artist')}" if kullanilan else "yok"
     if deneme:
