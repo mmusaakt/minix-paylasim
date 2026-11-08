@@ -364,6 +364,17 @@ def istatistik(args) -> int:
                 m = d.get("instagram", {})
                 if m.get("durum") == "paylasildi" and m.get("medya_id"):
                     cikti["slotlar"].setdefault(sid, {})["instagram"] = ig.medya_istatistikleri(m["medya_id"])
+            # Sistemin dışında (elle) paylaşılan gönderiler: 8 Kasım'dan önceki bölümler ve olası elle paylaşımlar
+            izlenen = {d.get("instagram", {}).get("medya_id") for d in durum.values()}
+            diger = {}
+            for g in ig.son_paylasimlar(100):
+                if g.get("id") in izlenen:
+                    continue
+                satirlar = (g.get("caption") or "").strip().splitlines()
+                diger[g["id"]] = {"ilk_satir": satirlar[0].strip()[:150] if satirlar else "",
+                                  "zaman": g.get("timestamp"), "baglanti": g.get("permalink"),
+                                  "instagram": ig.medya_istatistikleri(g["id"])}
+            cikti["instagram_elle"] = diger
         except Exception as e:  # noqa: BLE001
             sorun.append(f"Instagram istatistikleri: {e}")
     if "youtube" in platformlar:
@@ -393,7 +404,8 @@ def istatistik(args) -> int:
     metin = json.dumps(cikti, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
     (klasor / "son.json").write_text(metin, encoding="utf-8")
     (klasor / "gunluk" / f"{an.date().isoformat()}.json").write_text(metin, encoding="utf-8")
-    ozet(f"İstatistik: {len(cikti['slotlar'])} gönderi güncellendi.")
+    ozet(f"İstatistik: {len(cikti['slotlar'])} otomatik, {len(cikti.get('instagram_elle', {}))} elle paylaşılmış "
+         f"Instagram gönderisi güncellendi.")
     for s in sorun:
         ozet(f"- ❌ {s}")
         log("SORUN:", s)
