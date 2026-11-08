@@ -99,10 +99,14 @@ class Instagram:
             except ApiHatasi as e:
                 log(f"  müzik araması başarısız ({sorgu!r}): {e}")
         en_iyi, en_puan = None, 0.0
+        puanli = []
         for a in gorulen.values():
             p = muzik_puani(ad, sanatci, a.get("title", ""), a.get("display_artist", ""))
+            puanli.append((p, a))
             if p > en_puan:
                 en_iyi, en_puan = a, p
+        for p, a in sorted(puanli, key=lambda x: -x[0])[:5]:
+            log(f"    aday: {a.get('title')} – {a.get('display_artist')} (puan {p:.2f})")
         if en_iyi and en_puan >= 0.80:
             log(f"  müzik bulundu: {en_iyi.get('title')} – {en_iyi.get('display_artist')} (puan {en_puan:.2f})")
             return en_iyi
