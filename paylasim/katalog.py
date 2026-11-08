@@ -27,10 +27,15 @@ def ozellikler(url: str) -> dict:
     import numpy as np
     import librosa
 
-    with tempfile.NamedTemporaryFile(suffix=".m4a") as f:
-        f.write(istek("GET", url, deneme=2, timeout=60).content)
-        f.flush()
-        y, sr = librosa.load(f.name, sr=22050, mono=True, duration=60)
+    import subprocess
+
+    with tempfile.TemporaryDirectory() as d:
+        ham, wav = os.path.join(d, "onizleme"), os.path.join(d, "ses.wav")
+        with open(ham, "wb") as f:
+            f.write(istek("GET", url, deneme=2, timeout=60).content)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", ham, "-ac", "1", "-ar", "22050", "-t", "60", wav],
+                       check=True, capture_output=True)
+        y, sr = librosa.load(wav, sr=22050, mono=True)
     if y.size < sr * 3:
         return {}
     tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
@@ -94,9 +99,11 @@ def katalog_olustur() -> int:
         except ImportError:
             log("librosa yok; ses özellikleri çıkarılmadı")
             analiz = False
+        liste = KOK / "muzik" / "analiz_listesi.json"
+        istenen = set(json.loads(liste.read_text(encoding="utf-8"))) if liste.exists() else None
         if analiz:
             for i, (aid, url) in enumerate(onizleme.items(), 1):
-                if parcalar[aid].get("ozellik"):
+                if parcalar[aid].get("ozellik") or (istenen is not None and aid not in istenen):
                     continue
                 try:
                     parcalar[aid]["ozellik"] = ozellikler(url)
