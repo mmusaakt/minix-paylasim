@@ -75,6 +75,13 @@ def youtube_etiketleri(slot: dict) -> list[str]:
 
 # ---------------------------------------------------------------- slot seçimi
 
+def slot_platformlari(slot: dict, platformlar: list[str]) -> list[str]:
+    """Slot yalnızca bazı platformlar içinse (ör. Instagram'da zaten olan eski bölümlerin YouTube'a
+    yüklenmesi: "platformlar": ["youtube"]) açık platformları onlarla sınırlar."""
+    kisit = slot.get("platformlar")
+    return [p for p in platformlar if p in kisit] if kisit else list(platformlar)
+
+
 def slot_sec(slotlar: list[dict], durum: dict, platformlar: list[str], slot_id: str | None) -> dict | None:
     if slot_id:
         for s in slotlar:
@@ -84,7 +91,8 @@ def slot_sec(slotlar: list[dict], durum: dict, platformlar: list[str], slot_id: 
     an = simdi()
     adaylar = [s for s in slotlar
                if an - GEC_KALMA_SINIRI <= slot_zamani(s) <= an + ERKEN_BASLAMA
-               and not all(paylasildi_mi(durum, s["id"], p) for p in platformlar)]
+               and slot_platformlari(s, platformlar)
+               and not all(paylasildi_mi(durum, s["id"], p) for p in slot_platformlari(s, platformlar))]
     if not adaylar:
         return None
     return max(adaylar, key=slot_zamani)  # en yakın (en son) slot; eskiler atlanır
@@ -117,6 +125,11 @@ def paylas(args) -> int:
         ozet("Şu an paylaşılacak slot yok.")
         return 0
     sid = slot["id"]
+    platformlar = slot_platformlari(slot, platformlar)
+    if not platformlar:
+        log(f"Slot {sid} yalnızca {', '.join(slot['platformlar'])} için; seçilen platformda paylaşılacak bir şey yok.")
+        ozet(f"Slot {sid} yalnızca {', '.join(slot['platformlar'])} için; atlandı.")
+        return 0
     video = KOK / slot["video"]
     if not video.exists():
         ortak.hata_cik(f"{sid}: video dosyası yok ({slot['video']})")
@@ -254,10 +267,12 @@ def kontrol(args) -> int:
     ozet("### Sıradaki paylaşımlar")
     ozet("| Zaman | Başlık | Video | Durum |")
     ozet("|---|---|---|---|")
-    for s in gelecek[:6]:
-        d = ", ".join(f"{p}: {durum.get(s['id'], {}).get(p, {}).get('durum', '-')}" for p in PLATFORMLAR)
+    for s in gelecek[:8]:
+        d = ", ".join(f"{p}: {durum.get(s['id'], {}).get(p, {}).get('durum', '-')}"
+                      for p in slot_platformlari(s, list(PLATFORMLAR)))
         var = video_var(s["video"])
-        ozet(f"| {s['tarih']} {s['saat']} | {s['baslik']} | {'✅' if var else '❌ yok'} | {d} |")
+        ek = " (yalnız YouTube)" if s.get("platformlar") == ["youtube"] else ""
+        ozet(f"| {s['tarih']} {s['saat']} | {s['baslik']}{ek} | {'✅' if var else '❌ yok'} | {d} |")
     eksik = [s["id"] for s in gelecek if not video_var(s["video"])]
     if eksik:
         sorun.append(f"{len(eksik)} slotun videosu eksik: {', '.join(eksik[:5])}")
@@ -301,7 +316,7 @@ def kontrol(args) -> int:
                     ozet(f"- Son Instagram gönderisi ({z} UTC): {ilk}")
             except ApiHatasi:
                 pass
-            for s in gelecek[:3]:
+            for s in [g for g in gelecek if "instagram" in slot_platformlari(g, ["instagram"])][:3]:
                 m = slot_muzigi(s) or ig.muzik_bul(s.get("muzik", ""))
                 isim = f"{m.get('title')} – {m.get('display_artist')}" if m else "bulunamadı (müziksiz paylaşılır)"
                 ozet(f"- Müzik · {s['baslik']}: {isim}")

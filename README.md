@@ -8,7 +8,7 @@ Kurulum rehberi: https://claude.ai/artifact/N2q7RZswzuAQ5uZuVkt6VX
 
 | İşlem | Ne zaman | Ne yapar |
 | --- | --- | --- |
-| Paylaş | 11:00–12:50 ve 18:30–20:20 arası 10 dakikada bir (GitHub gecikmesine karşı); slotu 12:30 / 20:00'de paylaşır | Instagram: video + takvimdeki şarkı + açıklama + ilk yorum. YouTube: Shorts. |
+| Paylaş | 11:00–12:50 ve 18:30–20:20 arası 10 dakikada bir (GitHub gecikmesine karşı); slotu 12:30 / 20:00'de paylaşır. 9–20 Kasım'da ayrıca 16:00 ve 22:30 (yalnız YouTube) | Instagram: video + takvimdeki şarkı + açıklama + ilk yorum. YouTube: Shorts. |
 | İstatistik | Her gün 23:35 | İzlenme, erişim, beğeni, kaydetme… `istatistik/` klasörüne yazar. |
 | Kontrol | Pazartesi 10:10 + elle | Anahtarları, şarkıları, videoları ve takvimin bitişini kontrol eder. |
 | YouTube kanal ayarları | Elle | Kanal kapağı, açıklama ve anahtar kelimeler (`kanal/`). |
@@ -20,7 +20,7 @@ yayınlanmaz, YouTube'a gizli yüklenir.
 
 ## Dosyalar
 
-- `takvim.json` – paylaşılacak slotlar (başlık, açıklama, şarkı, sabit yorum, video, kapak karesi)
+- `takvim.json` – paylaşılacak slotlar (başlık, açıklama, şarkı, sabit yorum, video, kapak karesi). `"platformlar": ["youtube"]` olan slot yalnız YouTube'a gider: 9–20 Kasım'da Instagram'da elle paylaşılmış 23 bölüm YouTube'a da yükleniyor.
 - `videolar/` – sesli videolar
 - `durum.json` – ne zaman, nereye paylaşıldı (bağlantılarıyla)
 - `istatistik/` – günlük istatistikler
