@@ -126,13 +126,20 @@ class Instagram:
 
     # ------------------------------------------------------------------ yükleme
     def konteyner_olustur(self, aciklama: str, kapak_ms: int | None, muzik_id: str | None,
-                          muzik_ses: int, video_ses: int, ses_adi: str | None) -> dict:
+                          muzik_ses: int, video_ses: int, ses_adi: str | None,
+                          video_url: str | None = None) -> dict:
+        """video_url verilirse Instagram videoyu o adresten indirir; verilmezse resumable yükleme.
+        Lisanslı müzik (audio_configuration) Meta belgelerinde video_url ile gösteriliyor; 8 Kasım'da
+        resumable + audio_configuration hatasız işlendi ama yayınlanan Reels'te müzik yoktu."""
         veri = {
             "media_type": "REELS",
-            "upload_type": "resumable",
             "caption": aciklama,
             "share_to_feed": "true",
         }
+        if video_url:
+            veri["video_url"] = video_url
+        else:
+            veri["upload_type"] = "resumable"
         if kapak_ms is not None:
             veri["thumb_offset"] = str(int(kapak_ms))
         if muzik_id:
@@ -168,7 +175,7 @@ class Instagram:
 
     def hazirla(self, video: Path, aciklama: str, kapak_ms: int | None = None,
                 muzik: dict | None = None, muzik_ses: int = 35, video_ses: int = 100,
-                ses_adi: str | None = None) -> tuple[str, dict | None]:
+                ses_adi: str | None = None, video_url: str | None = None) -> tuple[str, dict | None]:
         """Konteyneri oluşturup videoyu yükler ve işlenmesini bekler.
 
         Müzikli yükleme ara sıra "Request processing failed" ile reddediliyor (aynı ayarlar birkaç
@@ -178,13 +185,17 @@ class Instagram:
         son_hata: Exception | None = None
         for i, m in enumerate(denemeler):
             try:
+                adres = video_url if (m and video_url) else None
                 k = self.konteyner_olustur(aciklama, kapak_ms, m and m.get("audio_id"),
-                                           muzik_ses, video_ses, ses_adi)
+                                           muzik_ses, video_ses, ses_adi, video_url=adres)
                 kid, uri = k["id"], k.get("uri")
-                if not uri:
-                    raise ApiHatasi(f"Instagram yükleme adresi vermedi: {k}")
-                log(f"  konteyner {kid} oluşturuldu{' (müzikli)' if m else ''}; video yükleniyor…")
-                self.video_yukle(uri, video)
+                if adres:
+                    log(f"  konteyner {kid} oluşturuldu (müzikli, video_url); Instagram videoyu indiriyor…")
+                else:
+                    if not uri:
+                        raise ApiHatasi(f"Instagram yükleme adresi vermedi: {k}")
+                    log(f"  konteyner {kid} oluşturuldu{' (müzikli)' if m else ''}; video yükleniyor…")
+                    self.video_yukle(uri, video)
                 self.islenmesini_bekle(kid)
                 log("  video işlendi")
                 return kid, m
@@ -239,6 +250,14 @@ class Instagram:
                     raise
                 time.sleep(20 * (deneme + 1))
         raise ApiHatasi("Instagram'da yayınlama 4 denemede de başarısız oldu")
+
+    def ses_turu(self, medya_id: str) -> str | None:
+        """Yayınlanan Reels'in ses türü (MUSIC / ORIGINAL_SOUND). Alan desteklenmiyorsa None."""
+        try:
+            return self._get(medya_id, fields="media_audio_type").get("media_audio_type")
+        except ApiHatasi as e:
+            log(f"  ses türü okunamadı ({e})")
+            return None
 
     def kalici_link(self, medya_id: str) -> str | None:
         try:

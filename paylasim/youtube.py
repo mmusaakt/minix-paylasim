@@ -38,13 +38,22 @@ class YouTube:
     def kanal(self) -> dict | None:
         """Bağlı kanalın adı. (youtube.upload izni kanal okumaya yetmeyebilir; o zaman None.)"""
         try:
-            v = istek("GET", f"{API}/channels", params={"part": "snippet", "mine": "true"},
+            v = istek("GET", f"{API}/channels", params={"part": "snippet,statistics", "mine": "true"},
                       headers=self._bas(), deneme=2).json()
         except ApiHatasi as e:
             log(f"  kanal bilgisi okunamadı ({e}); yükleme izni yine de çalışabilir")
             return None
         oge = (v.get("items") or [None])[0]
-        return {"id": oge["id"], "ad": oge["snippet"]["title"]} if oge else None
+        if not oge:
+            return None
+        st = oge.get("statistics", {})
+        k = {"id": oge["id"], "ad": oge["snippet"]["title"]}
+        if not st.get("hiddenSubscriberCount") and "subscriberCount" in st:
+            k["abone"] = int(st["subscriberCount"])
+        for alan, ad in (("viewCount", "toplam_izlenme"), ("videoCount", "video_sayisi")):
+            if alan in st:
+                k[ad] = int(st[alan])
+        return k
 
     # ------------------------------------------------------------------ kanal ayarları
     def kapak_yukle(self, gorsel: Path) -> str:

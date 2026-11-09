@@ -191,6 +191,15 @@ def slot_muzigi(slot: dict) -> dict | None:
     return None
 
 
+def ham_video_adresi(slot: dict) -> str | None:
+    """Herkese açık depodaki videonun doğrudan adresi (Instagram'ın indirmesi için)."""
+    if os.environ.get("IG_VIDEO_URL", "acik").lower() in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
+        return None
+    depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
+    dal = os.environ.get("GITHUB_SHA") or "main"
+    return f"https://raw.githubusercontent.com/{depo}/{dal}/{slot['video']}"
+
+
 def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: bool) -> list[str]:
     sid = slot["id"]
     ig = instagram_istemcisi()
@@ -211,7 +220,7 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
         video, slot["aciklama"], slot.get("kapak_ms"), muzik,
         muzik_ses=int(os.environ.get("MUZIK_SES") or VARSAYILAN_MUZIK_SES),
         video_ses=int(os.environ.get("VIDEO_SES") or VARSAYILAN_VIDEO_SES),
-        ses_adi=f"minix • {slot['baslik'].strip()}")
+        ses_adi=f"minix • {slot['baslik'].strip()}", video_url=ham_video_adresi(slot))
     muzik_metni = f"{kullanilan.get('title')} – {kullanilan.get('display_artist')}" if kullanilan else "yok"
     if deneme:
         log(f"Instagram (deneme): video hazırlandı, yayınlanmadı. Müzik: {muzik_metni}")
@@ -224,9 +233,14 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
     log(f"Instagram: yayınlandı {link or medya_id} · müzik: {muzik_metni}")
     bilgi = {"durum": "paylasildi", "medya_id": medya_id, "link": link, "muzik": muzik_metni,
              "zaman": simdi().isoformat()}
+    ses = ig.ses_turu(medya_id)
+    if ses:
+        bilgi["ses_turu"] = ses
     kaydet(durum, sid, "instagram", bilgi)
-    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · müzik: {muzik_metni}")
+    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · müzik: {muzik_metni} · ses türü: {ses or 'okunamadı'}")
     hatalar = []
+    if kullanilan and ses and ses != "MUSIC":
+        hatalar.append(f"Instagram: müzik istendi ama yayınlanan Reels'in ses türü {ses} (Müzik: yok)")
     if slot.get("sabitYorum"):
         yid = ig.yorum_yaz(medya_id, slot["sabitYorum"])
         if yid:

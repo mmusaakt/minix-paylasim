@@ -37,13 +37,24 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
     tam = {"audio_id": aid, "audio_volume": 40, "video_volume": 70}
     kapak = slot.get("kapak_ms")
     gercek = slot["aciklama"]
+    # Yayınlanmış gönderilerin ses türü (müziğin gerçekten eklenip eklenmediği)
+    from .ortak import durum_oku
+    for sid, d in sorted(durum_oku().items()):
+        mid = d.get("instagram", {}).get("medya_id")
+        if mid:
+            try:
+                v = ig._get(mid, fields="media_audio_type,media_product_type")
+                log(f"[ses] {sid}: {v}")
+                ozet(f"- Yayınlanmış {sid}: ses türü {v.get('media_audio_type')}")
+            except ApiHatasi as e:
+                log(f"[ses] {sid}: okunamadı ({e})")
+                ozet(f"- Yayınlanmış {sid}: ses türü okunamadı ({e})")
+    from .main import ham_video_adresi
+    adres = ham_video_adresi(slot)
     # (ad, yöntem, adres, ses ayarı, kapak karesi ms, açıklama)
     varyantlar = [
+        ("video_url · ses 40/70 · kapak son kare · gerçek açıklama", "url", adres, tam, kapak, gercek),
         ("ses 40/70 · kapak son kare · gerçek açıklama (paylaşımın aynısı)", "resumable", None, tam, kapak, gercek),
-        ("ses 40/70 · kapak son kare · kısa açıklama", "resumable", None, tam, kapak, "deneme"),
-        ("ses 40/70 · kapak yok · gerçek açıklama", "resumable", None, tam, None, gercek),
-        ("ses 40/70 · kapak son kareden 1 sn önce · gerçek açıklama", "resumable", None, tam,
-         (kapak - 1000) if kapak else None, gercek),
         ("yalnız audio_id · kapak son kare · gerçek açıklama", "resumable", None, {"audio_id": aid}, kapak, gercek),
     ]
     sonuclar = []
