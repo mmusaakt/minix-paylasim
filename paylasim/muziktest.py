@@ -50,7 +50,9 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
                 log(f"[ses] {sid}: okunamadı ({e})")
                 ozet(f"- Yayınlanmış {sid}: ses türü okunamadı ({e})")
     from .main import ham_video_adresi
-    adres = ham_video_adresi(slot)
+    import os
+    adres = ham_video_adresi(slot) or (f"https://raw.githubusercontent.com/"
+                                       f"{os.environ.get('GITHUB_REPOSITORY', 'mmusaakt/minix-paylasim')}/main/{slot['video']}")
     # (ad, yöntem, adres, ses ayarı, kapak karesi ms, açıklama)
     varyantlar = [
         ("video_url · müziksiz · kapak son kare · gerçek açıklama", "url", adres, None, kapak, gercek),

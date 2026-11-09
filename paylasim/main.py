@@ -193,11 +193,10 @@ def slot_muzigi(slot: dict) -> dict | None:
 
 def ham_video_adresi(slot: dict) -> str | None:
     """Herkese açık depodaki videonun doğrudan adresi (Instagram'ın indirmesi için)."""
-    if os.environ.get("IG_VIDEO_URL", "acik").lower() in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
+    taban = (os.environ.get("IG_VIDEO_TABAN") or "").strip().rstrip("/")
+    if not taban:  # raw.githubusercontent.com adresini Instagram indiremiyor (hata 2207076)
         return None
-    depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
-    dal = os.environ.get("GITHUB_SHA") or "main"
-    return f"https://raw.githubusercontent.com/{depo}/{dal}/{slot['video']}"
+    return f"{taban}/{slot['video']}"
 
 
 def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: bool) -> list[str]:
@@ -236,11 +235,13 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
     ses = ig.ses_turu(medya_id)
     if ses:
         bilgi["ses_turu"] = ses
-    kaydet(durum, sid, "instagram", bilgi)
-    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · müzik: {muzik_metni} · ses türü: {ses or 'okunamadı'}")
-    hatalar = []
     if kullanilan and ses and ses != "MUSIC":
-        hatalar.append(f"Instagram: müzik istendi ama yayınlanan Reels'in ses türü {ses} (Müzik: yok)")
+        muzik_metni = f"yok (istenen {muzik_metni}; Instagram eklemedi, ses türü {ses})"
+        bilgi["muzik"] = muzik_metni
+        log(f"UYARI: Müzik: {muzik_metni}")
+    kaydet(durum, sid, "instagram", bilgi)
+    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · Müzik: {muzik_metni} · ses türü: {ses or 'okunamadı'}")
+    hatalar = []
     if slot.get("sabitYorum"):
         yid = ig.yorum_yaz(medya_id, slot["sabitYorum"])
         if yid:

@@ -60,6 +60,7 @@ jobs:
           PLATFORMLAR: ${{ vars.PLATFORMLAR }}
           MUZIK: ${{ vars.MUZIK }}
           MUZIK_SES: ${{ vars.MUZIK_SES }}
+          IG_VIDEO_TABAN: ${{ vars.IG_VIDEO_TABAN }}
           VIDEO_SES: ${{ vars.VIDEO_SES }}
           SLOT: ${{ inputs.slot }}
           PLATFORM: ${{ inputs.platform }}

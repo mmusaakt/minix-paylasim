@@ -31,4 +31,5 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           SLOT: ${{ inputs.slot }}
           MUZIK_ID: ${{ inputs.muzik }}
+          IG_VIDEO_TABAN: ${{ vars.IG_VIDEO_TABAN }}
         run: python -m paylasim muziktest --slot "$SLOT" --muzik "$MUZIK_ID"
