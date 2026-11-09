@@ -51,8 +51,7 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
                 ozet(f"- Yayınlanmış {sid}: ses türü okunamadı ({e})")
     from .main import ham_video_adresi
     import os
-    adres = ham_video_adresi(slot) or (f"https://mmusaakt.github.io/"
-                                       f"minix-paylasim/{slot["video"]}")
+    adres = ham_video_adresi(slot) or ""
     # (ad, yöntem, adres, ses ayarı, kapak karesi ms, açıklama)
     varyantlar = [
         ("video_url · müziksiz · kapak son kare · gerçek açıklama", "url", adres, None, kapak, gercek),
