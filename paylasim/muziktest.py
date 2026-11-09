@@ -53,9 +53,10 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
     adres = ham_video_adresi(slot)
     # (ad, yöntem, adres, ses ayarı, kapak karesi ms, açıklama)
     varyantlar = [
+        ("video_url · müziksiz · kapak son kare · gerçek açıklama", "url", adres, None, kapak, gercek),
         ("video_url · ses 40/70 · kapak son kare · gerçek açıklama", "url", adres, tam, kapak, gercek),
-        ("ses 40/70 · kapak son kare · gerçek açıklama (paylaşımın aynısı)", "resumable", None, tam, kapak, gercek),
-        ("yalnız audio_id · kapak son kare · gerçek açıklama", "resumable", None, {"audio_id": aid}, kapak, gercek),
+        ("video_url · trend parça · kapak son kare · gerçek açıklama", "url", adres,
+         {"audio_id": trend_id, "audio_volume": 40, "video_volume": 70}, kapak, gercek),
     ]
     sonuclar = []
     for ad, yontem, adres, ses, kapak_ms, aciklama in varyantlar:
