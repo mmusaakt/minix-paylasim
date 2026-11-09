@@ -39,5 +39,22 @@
    "video_id": "R1Q4XbhKMsw",
    "zaman": "2026-11-09T16:00:01.814548+03:00"
   }
+ },
+ "2026-11-09-2000": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/Dfh1J5lgYom/",
+   "medya_id": "18079327136756097",
+   "muzik": "Lovely Life – LAVLO",
+   "ses_turu": "MUSIC",
+   "yorum_id": "17882478336547412",
+   "zaman": "2026-11-09T20:07:58.403488+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/HE-4lWRcn_4",
+   "video_id": "HE-4lWRcn_4",
+   "zaman": "2026-11-09T20:08:07.683259+03:00"
+  }
  }
 }
