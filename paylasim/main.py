@@ -193,10 +193,26 @@ def slot_muzigi(slot: dict) -> dict | None:
 
 def ham_video_adresi(slot: dict) -> str | None:
     """Herkese açık depodaki videonun doğrudan adresi (Instagram'ın indirmesi için)."""
+    # raw.githubusercontent.com adresini Instagram indiremiyor (hata 2207076). GitHub Pages
+    # açıksa videolar oradan video/mp4 olarak sunulur; açık değilse doğrudan yüklemeye dönülür.
     taban = (os.environ.get("IG_VIDEO_TABAN") or "").strip().rstrip("/")
-    if not taban:  # raw.githubusercontent.com adresini Instagram indiremiyor (hata 2207076)
+    if taban.lower() in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
         return None
-    return f"{taban}/{slot['video']}"
+    if not taban:
+        depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
+        sahip, _, ad = depo.partition("/")
+        taban = f"https://{sahip.lower()}.github.io/{ad}"
+    adres = f"{taban}/{slot['video']}"
+    try:
+        import requests
+        r = requests.head(adres, timeout=20, allow_redirects=True)
+        tur = r.headers.get("Content-Type", "")
+        if r.status_code == 200 and tur.startswith("video/"):
+            return adres
+        log(f"  video adresi kullanılamıyor ({r.status_code} {tur}); doğrudan yükleme")
+    except Exception as e:  # noqa: BLE001
+        log(f"  video adresi denetlenemedi ({e}); doğrudan yükleme")
+    return None
 
 
 def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: bool) -> list[str]:
