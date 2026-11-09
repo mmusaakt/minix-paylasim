@@ -192,14 +192,29 @@ def slot_muzigi(slot: dict) -> dict | None:
 
 
 def ham_video_adresi(slot: dict) -> str | None:
-    """Müzikli Reels için Instagram'ın indireceği video adresi (IG_VIDEO_TABAN/<video>).
+    """Müzikli Reels için Instagram'ın indireceği video adresi.
 
-    Depo gizli olduğu için GitHub adresleri Instagram'a kapalı (raw.githubusercontent 2207076,
-    GitHub Pages gizli depoda açılamıyor). Değişken boşsa video doğrudan yüklenir."""
+    IG_VIDEO_TABAN verilirse <taban>/<video>; verilmezse deponun GitHub Pages adresi denenir
+    (depo herkese açık ve Pages açıksa videolar video/mp4 olarak sunulur). Adres çalışmıyorsa
+    None döner ve video doğrudan yüklenir. IG_VIDEO_TABAN=kapali adres kullanımını kapatır."""
     taban = (os.environ.get("IG_VIDEO_TABAN") or "").strip().rstrip("/")
-    if not taban or taban.lower() in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
+    if taban.lower() in ("kapali", "kapalı", "0", "false", "hayir", "hayır"):
         return None
-    return f"{taban}/{slot['video']}"
+    if not taban:
+        depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
+        sahip, _, ad = depo.partition("/")
+        taban = f"https://{sahip.lower()}.github.io/{ad}"
+    adres = f"{taban}/{slot['video']}"
+    try:
+        import requests
+        r = requests.head(adres, timeout=20, allow_redirects=True)
+        tur = r.headers.get("Content-Type", "")
+        if r.status_code == 200 and tur.startswith("video/"):
+            return adres
+        log(f"  video adresi kullanılamıyor ({r.status_code} {tur}); doğrudan yükleme")
+    except Exception as e:  # noqa: BLE001
+        log(f"  video adresi denetlenemedi ({e}); doğrudan yükleme")
+    return None
 
 
 def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: bool) -> list[str]:
