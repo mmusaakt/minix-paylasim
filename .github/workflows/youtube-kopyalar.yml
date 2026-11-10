@@ -1,0 +1,44 @@
+name: YouTube kopyaları
+
+# Kanalda aynı başlıkla birden çok kez yüklenmiş videoları listeler; "sil" işaretliyse fazlalarını siler.
+on:
+  workflow_dispatch:
+    inputs:
+      sil:
+        description: "Fazla kopyaları sil (işaretsizse yalnız listeler)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: paylas
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  kopyalar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Kopyalar
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          SIL: ${{ inputs.sil }}
+        run: |
+          if [ "$SIL" = "true" ]; then python -m paylasim youtube-kopyalar --sil; else python -m paylasim youtube-kopyalar; fi
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python -m paylasim durum-kaydet --mesaj "YouTube kopyaları temizlendi"

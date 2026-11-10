@@ -53,7 +53,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 75
     steps:
+      # Bekleyen çalışma, tetiklendiği andaki commit'i değil main'in son halini almalı: yoksa önceki
+      # çalışmanın kaydettiği durum.json'u görmez ve aynı slotu tekrar paylaşır (9–10 Kasım YouTube kopyaları).
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -87,13 +91,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add durum.json 2>/dev/null || true
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Paylaşım durumu: ${SLOT:-planlı}"
-          for i in 1 2 3; do
-            git pull --rebase --quiet && git push --quiet && exit 0
-            sleep 5
-          done
-          exit 1
+          python -m paylasim durum-kaydet --mesaj "Paylaşım durumu: ${SLOT:-planlı}"
         env:
           SLOT: ${{ inputs.slot }}

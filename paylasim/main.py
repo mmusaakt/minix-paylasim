@@ -158,13 +158,28 @@ def paylas(args) -> int:
                 bekle(slot)
             yt = youtube_istemcisi()
             gizlilik = "private" if deneme else "public"
-            vid = yt.yukle(video, youtube_basligi(slot), youtube_aciklamasi(slot), youtube_etiketleri(slot), gizlilik)
-            link = f"https://youtube.com/shorts/{vid}"
-            log(f"YouTube: yüklendi ({gizlilik}) {link}")
-            ozet(f"- YouTube: [{link}]({link}){' — gizli deneme, Studio’dan silebilirsin' if deneme else ''}")
+            # Kanalda aynı başlıkla herkese açık video varsa tekrar yükleme (durum kaydı kaybolmuş olabilir)
+            onceki = None
             if not deneme:
-                kaydet(durum, sid, "youtube", {"durum": "paylasildi", "video_id": vid, "link": link,
-                                               "zaman": simdi().isoformat()})
+                try:
+                    onceki = yt.zaten_yuklenmis(youtube_basligi(slot))
+                except Exception as e:  # noqa: BLE001
+                    log(f"  YouTube: kanaldaki videolar okunamadı ({e}); tekrar kontrolü atlandı")
+            if onceki:
+                link = f"https://youtube.com/shorts/{onceki}"
+                log(f"YouTube: bu bölüm kanalda zaten var, tekrar yüklenmedi {link}")
+                ozet(f"- YouTube: zaten yüklenmiş, atlandı [{link}]({link})")
+                kaydet(durum, sid, "youtube", {"durum": "paylasildi", "video_id": onceki, "link": link,
+                                               "zaman": simdi().isoformat(), "not": "kanalda zaten vardı"})
+            else:
+                vid = yt.yukle(video, youtube_basligi(slot), youtube_aciklamasi(slot), youtube_etiketleri(slot),
+                               gizlilik)
+                link = f"https://youtube.com/shorts/{vid}"
+                log(f"YouTube: yüklendi ({gizlilik}) {link}")
+                ozet(f"- YouTube: [{link}]({link}){' — gizli deneme, Studio’dan silebilirsin' if deneme else ''}")
+                if not deneme:
+                    kaydet(durum, sid, "youtube", {"durum": "paylasildi", "video_id": vid, "link": link,
+                                                   "zaman": simdi().isoformat()})
         except Exception as e:  # noqa: BLE001
             hatalar.append(f"YouTube: {e}")
             if not deneme:
@@ -460,6 +475,101 @@ def istatistik(args) -> int:
     return 1 if sorun else 0
 
 
+def _git(*a, kontrol: bool = True):
+    import subprocess
+    return subprocess.run(["git", *a], check=kontrol, capture_output=True, text=True)
+
+
+def durum_birlestir(taban: dict, bizim: dict) -> dict:
+    """İki durum kaydını birleştirir: 'paylasildi' bilgisi asla kaybolmaz (kaybolursa bir sonraki çalışma
+    aynı slotu tekrar paylaşabilir). İkisi de farklı bir videoyla paylaşıldı diyorsa ilk kayıt kalır,
+    diğeri 'kopyalar' listesine yazılır (temizlemek için)."""
+    for sid, kayitlar in bizim.items():
+        for p, k in kayitlar.items():
+            eski = taban.setdefault(sid, {}).get(p)
+            if eski is None or (eski.get("durum") != "paylasildi" and
+                                (k.get("durum") == "paylasildi" or k.get("zaman", "") > eski.get("zaman", ""))):
+                taban[sid][p] = k
+            elif eski.get("durum") == "paylasildi" and k.get("durum") == "paylasildi":
+                kid = k.get("video_id") or k.get("medya_id")
+                if kid and kid not in (eski.get("video_id"), eski.get("medya_id")):
+                    kop = eski.setdefault("kopyalar", [])
+                    if kid not in kop:
+                        kop.append(kid)
+    return taban
+
+
+def durum_kaydet(args) -> int:
+    """durum.json'daki değişikliği depoya gönderir. Bu arada başka bir çalışma da yazdıysa iki kaydı birleştirir."""
+    if not _git("status", "--porcelain", "durum.json").stdout.strip():
+        log("Durum değişmedi")
+        return 0
+    bizim = ortak.durum_oku()
+    for deneme in range(4):
+        _git("fetch", "--quiet", "origin", "main")
+        _git("reset", "--quiet", "--hard", "origin/main")
+        ortak.durum_yaz(durum_birlestir(ortak.durum_oku(), bizim))
+        if not _git("status", "--porcelain", "durum.json").stdout.strip():
+            log("Durum zaten kayıtlı")
+            return 0
+        _git("add", "durum.json")
+        _git("commit", "--quiet", "-m", args.mesaj)
+        if _git("push", "--quiet", "origin", "HEAD:main", kontrol=False).returncode == 0:
+            log("Durum kaydedildi")
+            return 0
+        time.sleep(5 + 5 * deneme)
+    log("HATA: durum kaydedilemedi")
+    return 1
+
+
+def youtube_kopyalar(args) -> int:
+    """Kanalda aynı başlıkla birden çok kez yüklenmiş videoları bulur; --sil ile fazlalarını siler.
+    Kalan: durum.json'da kayıtlı olan; kopyası daha çok izlendiyse o kalır ve kayıt ona çevrilir."""
+    yt = youtube_istemcisi()
+    durum = ortak.durum_oku()
+    kayit = {d["youtube"]["video_id"]: sid for sid, d in durum.items()
+             if d.get("youtube", {}).get("video_id")}
+    yuk = yt.yuklemeler(500)
+    gruplar: dict[str, list[dict]] = {}
+    for y in yuk:
+        gruplar.setdefault(" ".join(y["baslik"].split()), []).append(y)
+    izl = yt.istatistikler([y["id"] for y in yuk])
+    silinecek, degisen = [], 0
+    ozet(f"### YouTube kopyaları ({len(yuk)} video tarandı)")
+    for baslik, vs in gruplar.items():
+        acik = [v for v in vs if v["gizlilik"] == "public"]
+        if len(vs) < 2 or not acik:
+            continue
+        for v in vs:
+            v["izlenme"] = izl.get(v["id"], {}).get("viewCount", 0)
+        kayitli = next((v for v in acik if v["id"] in kayit), None)
+        en_cok = max(acik, key=lambda v: v["izlenme"])
+        kalan = en_cok if kayitli is None or en_cok["izlenme"] > kayitli["izlenme"] else kayitli
+        fazla = [v for v in vs if v is not kalan]
+        ozet(f"- **{baslik[:70]}** — kalan {kalan['id']} ({kalan['izlenme']} izlenme); fazla: " +
+             ", ".join(f"{v['id']} ({v['gizlilik']}, {v['izlenme']} izlenme)" for v in fazla))
+        if kayitli and kalan is not kayitli and args.sil:
+            sid = kayit[kayitli["id"]]
+            durum[sid]["youtube"].update({"video_id": kalan["id"], "link": f"https://youtube.com/shorts/{kalan['id']}"})
+            degisen += 1
+        silinecek += fazla
+    if not silinecek:
+        ozet("Kopya yok.")
+        return 0
+    if not args.sil:
+        ozet(f"**{len(silinecek)} fazla video** bulundu. Silmek için bu işlemi *sil* işaretli çalıştır.")
+        return 0
+    for v in silinecek:
+        yt.sil(v["id"])
+        log(f"silindi {v['id']} · {v['baslik'][:60]}")
+    for d in durum.values():
+        if "youtube" in d:
+            d["youtube"].pop("kopyalar", None)
+    ortak.durum_yaz(durum)
+    ozet(f"🗑️ {len(silinecek)} fazla video silindi{f', {degisen} kayıt daha çok izlenen kopyaya çevrildi' if degisen else ''}.")
+    return 0
+
+
 def ana(argv=None) -> int:
     p = argparse.ArgumentParser(prog="paylasim")
     alt = p.add_subparsers(dest="komut", required=True)
@@ -476,7 +586,15 @@ def ana(argv=None) -> int:
     pm = alt.add_parser("muziktest")
     pm.add_argument("--slot", required=True)
     pm.add_argument("--muzik", default="")
+    pd = alt.add_parser("durum-kaydet")
+    pd.add_argument("--mesaj", default="Paylaşım durumu")
+    py = alt.add_parser("youtube-kopyalar")
+    py.add_argument("--sil", action="store_true")
     args = p.parse_args(argv)
+    if args.komut == "durum-kaydet":
+        return durum_kaydet(args)
+    if args.komut == "youtube-kopyalar":
+        return youtube_kopyalar(args)
     if args.komut == "katalog":
         from .katalog import katalog_olustur
         return katalog_olustur()

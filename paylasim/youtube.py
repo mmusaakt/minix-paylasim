@@ -87,6 +87,42 @@ class YouTube:
                   data=json.dumps(govde))
         return r.json()
 
+    # ------------------------------------------------------------------ yüklenenler
+    def yuklemeler(self, adet: int = 50) -> list[dict]:
+        """Kanalın son yüklemeleri (yeniden eskiye): id, başlık, gizlilik, zaman."""
+        v = istek("GET", f"{API}/channels", params={"part": "contentDetails", "mine": "true"},
+                  headers=self._bas(), deneme=2).json()
+        oge = (v.get("items") or [None])[0]
+        if not oge:
+            return []
+        liste_id = oge["contentDetails"]["relatedPlaylists"]["uploads"]
+        sonuc: list[dict] = []
+        sayfa = None
+        while len(sonuc) < adet:
+            p = {"part": "snippet,status,contentDetails", "playlistId": liste_id, "maxResults": 50}
+            if sayfa:
+                p["pageToken"] = sayfa
+            v = istek("GET", f"{API}/playlistItems", params=p, headers=self._bas(), deneme=2).json()
+            for o in v.get("items", []):
+                sonuc.append({"id": o["contentDetails"]["videoId"], "baslik": o["snippet"].get("title", ""),
+                              "gizlilik": o.get("status", {}).get("privacyStatus", ""),
+                              "zaman": o["contentDetails"].get("videoPublishedAt") or o["snippet"].get("publishedAt", "")})
+            sayfa = v.get("nextPageToken")
+            if not sayfa:
+                break
+        return sonuc[:adet]
+
+    def zaten_yuklenmis(self, baslik: str) -> str | None:
+        """Aynı başlıkla herkese açık bir Shorts zaten varsa onun id'si (gizli deneme yüklemeleri sayılmaz)."""
+        aranan = " ".join(baslik[:100].split())
+        for y in self.yuklemeler(50):
+            if y["gizlilik"] == "public" and " ".join(y["baslik"].split()) == aranan:
+                return y["id"]
+        return None
+
+    def sil(self, video_id: str) -> None:
+        istek("DELETE", f"{API}/videos", params={"id": video_id}, headers=self._bas(), deneme=2)
+
     # ------------------------------------------------------------------ istatistik
     def istatistikler(self, video_idleri: list[str]) -> dict[str, dict]:
         sonuc: dict[str, dict] = {}
