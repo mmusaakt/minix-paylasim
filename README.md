@@ -14,6 +14,7 @@ Kurulum rehberi: https://claude.ai/artifact/N2q7RZswzuAQ5uZuVkt6VX
 | YouTube kanal ayarları | Elle | Kanal kapağı, açıklama ve anahtar kelimeler (`kanal/`). |
 | Müzik kataloğu | Elle | Instagram'ın lisanslı müzik kütüphanesini tarar, parçaların temposunu ve tonunu çıkarır (`muzik/`). |
 | Müzik testi | Elle | Şarkının videoya eklenip eklenmediğini yayın yapmadan dener. |
+| YouTube kopyaları | Elle | Kanalda aynı başlıkla birden çok yüklenmiş videoları listeler; *sil* işaretliyse fazlalarını siler (daha çok izleneni bırakır). |
 
 Elle çalıştırma: **Actions → işlem → Run workflow**. Paylaş'ta *deneme* seçilirse Instagram'a yüklenir ama
 yayınlanmaz, YouTube'a gizli yüklenir.
