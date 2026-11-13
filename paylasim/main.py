@@ -376,8 +376,35 @@ def kontrol(args) -> int:
             yt.erisim()
             k = yt.kanal()
             ozet(f"- YouTube: bağlantı tamam{(' · kanal: ' + k['ad']) if k else ''}")
+            try:  # yayınlanmış videolarda kısıt var mı
+                yuk = yt.yuklemeler(50)
+                ayr = yt.ayrintilar([y["id"] for y in yuk])
+                kisitli = []
+                for y in yuk:
+                    a = ayr.get(y["id"], {})
+                    neden = [x for x, kosul in (
+                        (f"durum {a.get('yukleme')}", a.get("yukleme") not in (None, "processed", "uploaded")),
+                        (f"ret: {a.get('red')}", bool(a.get("red"))),
+                        ("çocuklara özel", a.get("cocuk") is True),
+                        ("yaş sınırlı", bool(a.get("yas"))),
+                        ("bölge kısıtı", bool(a.get("bolge"))),
+                        (f"gizlilik {a.get('gizlilik')}", a.get("gizlilik") not in (None, "public")),
+                    ) if kosul]
+                    if neden:
+                        kisitli.append(f"{y['baslik'][:40]} ({y['id']}): {', '.join(neden)}")
+                ozet(f"- YouTube videoları: {len(yuk)} video tarandı, {len(kisitli)} tanesinde kısıt var")
+                for x in kisitli:
+                    ozet(f"  - ⚠️ {x}")
+            except Exception as e:  # noqa: BLE001
+                ozet(f"- YouTube videoları okunamadı: {e}")
         except Exception as e:  # noqa: BLE001
             sorun.append(f"YouTube bağlantısı: {e}")
+    # kaçan slotlar: son 3 günde saati 3 saatten fazla geçmiş ama paylaşılmamış
+    kacan = [s for s in slotlar
+             if an - timedelta(days=3) <= slot_zamani(s) < an - GEC_KALMA_SINIRI
+             and not all(paylasildi_mi(durum, s["id"], p) for p in slot_platformlari(s, list(PLATFORMLAR)))]
+    for s in kacan:
+        sorun.append(f"Kaçan paylaşım: {s['tarih']} {s['saat']} {s['baslik']} (sıranın sonuna alınmalı)")
     for s in sorun:
         ozet(f"- ❌ {s}")
         log("SORUN:", s)
@@ -522,6 +549,85 @@ def durum_kaydet(args) -> int:
     return 1
 
 
+TETIK_ONCE = timedelta(minutes=10)          # Paylaş'ı slottan bu kadar önce başlat (Paylaş 12 dk öncesinden bekler)
+GUNLUK_ISLER = [("23:35", "istatistik.yml")]
+
+
+def zamanla(args) -> int:
+    """Zamanlayıcı zinciri. GitHub'ın zamanlanmış çalışmaları saatlerce hiç gelmeyebiliyor (13 Kasım'da
+    04:41–19:02 arası tek çalışma gelmedi; KIŞ ile iki YouTube bölümü kaçtı). Bu iş sıradaki slotu bekler, slottan
+    10 dakika önce Paylaş'ı workflow_dispatch ile başlatır (elle tetikleme düşürülmüyor), gece istatistiği de
+    başlatır ve süresi bitmeden kendinin bir sonraki halkasını başlatır. Zamanlanmış tetikleyiciler yedek kalır."""
+    import json
+
+    depo = os.environ.get("GITHUB_REPOSITORY") or "mmusaakt/minix-paylasim"
+    anahtar = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
+    platformlar = [p.strip() for p in os.environ.get("PLATFORMLAR", "").split(",") if p.strip()] or list(PLATFORMLAR)
+    bitis = time.monotonic() + args.sure_dk * 60
+    tetiklenen: dict[str, list[float]] = {}
+    gunluk_yapilan: set[str] = set()
+
+    def tetikle(dosya: str) -> None:
+        if args.kuru:
+            log(f"  (kuru çalışma) {dosya} tetiklenecekti")
+            return
+        ortak.istek("POST", f"https://api.github.com/repos/{depo}/actions/workflows/{dosya}/dispatches",
+                    headers={"Authorization": f"Bearer {anahtar}", "Accept": "application/vnd.github+json"},
+                    json={"ref": "main"}, deneme=3)
+        log(f"  {dosya} tetiklendi")
+
+    def guncel() -> tuple[list[dict], dict]:
+        try:
+            _git("fetch", "--quiet", "origin", "main")
+            t = json.loads(_git("show", "origin/main:takvim.json").stdout)
+            d = json.loads(_git("show", "origin/main:durum.json", kontrol=False).stdout or "{}")
+            return (t["slotlar"] if isinstance(t, dict) else t), d
+        except Exception as e:  # noqa: BLE001
+            log(f"  depo okunamadı ({e}); yerel kopya kullanılıyor")
+            return takvim_oku(), durum_oku()
+
+    while True:
+        an = simdi()
+        uyan = 30 * 60.0
+        for saat, dosya in GUNLUK_ISLER:
+            hedef = an.replace(hour=int(saat[:2]), minute=int(saat[3:]), second=0, microsecond=0)
+            if hedef <= an < hedef + timedelta(minutes=40) and f"{an.date()} {dosya}" not in gunluk_yapilan:
+                log(f"Günlük iş: {dosya}")
+                tetikle(dosya)
+                gunluk_yapilan.add(f"{an.date()} {dosya}")
+            sonraki = hedef if hedef > an else hedef + timedelta(days=1)
+            uyan = min(uyan, (sonraki - an).total_seconds())
+        slotlar, durum = guncel()
+        bekleyen = [s for s in slotlar
+                    if slot_zamani(s) >= an - GEC_KALMA_SINIRI and slot_platformlari(s, platformlar)
+                    and not all(paylasildi_mi(durum, s["id"], p) for p in slot_platformlari(s, platformlar))]
+        vakti_gelen = [s for s in bekleyen if an >= slot_zamani(s) - TETIK_ONCE]
+        ileride = [s for s in bekleyen if an < slot_zamani(s) - TETIK_ONCE]
+        if vakti_gelen:
+            # Paylaş penceresindeki en yeni slotu seçer; o yüzden hep en yeni vakti gelen slot için başlatılır
+            # (geç kalmış bir slot takılıp kalsa da sonraki slotun önünü kesmez)
+            s = max(vakti_gelen, key=slot_zamani)
+            gecmis = tetiklenen.setdefault(s["id"], [])
+            if len(gecmis) < 4 and (not gecmis or time.monotonic() - gecmis[-1] >= 25 * 60):
+                log(f"Slot {s['id']} · {s['baslik']}: Paylaş başlatılıyor")
+                tetikle("paylas.yml")
+                gecmis.append(time.monotonic())
+            uyan = min(uyan, 5 * 60)
+        if ileride:
+            s = min(ileride, key=slot_zamani)
+            bekle_sn = (slot_zamani(s) - TETIK_ONCE - an).total_seconds()
+            log(f"Sıradaki slot {s['id']} · {s['baslik']} ({slot_zamani(s):%d.%m %H:%M}); "
+                f"Paylaş {bekle_sn / 60:.0f} dk sonra başlatılacak")
+            uyan = min(uyan, bekle_sn)
+        kalan = bitis - time.monotonic()
+        if kalan <= 6 * 60:
+            log("Süre doluyor; zincirin sonraki halkası başlatılıyor")
+            tetikle("zamanlayici.yml")
+            ozet(f"⏱️ Zamanlayıcı {args.sure_dk} dk çalıştı; sonraki halka başlatıldı.")
+            return 0
+        time.sleep(max(20.0, min(uyan, kalan - 6 * 60)))
+
+
 def youtube_kopyalar(args) -> int:
     """Kanalda aynı başlıkla birden çok kez yüklenmiş videoları bulur; --sil ile fazlalarını siler.
     Kalan: durum.json'da kayıtlı olan; kopyası daha çok izlendiyse o kalır ve kayıt ona çevrilir."""
@@ -590,7 +696,12 @@ def ana(argv=None) -> int:
     pd.add_argument("--mesaj", default="Paylaşım durumu")
     py = alt.add_parser("youtube-kopyalar")
     py.add_argument("--sil", action="store_true")
+    pz = alt.add_parser("zamanla")
+    pz.add_argument("--sure-dk", dest="sure_dk", type=float, default=330)
+    pz.add_argument("--kuru", action="store_true", help="tetiklemeden yalnız ne yapacağını yazar")
     args = p.parse_args(argv)
+    if args.komut == "zamanla":
+        return zamanla(args)
     if args.komut == "durum-kaydet":
         return durum_kaydet(args)
     if args.komut == "youtube-kopyalar":

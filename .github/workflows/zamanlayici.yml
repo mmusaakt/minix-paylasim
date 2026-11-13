@@ -1,0 +1,42 @@
+name: Zamanlayıcı
+
+# GitHub'ın zamanlanmış tetikleyicileri saatlerce hiç gelmeyebiliyor (13 Kasım'da 14 saat çalışma gelmedi).
+# Bu iş kendi kendini sürdüren bir zincir: sıradaki slotu bekler, slottan 10 dakika önce Paylaş'ı başlatır,
+# 23:35'te İstatistik'i başlatır ve ~5,5 saat dolmadan bir sonraki halkasını başlatır.
+# Aşağıdaki zamanlanmış tetikleyici yalnız yedektir: zincir koparsa yeniden başlatır.
+on:
+  workflow_dispatch:
+    inputs:
+      sure_dk:
+        description: "Bu halkanın süresi (dakika)"
+        required: false
+        default: "330"
+  schedule:
+    - cron: "17 */2 * * *"
+
+concurrency:
+  group: zamanlayici
+  cancel-in-progress: false
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  zamanla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Bekle ve başlat
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PLATFORMLAR: ${{ vars.PLATFORMLAR }}
+          SURE: ${{ inputs.sure_dk }}
+        run: python -m paylasim zamanla --sure-dk "${SURE:-330}"

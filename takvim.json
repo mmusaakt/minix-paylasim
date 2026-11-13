@@ -262,24 +262,6 @@
    "muzik_sanatci": "Cy Curnin"
   },
   {
-   "id": "2026-11-12-1600",
-   "takvim_belgesi": "2026-10-25-0118",
-   "tarih": "2026-11-12",
-   "saat": "16:00",
-   "baslik": "AYNI TOHUM. AYNI TOPRAK.",
-   "etiketler": "SABIRSIZ / SABIRLI",
-   "konu": "Alışkanlık",
-   "slug": "ayni-tohum",
-   "video": "videolar/ayni-tohum.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Sabreden derviş muradına ermiş. Ama sabır beklemek değil, kurcalamamaktır.\n\nHer gün tartıya çıkmak, takipçi sayısını yenileyip durmak, yatırıma saatte bir bakmak… Hepsi tohumu topraktan çıkarıp \"büyüdü mü?\" diye kontrol etmek gibi.\n\nDikkat et: Sabırsızın tohumu da büyüyordu. Kök salmaya başlamıştı, ama her kontrolde baştan başladı.\n\nEk. Sula. Bekle. Sonuç görünmeden önce toprağın altında olur.\n\nSen en çok neyi her gün kontrol ediyorsun? 👇\n\n#minixanima #sabır #alışkanlık",
-   "platformlar": [
-    "youtube"
-   ],
-   "not": "Instagram'da elle paylaşıldı; YouTube'a sonradan yükleniyor."
-  },
-  {
    "id": "2026-11-12-2000",
    "takvim_belgesi": "2026-11-12-2000",
    "tarih": "2026-11-12",
@@ -311,43 +293,6 @@
    "sure": 14.0,
    "kapak_ms": 13950,
    "aciklama": "Para kazanmak bir şey. Delikleri kapatmak başka.\n\nUnutulan bir abonelik, her gün alınan bir kahve, fark etmeden ödenen bir ücret… Tek tek bakınca hepsi önemsiz görünür. Ama hepsi aynı kovadan sızar; gelir aynı kalsa bile kova dolmaz.\n\nDikkat et: İlk kaçan para ikisinin de ayaklarının dibinden aynı anda geçti. Sadece sağdaki aşağı baktı.\n\nBu hafta banka ekstreni aç ve her ay düzenli çıkan küçük ödemeleri tek tek işaretle.\n\nSenin kovandaki en büyük delik ne? 👇\n\n#minixanima #para #birikim",
-   "platformlar": [
-    "youtube"
-   ],
-   "not": "Instagram'da elle paylaşıldı; YouTube'a sonradan yükleniyor."
-  },
-  {
-   "id": "2026-11-13-1230",
-   "takvim_belgesi": "2026-11-13-1230",
-   "tarih": "2026-11-13",
-   "saat": "12:30",
-   "baslik": "AYNI KIŞ.",
-   "etiketler": "KESEN / BEKLEYEN",
-   "konu": "Zihin",
-   "slug": "ayni-kis",
-   "video": "videolar/ayni-kis.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Kışın her ağaç ölü görünür.\n\nZor bir dönemde verilen kalıcı kararlar sonradan pişmanlık getirebilir: bir işi bırakmak, bir ilişkiyi bitirmek, bir hayalden vazgeçmek. Oysa bazı şeyler sadece mevsimini bekliyordur.\n\nDikkat et: Kesilen kütükten bile yeşil bir yaprak çıktı. Ağaç hiç ölmemişti.\n\nVazgeçmek üzere olduğun bir şey varsa, kararı bir hafta ertele ve sadece bekle.\n\nSen hiç kışın bir ağacı kestin mi? 👇\n\n#minixanima #sabır #zihin",
-   "muzik": "İlkbahar (Spring) – Vivaldi, Dört Mevsim",
-   "sabitYorum": "Sonuna kadar izleyenler kütükteki küçük sürprizi gördü 🌱",
-   "muzik_id": "1397571032221463",
-   "muzik_baslik": "Hopeful Ascent",
-   "muzik_sanatci": "Fellow Travelers"
-  },
-  {
-   "id": "2026-11-13-1600",
-   "takvim_belgesi": "2026-10-30-2000",
-   "tarih": "2026-11-13",
-   "saat": "16:00",
-   "baslik": "AYNI SARILMA.",
-   "etiketler": "ACELEYLE SARILAN / SARILIP KALAN",
-   "konu": "Aşk",
-   "slug": "ayni-sarilma",
-   "video": "videolar/ayni-sarilma.mp4",
-   "sure": 14.0,
-   "kapak_ms": 13950,
-   "aciklama": "Bazı dertler sözle değil, uzun bir sarılmayla geçer.\n\nKötü bir günün sonunda sevdiğimiz insana hızlıca sarılıp kendi işimize döneriz. Oysa bazen en iyi destek, hiçbir şey söylemeden biraz daha uzun kalmaktır.\n\nDikkat et: Sağdaki tek kelime etmedi, sadece bırakmadı. Soldaki ise cebine koyduğu telefonu hemen geri çıkardı.\n\nBu akşam sevdiğin birine sarıldığında acele etme; o bırakana kadar bırakma.\n\nEn son kime uzun uzun sarıldın? 👇\n\n#minixanima #sarılmak #sevgi",
    "platformlar": [
     "youtube"
    ],
@@ -891,6 +836,24 @@
    "muzik_sanatci": "Giulio Cercato"
   },
   {
+   "id": "2026-11-20-2230",
+   "takvim_belgesi": "2026-10-25-0118",
+   "tarih": "2026-11-20",
+   "saat": "22:30",
+   "baslik": "AYNI TOHUM. AYNI TOPRAK.",
+   "etiketler": "SABIRSIZ / SABIRLI",
+   "konu": "Alışkanlık",
+   "slug": "ayni-tohum",
+   "video": "videolar/ayni-tohum.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Sabreden derviş muradına ermiş. Ama sabır beklemek değil, kurcalamamaktır.\n\nHer gün tartıya çıkmak, takipçi sayısını yenileyip durmak, yatırıma saatte bir bakmak… Hepsi tohumu topraktan çıkarıp \"büyüdü mü?\" diye kontrol etmek gibi.\n\nDikkat et: Sabırsızın tohumu da büyüyordu. Kök salmaya başlamıştı, ama her kontrolde baştan başladı.\n\nEk. Sula. Bekle. Sonuç görünmeden önce toprağın altında olur.\n\nSen en çok neyi her gün kontrol ediyorsun? 👇\n\n#minixanima #sabır #alışkanlık",
+   "platformlar": [
+    "youtube"
+   ],
+   "not": "Instagram'da elle paylaşıldı; YouTube'a sonradan yükleniyor."
+  },
+  {
    "id": "2026-11-21-1230",
    "takvim_belgesi": "2026-11-21-1230",
    "tarih": "2026-11-21",
@@ -908,6 +871,24 @@
    "muzik_id": "1362779189166314",
    "muzik_baslik": "Funky Junk",
    "muzik_sanatci": "Lightbox Music"
+  },
+  {
+   "id": "2026-11-21-1600",
+   "takvim_belgesi": "2026-10-30-2000",
+   "tarih": "2026-11-21",
+   "saat": "16:00",
+   "baslik": "AYNI SARILMA.",
+   "etiketler": "ACELEYLE SARILAN / SARILIP KALAN",
+   "konu": "Aşk",
+   "slug": "ayni-sarilma",
+   "video": "videolar/ayni-sarilma.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Bazı dertler sözle değil, uzun bir sarılmayla geçer.\n\nKötü bir günün sonunda sevdiğimiz insana hızlıca sarılıp kendi işimize döneriz. Oysa bazen en iyi destek, hiçbir şey söylemeden biraz daha uzun kalmaktır.\n\nDikkat et: Sağdaki tek kelime etmedi, sadece bırakmadı. Soldaki ise cebine koyduğu telefonu hemen geri çıkardı.\n\nBu akşam sevdiğin birine sarıldığında acele etme; o bırakana kadar bırakma.\n\nEn son kime uzun uzun sarıldın? 👇\n\n#minixanima #sarılmak #sevgi",
+   "platformlar": [
+    "youtube"
+   ],
+   "not": "Instagram'da elle paylaşıldı; YouTube'a sonradan yükleniyor."
   },
   {
    "id": "2026-11-21-2000",
@@ -2352,6 +2333,26 @@
    "muzik_id": "984456724611827",
    "muzik_baslik": "Hope Begins",
    "muzik_sanatci": "Neon Avenue"
+  },
+  {
+   "id": "2026-12-29-2000",
+   "takvim_belgesi": "2026-11-13-1230",
+   "tarih": "2026-12-29",
+   "saat": "20:00",
+   "baslik": "AYNI KIŞ.",
+   "etiketler": "KESEN / BEKLEYEN",
+   "konu": "Zihin",
+   "slug": "ayni-kis",
+   "video": "videolar/ayni-kis.mp4",
+   "sure": 14.0,
+   "kapak_ms": 13950,
+   "aciklama": "Kışın her ağaç ölü görünür.\n\nZor bir dönemde verilen kalıcı kararlar sonradan pişmanlık getirebilir: bir işi bırakmak, bir ilişkiyi bitirmek, bir hayalden vazgeçmek. Oysa bazı şeyler sadece mevsimini bekliyordur.\n\nDikkat et: Kesilen kütükten bile yeşil bir yaprak çıktı. Ağaç hiç ölmemişti.\n\nVazgeçmek üzere olduğun bir şey varsa, kararı bir hafta ertele ve sadece bekle.\n\nSen hiç kışın bir ağacı kestin mi? 👇\n\n#minixanima #sabır #zihin",
+   "muzik": "İlkbahar (Spring) – Vivaldi, Dört Mevsim",
+   "sabitYorum": "Sonuna kadar izleyenler kütükteki küçük sürprizi gördü 🌱",
+   "muzik_id": "1397571032221463",
+   "muzik_baslik": "Hopeful Ascent",
+   "muzik_sanatci": "Fellow Travelers",
+   "not": "13 Kasım 12:30'da GitHub zamanlayıcısı çalışmadığı için paylaşılamadı; sıranın sonuna alındı."
   }
  ]
 }

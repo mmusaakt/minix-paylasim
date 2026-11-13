@@ -135,6 +135,24 @@ class YouTube:
                 sonuc[oge["id"]] = {k: int(s[k]) for k in ("viewCount", "likeCount", "commentCount") if k in s}
         return sonuc
 
+    def ayrintilar(self, video_idleri: list[str]) -> dict[str, dict]:
+        """Videoların yayın durumu: gizlilik, yükleme durumu, ret sebebi, çocuklara özel, yaş sınırı, bölge kısıtı."""
+        sonuc: dict[str, dict] = {}
+        for i in range(0, len(video_idleri), 50):
+            parca = video_idleri[i:i + 50]
+            v = istek("GET", f"{API}/videos", params={"part": "status,contentDetails,statistics", "id": ",".join(parca)},
+                      headers=self._bas(), deneme=2).json()
+            for o in v.get("items", []):
+                st, cd = o.get("status", {}), o.get("contentDetails", {})
+                sonuc[o["id"]] = {
+                    "gizlilik": st.get("privacyStatus"), "yukleme": st.get("uploadStatus"),
+                    "red": st.get("rejectionReason") or st.get("failureReason"),
+                    "cocuk": st.get("madeForKids"), "yas": (cd.get("contentRating") or {}).get("ytRating"),
+                    "bolge": cd.get("regionRestriction"),
+                    "izlenme": int(o.get("statistics", {}).get("viewCount", 0)),
+                }
+        return sonuc
+
     def analitik(self, video_idleri: list[str], baslangic: str, bitis: str) -> dict[str, dict]:
         """İzlenme süresi ve izlenme yüzdesi (yt-analytics.readonly izni varsa)."""
         sonuc: dict[str, dict] = {}
