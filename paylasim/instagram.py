@@ -22,6 +22,16 @@ ISTENMEYEN = ("remix", "cover", "sped up", "slowed", "karaoke", "instrumental",
               "live", "acoustic", "8d", "nightcore", "reverb", "piano version", "lofi", "lo fi")
 
 
+def deneme_reels_stratejisi() -> str | None:
+    """Instagram deneme Reels (trial reels): önce takipçi olmayanlara gösterilir.
+    DENEME_REELS değişkeni: SS_PERFORMANCE (varsayılan, iyi giderse kendiliğinden takipçilere açılır),
+    MANUAL (uygulamadan elle açılır) ya da kapali."""
+    d = (os.environ.get("DENEME_REELS") or "SS_PERFORMANCE").strip().upper()
+    if d in ("KAPALI", "KAPALİ", "0", "FALSE", "HAYIR", "YOK"):
+        return None
+    return d if d in ("SS_PERFORMANCE", "MANUAL") else "SS_PERFORMANCE"
+
+
 class Instagram:
     def __init__(self, token: str, ig_user_id: str | None = None, surum: str | None = None,
                  kullanici_adi: str | None = None):
@@ -31,8 +41,11 @@ class Instagram:
         self.ig_id = ig_user_id or None
         self.kullanici_adi = (kullanici_adi or os.environ.get("IG_USERNAME") or "minixanima").lstrip("@").lower()
         self.hesap_adi: str | None = None
+        self.deneme_reels: str | None = None  # son konteynerde kullanılan graduation_strategy
+        self.deneme_reels_kapali = False
 
     # ------------------------------------------------------------------ temel
+
     def _get(self, yol: str, **params) -> dict:
         params["access_token"] = self.token
         return istek("GET", f"{self.taban}/{yol.lstrip('/')}", params=params).json()
@@ -147,6 +160,18 @@ class Instagram:
                 {"audio_id": str(muzik_id), "audio_volume": int(muzik_ses), "video_volume": int(video_ses)})
         elif ses_adi:
             veri["audio_name"] = ses_adi
+        strateji = deneme_reels_stratejisi()
+        if strateji and not self.deneme_reels_kapali:
+            try:
+                k = self._post(f"{self.ig_id}/media", tekrar_dene=False,
+                               trial_params=json.dumps({"graduation_strategy": strateji}), **veri)
+                self.deneme_reels = strateji
+                return k
+            except ApiHatasi as e:
+                # Hesap deneme Reels'e uygun değilse ya da parametre reddedilirse normal Reels olarak devam et
+                log(f"  deneme Reels konteyneri reddedildi ({e}); normal Reels olarak deneniyor")
+                self.deneme_reels_kapali = True
+        self.deneme_reels = None
         return self._post(f"{self.ig_id}/media", **veri)
 
     def video_yukle(self, uri: str, video: Path) -> None:

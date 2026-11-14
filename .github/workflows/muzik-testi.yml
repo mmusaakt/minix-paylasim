@@ -32,4 +32,5 @@ jobs:
           SLOT: ${{ inputs.slot }}
           MUZIK_ID: ${{ inputs.muzik }}
           IG_VIDEO_TABAN: ${{ vars.IG_VIDEO_TABAN }}
+          DENEME_REELS: ${{ vars.DENEME_REELS }}
         run: python -m paylasim muziktest --slot "$SLOT" --muzik "$MUZIK_ID"

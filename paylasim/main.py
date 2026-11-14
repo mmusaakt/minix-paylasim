@@ -265,6 +265,8 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
     log(f"Instagram: yayınlandı {link or medya_id} · müzik: {muzik_metni}")
     bilgi = {"durum": "paylasildi", "medya_id": medya_id, "link": link, "muzik": muzik_metni,
              "zaman": simdi().isoformat()}
+    if ig.deneme_reels:
+        bilgi["deneme_reels"] = ig.deneme_reels
     ses = ig.ses_turu(medya_id)
     if ses:
         bilgi["ses_turu"] = ses
@@ -273,7 +275,8 @@ def instagram_paylas(slot: dict, video, durum: dict, deneme: bool, beklenecek: b
         bilgi["muzik"] = muzik_metni
         log(f"UYARI: Müzik: {muzik_metni}")
     kaydet(durum, sid, "instagram", bilgi)
-    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · Müzik: {muzik_metni} · ses türü: {ses or 'okunamadı'}")
+    ozet(f"- Instagram: [{link or medya_id}]({link or ''}) · Müzik: {muzik_metni} · ses türü: {ses or 'okunamadı'}"
+         f" · deneme Reels: {ig.deneme_reels or 'hayır'}")
     hatalar = []
     if slot.get("sabitYorum"):
         yid = ig.yorum_yaz(medya_id, slot["sabitYorum"])
