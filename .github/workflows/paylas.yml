@@ -15,6 +15,7 @@ on:
     - cron: "3-23/10 12 * * *"     # 15:03–15:23 İstanbul
     - cron: "33-59/10 17 * * *"    # 20:33–20:53 İstanbul (20:00 slotu için yedek)
     - cron: "3-59/10 18-19 * * *"  # 21:03–22:53 İstanbul
+    # 15–21 Kasım deneme: akşam slotu 18:00. Yedek pencereler 17:03–20:53 (aşağıdaki 16:00 yedekleri + 20:00 pencereleri) bunu karşılıyor.
     # 9–20 Kasım: Instagram'da elle paylaşılmış 23 bölüm YouTube'a da yükleniyor (yalnız YouTube, 16:00 ve 22:30).
     - cron: "33-59/10 11 9-21 11 *"   # 14:33–14:53 İstanbul -> 16:00 paylaşımı
     - cron: "3-59/10 12 9-21 11 *"    # 15:03–15:53 İstanbul
