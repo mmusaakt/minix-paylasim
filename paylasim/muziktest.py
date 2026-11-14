@@ -58,6 +58,7 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
         ("video_url · ses 40/70 · kapak son kare · gerçek açıklama", "url", adres, tam, kapak, gercek),
         ("video_url · trend parça · kapak son kare · gerçek açıklama", "url", adres,
          {"audio_id": trend_id, "audio_volume": 40, "video_volume": 70}, kapak, gercek),
+        ("video_url · ses 40/70 · deneme Reels (SS_PERFORMANCE)", "url+deneme", adres, tam, kapak, gercek),
     ]
     sonuclar = []
     for ad, yontem, adres, ses, kapak_ms, aciklama in varyantlar:
@@ -70,6 +71,8 @@ def muzik_testi(slot_id: str, muzik_id: str | None = None) -> int:
             veri["thumb_offset"] = str(int(kapak_ms))
         if ses:
             veri["audio_configuration"] = json.dumps(ses)
+        if yontem.endswith("+deneme"):
+            veri["trial_params"] = json.dumps({"graduation_strategy": "SS_PERFORMANCE"})
         sonuc = "?"
         try:
             k = ig._post(f"{ig.ig_id}/media", **veri)
