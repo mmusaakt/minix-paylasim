@@ -24,9 +24,10 @@ ISTENMEYEN = ("remix", "cover", "sped up", "slowed", "karaoke", "instrumental",
 
 def deneme_reels_stratejisi() -> str | None:
     """Instagram deneme Reels (trial reels): önce takipçi olmayanlara gösterilir.
-    DENEME_REELS değişkeni: SS_PERFORMANCE (varsayılan, iyi giderse kendiliğinden takipçilere açılır),
-    MANUAL (uygulamadan elle açılır) ya da kapali."""
-    d = (os.environ.get("DENEME_REELS") or "SS_PERFORMANCE").strip().upper()
+    DENEME_REELS değişkeni: kapali (varsayılan), SS_PERFORMANCE (iyi giderse kendiliğinden takipçilere açılır)
+    ya da MANUAL (uygulamadan elle açılır). 16 Kasım 2026: Instagram hesabı takipçi koşulunu karşılamadığı için
+    reddediyordu (alt kod 2207081); kullanıcı onayıyla varsayılan kapalı."""
+    d = (os.environ.get("DENEME_REELS") or "KAPALI").strip().upper()
     if d in ("KAPALI", "KAPALİ", "0", "FALSE", "HAYIR", "YOK"):
         return None
     return d if d in ("SS_PERFORMANCE", "MANUAL") else "SS_PERFORMANCE"

@@ -8,6 +8,10 @@ on:
         description: "Fazla kopyaları sil (işaretsizse yalnız listeler)"
         type: boolean
         default: false
+      videolar:
+        description: "Yalnız bu videoları sil (boşlukla ayrılmış video kimlikleri; durum.json'da kayıtlı olmalı)"
+        required: false
+        default: ""
 
 concurrency:
   group: paylas
@@ -34,7 +38,12 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           SIL: ${{ inputs.sil }}
+          VIDEOLAR: ${{ inputs.videolar }}
         run: |
+          if [ -n "$VIDEOLAR" ]; then
+            ARGS=(); for v in $VIDEOLAR; do ARGS+=(--video "$v"); done
+            python -m paylasim youtube-sil "${ARGS[@]}"; exit $?
+          fi
           if [ "$SIL" = "true" ]; then python -m paylasim youtube-kopyalar --sil; else python -m paylasim youtube-kopyalar; fi
       - name: Durumu kaydet
         if: always()

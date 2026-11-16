@@ -679,6 +679,29 @@ def youtube_kopyalar(args) -> int:
     return 0
 
 
+def youtube_sil(args) -> int:
+    """Kullanıcının onayladığı belirli YouTube videolarını siler (ör. algoritmanın almadığı, yeniden yüklenecek
+    videolar). Güvenlik için yalnız durum.json'da kayıtlı video kimlikleri silinir; durum kaydına dokunulmaz."""
+    yt = youtube_istemcisi()
+    durum = ortak.durum_oku()
+    kayit = {d["youtube"]["video_id"]: sid for sid, d in durum.items()
+             if d.get("youtube", {}).get("video_id")}
+    basliklar = {y["id"]: y["baslik"] for y in yt.yuklemeler(500)}
+    ozet("### YouTube video silme")
+    hata = 0
+    for vid in args.video:
+        if vid not in kayit:
+            ozet(f"- ❌ {vid}: durum.json'da kayıtlı değil, silinmedi")
+            hata += 1
+            continue
+        if vid not in basliklar:
+            ozet(f"- {vid} ({kayit[vid]}): kanalda yok, zaten silinmiş")
+            continue
+        yt.sil(vid)
+        ozet(f"- 🗑️ {vid} silindi · {kayit[vid]} · {basliklar[vid][:60]}")
+    return 1 if hata else 0
+
+
 def ana(argv=None) -> int:
     p = argparse.ArgumentParser(prog="paylasim")
     alt = p.add_subparsers(dest="komut", required=True)
@@ -699,6 +722,8 @@ def ana(argv=None) -> int:
     pd.add_argument("--mesaj", default="Paylaşım durumu")
     py = alt.add_parser("youtube-kopyalar")
     py.add_argument("--sil", action="store_true")
+    ps = alt.add_parser("youtube-sil")
+    ps.add_argument("--video", action="append", required=True)
     pz = alt.add_parser("zamanla")
     pz.add_argument("--sure-dk", dest="sure_dk", type=float, default=330)
     pz.add_argument("--kuru", action="store_true", help="tetiklemeden yalnız ne yapacağını yazar")
@@ -709,6 +734,8 @@ def ana(argv=None) -> int:
         return durum_kaydet(args)
     if args.komut == "youtube-kopyalar":
         return youtube_kopyalar(args)
+    if args.komut == "youtube-sil":
+        return youtube_sil(args)
     if args.komut == "katalog":
         from .katalog import katalog_olustur
         return katalog_olustur()
