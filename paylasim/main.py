@@ -49,6 +49,8 @@ def youtube_istemcisi():
 # ---------------------------------------------------------------- metinler
 
 def youtube_basligi(slot: dict) -> str:
+    if slot.get("yt_baslik"):  # yeniden yüklemelerde farklı başlık (kanalda aynı başlık varsa yükleme atlanır)
+        return slot["yt_baslik"].strip()[:100]
     baslik = slot["baslik"].strip()
     parca = [p.strip() for p in re.split(r"\s*/\s*", slot.get("etiketler", "")) if p.strip()]
     if len(parca) == 2:
