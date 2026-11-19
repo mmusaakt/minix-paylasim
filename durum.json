@@ -506,5 +506,22 @@
    "video_id": "HQ1OdDWBm7o",
    "zaman": "2026-11-19T16:00:02.110966+03:00"
   }
+ },
+ "2026-11-19-1800": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/Df7Viz9AlO-/",
+   "medya_id": "18134961920510531",
+   "muzik": "Piano Mystique – Brent Bourgeois",
+   "ses_turu": "MUSIC",
+   "yorum_id": "17886559032529449",
+   "zaman": "2026-11-19T18:00:08.094615+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/GOHxZsSCEaA",
+   "video_id": "GOHxZsSCEaA",
+   "zaman": "2026-11-19T18:00:17.673804+03:00"
+  }
  }
 }
