@@ -481,5 +481,22 @@
    "video_id": "Qnub37P-HVs",
    "zaman": "2026-11-18T22:30:02.355422+03:00"
   }
+ },
+ "2026-11-19-1230": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/Df6vq3hinVL/",
+   "medya_id": "17995359702062492",
+   "muzik": "Sunshine Of Life (Instrumental) – Global Genius",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18364871686247694",
+   "zaman": "2026-11-19T12:30:08.368394+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/foc6B4nufeU",
+   "video_id": "foc6B4nufeU",
+   "zaman": "2026-11-19T12:30:18.812238+03:00"
+  }
  }
 }
