@@ -581,5 +581,22 @@
    "video_id": "Mfj_bDuMu6w",
    "zaman": "2026-11-20T22:30:01.875828+03:00"
   }
+ },
+ "2026-11-21-1230": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/Df_5T15HFeg/",
+   "medya_id": "18112216400287513",
+   "muzik": "Funky Junk – Lightbox Music",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18273306217306042",
+   "zaman": "2026-11-21T12:30:07.980992+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/7eXdMyXb_EA",
+   "video_id": "7eXdMyXb_EA",
+   "zaman": "2026-11-21T12:30:17.608644+03:00"
+  }
  }
 }
