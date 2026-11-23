@@ -27,14 +27,14 @@ on:
     - cron: "3-23/10 15 9-30 11 *"    # 18:03–18:23 İstanbul
     - cron: "3-59/10 20 9-22 11 *"    # 23:03–23:53 İstanbul (22:30 için yedek)
     - cron: "3-53/10 21 9-22 11 *"    # 00:03–00:53 İstanbul
-    # 23 Kasım – 2 Aralık 16:00: bir platformda tutup diğerinde tutmayan bölümler yeniden paylaşılıyor
+    # 23 Kasım – 8 Aralık 16:00 (2. tur 3–8 Aralık): bir platformda tutup diğerinde tutmayan bölümler yeniden paylaşılıyor
     # (günaşırı Instagram / YouTube; slotlarda "yeniden": true).
-    - cron: "33-59/10 11 1-2 12 *"   # (1–2 Aralık)
-    - cron: "3-59/10 12 1-2 12 *"    # (1–2 Aralık)
-    - cron: "3-23/10 13 1-2 12 *"    # (1–2 Aralık)
-    - cron: "33-59/10 13 1-2 12 *"   # (1–2 Aralık)
-    - cron: "3-59/10 14 1-2 12 *"    # (1–2 Aralık)
-    - cron: "3-23/10 15 1-2 12 *"    # (1–2 Aralık)
+    - cron: "33-59/10 11 1-8 12 *"   # (1–8 Aralık)
+    - cron: "3-59/10 12 1-8 12 *"    # (1–8 Aralık)
+    - cron: "3-23/10 13 1-8 12 *"    # (1–8 Aralık)
+    - cron: "33-59/10 13 1-8 12 *"   # (1–8 Aralık)
+    - cron: "3-59/10 14 1-8 12 *"    # (1–8 Aralık)
+    - cron: "3-23/10 15 1-8 12 *"    # (1–8 Aralık)
   workflow_dispatch:
     inputs:
       slot:
