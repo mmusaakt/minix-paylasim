@@ -718,5 +718,22 @@
    "video_id": "3KK2RRWSSn0",
    "zaman": "2026-11-23T20:00:20.807188+03:00"
   }
+ },
+ "2026-11-24-1230": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/DgHnr9vCpi7/",
+   "medya_id": "18042828041650374",
+   "muzik": "Euphoria – Giulio Cercato",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18084961802360029",
+   "zaman": "2026-11-24T12:30:07.105249+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/SqwdANy1n60",
+   "video_id": "SqwdANy1n60",
+   "zaman": "2026-11-24T12:30:16.209950+03:00"
+  }
  }
 }
