@@ -788,5 +788,22 @@
    "yorum_id": "18373855528246294",
    "zaman": "2026-11-25T16:00:12.459507+03:00"
   }
+ },
+ "2026-11-25-2000": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/DgK__CagEwS/",
+   "medya_id": "17923672185241838",
+   "muzik": "Good Morning Funk – F-MACK",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18152512951558148",
+   "zaman": "2026-11-25T20:00:10.009884+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/zKKu1Y-5voI",
+   "video_id": "zKKu1Y-5voI",
+   "zaman": "2026-11-25T20:00:19.258185+03:00"
+  }
  }
 }
