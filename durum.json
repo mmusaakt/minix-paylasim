@@ -830,5 +830,22 @@
    "video_id": "PdOuIXPjXqE",
    "zaman": "2026-11-26T16:00:01.922786+03:00"
   }
+ },
+ "2026-11-26-2000": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/DgNk4LsjLpu/",
+   "medya_id": "18117751751139257",
+   "muzik": "Joyful Spectacle (Instrumental) – bbox",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18397227523227761",
+   "zaman": "2026-11-26T20:00:07.080379+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/gTuLiWcqabg",
+   "video_id": "gTuLiWcqabg",
+   "zaman": "2026-11-26T20:00:16.166012+03:00"
+  }
  }
 }
