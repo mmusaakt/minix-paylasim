@@ -16,7 +16,8 @@ Kullanım:
       yeniden basılmaz (--yeniden ile basılır).
 
 Kanca kartı: InterDisplay Bold 64/58/52/48 px, en fazla 2 satır ("\\n" satırı böler), ilk kareden
-görünür, 2,5 sn'de sönmeye başlar, 2,9 sn'de biter. Yer sırası:
+görünür; yazı 2,35–2,6 sn'de, kutu 2,6–2,9 sn'de söner (örtülen başlık yazıyla üst üste binmez).
+Yer sırası (önce 64/58 px'te, sığmazsa 52/48 px'te):
   1. başlık ile etiketlerin arasındaki boşluk (yarı saydam kutu; hiçbir şeyi örtmez),
   2. başlığın üstü (y=236'dan etiketlere kadar; başlığı 3 sn örter, koyu zemin),
   3. etiket satırını örter (sahneye taşmaz, koyu zemin),
@@ -34,8 +35,8 @@ W, H = rk.W, rk.H
 KANCA_FONT = rk.INTER + "InterDisplay-Bold.otf"
 KANCA_BOYLAR = (64, 58, 52, 48)
 UST_EN_AZ = 236          # Reels/Shorts üst arayüzünün altı
-SON = 2.5                # kanca bu saniyede sönmeye başlar
-SONME = 0.4
+YAZI_SON, YAZI_SONME = 2.35, 0.25   # kanca yazısı 2,35 sn'de sönmeye başlar, 2,6'da biter
+KUTU_SON, KUTU_SONME = 2.6, 0.3     # kutu yazıdan sonra söner, 2,9'da biter
 GENISLIK = 900
 
 
@@ -57,22 +58,26 @@ def kanca_olcu(metin, boylar=KANCA_BOYLAR):
     raise ValueError(f"Kanca 2 satıra sığmıyor, kısaltılmalı: {metin!r}")
 
 
-def kanca_png(metin, yol, ust, alt=None, alfa=150, boylar=KANCA_BOYLAR):
+def kanca_png(metin, yol, ust, alt=None, alfa=150, boylar=KANCA_BOYLAR, yazi_yol=None):
+    """yazi_yol verilirse kutu `yol`a, yazı ayrı katman olarak `yazi_yol`a yazılır (ayrı sönsünler diye)."""
     boy, satirlar, h = kanca_olcu(metin, boylar)
     f = ImageFont.truetype(KANCA_FONT, boy)
     ara = round(boy * 1.22)
     alt = max(alt or 0, ust + h)
     y0 = ust + (alt - ust - h) // 2 + 46
-    im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     zemin = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(zemin).rounded_rectangle((60, ust, W - 60, alt), radius=36, fill=(0, 0, 0, alfa))
-    im = Image.alpha_composite(im, zemin)
-    c = ImageDraw.Draw(im)
+    yazi = Image.new("RGBA", (W, H), (255, 255, 255, 0))  # beyaz-saydam zemin: kenar yumuşatması kararmaz
+    c = ImageDraw.Draw(yazi)
     for i, s in enumerate(satirlar):
         w = c.textlength(s, font=f)
         # harflerin üst boşluğunu dengelemek için yazının görünen kutusuna göre ortala
         c.text(((W - w) / 2, y0 + i * ara - round(boy * 0.08)), s, font=f, fill=(255, 255, 255, 255))
-    im.save(yol)
+    if yazi_yol:
+        zemin.save(yol)
+        yazi.save(yazi_yol)
+    else:
+        Image.alpha_composite(zemin, yazi).save(yol)
 
 
 def kanca_bantlar(video):
@@ -81,7 +86,8 @@ def kanca_bantlar(video):
         k = rk.kare(video, t)
         a = k if a is None else np.maximum(a, k)
     med = np.median(a, axis=1, keepdims=True)
-    satir = ((a - med) > 60).sum(axis=1) > 3
+    sayi = ((a - med) > 60).sum(axis=1)
+    satir = sayi > 3
     out, bas_ = [], None
     for y in range(150, 1400):
         if satir[y] and bas_ is None:
@@ -92,7 +98,8 @@ def kanca_bantlar(video):
             else:
                 out.append((bas_, y))
             bas_ = None
-    return out
+    # Yıldız, toz gibi küçük parıltılar bant sayılmaz: bandın parlak piksel alanı en az 300 olmalı
+    return [(u, l) for u, l in out if sayi[u:l].sum() >= 300]
 
 
 def kanca_yerlesim(video, metin):
@@ -104,42 +111,33 @@ def kanca_yerlesim(video, metin):
     etiket = alt[0][0] if alt else 1400
     etiket_alt = alt[0][1] if alt else ust_sinir
     sahne = alt[1][0] if len(alt) > 1 else 1400
-    secenekler = [KANCA_BOYLAR[i:] for i in range(len(KANCA_BOYLAR))]
-    # 1. Boşluk: başlık ile etiketler arası, boşluğun ortasına
-    for boylar in secenekler:
+
+    def yer(tur, boy):
         try:
-            _, _, h = kanca_olcu(metin, boylar)
+            _, _, h = kanca_olcu(metin, (boy,))
         except ValueError:
-            continue
-        if ust_sinir + h <= etiket - 15:
-            ust = ust_sinir + ((etiket - 15) - ust_sinir - h) // 2
-            return "bosluk", ust, None, 150, boylar
-    # 2. Başlığın üstü
-    for boylar in secenekler:
-        try:
-            _, _, h = kanca_olcu(metin, boylar)
-        except ValueError:
-            continue
-        if UST_EN_AZ + h <= etiket - 15:
-            return "baslik", UST_EN_AZ, etiket - 15, 255, boylar
-    # 3. Etiketleri örter
-    for boylar in secenekler:
-        try:
-            _, _, h = kanca_olcu(metin, boylar)
-        except ValueError:
-            continue
-        kutu_alt = max(ust_sinir + h, etiket_alt + 16)
-        if kutu_alt <= sahne - 12:
-            return "etiket", ust_sinir, kutu_alt, 255, boylar
-    # 4. Başlık + etiketler
-    for boylar in secenekler:
-        try:
-            _, _, h = kanca_olcu(metin, boylar)
-        except ValueError:
-            continue
-        kutu_alt = max(UST_EN_AZ + h, etiket_alt + 16)
-        if kutu_alt <= sahne - 12:
-            return "hepsi", UST_EN_AZ, kutu_alt, 255, boylar
+            return None
+        if tur == "bosluk" and ust_sinir + h <= etiket - 15:   # başlık ile etiketler arası, ortada
+            return ust_sinir + ((etiket - 15) - ust_sinir - h) // 2, None, 150
+        if tur == "baslik" and UST_EN_AZ + h <= etiket - 15:   # başlığı örter
+            return UST_EN_AZ, etiket - 15, 255
+        if tur == "etiket":                                     # etiket satırını örter
+            kutu_alt = max(ust_sinir + h, etiket_alt + 16)
+            if kutu_alt <= sahne - 12:
+                return ust_sinir, kutu_alt, 255
+        if tur == "hepsi":                                      # başlık + etiketler
+            kutu_alt = max(UST_EN_AZ + h, etiket_alt + 16)
+            if kutu_alt <= sahne - 12:
+                return UST_EN_AZ, kutu_alt, 255
+        return None
+
+    # Yazı önce 64/58 px'te her yer sırasıyla denenir; hiçbir yere sığmazsa 52/48 px'te.
+    for kademe in ((64, 58), (52, 48)):
+        for tur in ("bosluk", "baslik", "etiket", "hepsi"):
+            for boy in kademe:
+                y = yer(tur, boy)
+                if y:
+                    return (tur, *y, (boy,))
     _, _, h = kanca_olcu(metin, (48,))
     return "zorunlu", UST_EN_AZ, UST_EN_AZ + h, 255, (48,)
 
@@ -163,19 +161,25 @@ def planla(slot):
 
 
 def bas2(gir, cik, kanca, k, replik, bas, r):
+    """Önce yazı söner (2,35–2,6 sn), sonra kutu (2,6–2,9 sn): örten kutunun altındaki başlık ya da
+    etiketler yazıyla üst üste binmeden ortaya çıkar."""
     d = tempfile.mkdtemp()
-    kp = os.path.join(d, "kanca.png")
+    kp = os.path.join(d, "kanca_kutu.png")
+    yp = os.path.join(d, "kanca_yazi.png")
     rp = os.path.join(d, "kart.png")
     _, kust, kalt, kalfa, kboy = k
-    kanca_png(kanca, kp, kust, kalt, kalfa, kboy)
+    kanca_png(kanca, kp, kust, kalt, kalfa, kboy, yazi_yol=yp)
     _, rust, ralfa, ralt, rboy = r
     rk.kart(replik, rp, rust, ralfa, ralt, rboy)
-    filtre = (f"[1:v]format=rgba,fade=out:st={SON}:d={SONME}:alpha=1[h];"
-              f"[2:v]format=rgba,fade=in:st={bas}:d=0.4:alpha=1[k];"
-              f"[0:v][h]overlay=0:0:shortest=1:format=auto[a];"
-              f"[a][k]overlay=0:0:shortest=1:format=auto,format=yuv420p[v]")
+    filtre = (f"[1:v]format=rgba,fade=out:st={YAZI_SON}:d={YAZI_SONME}:alpha=1[ky];"
+              f"[2:v]format=rgba,fade=out:st={KUTU_SON}:d={KUTU_SONME}:alpha=1[kz];"
+              f"[3:v]format=rgba,fade=in:st={bas}:d=0.4:alpha=1[k];"
+              f"[0:v][kz]overlay=0:0:shortest=1:format=auto[a];"
+              f"[a][ky]overlay=0:0:shortest=1:format=auto[b];"
+              f"[b][k]overlay=0:0:shortest=1:format=auto,format=yuv420p[v]")
     gecici = cik + ".tmp.mp4"
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", gir,
+                    "-framerate", "30", "-loop", "1", "-i", yp,
                     "-framerate", "30", "-loop", "1", "-i", kp,
                     "-framerate", "30", "-loop", "1", "-i", rp,
                     "-filter_complex", filtre, "-map", "[v]", "-map", "0:a?",
