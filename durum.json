@@ -847,5 +847,22 @@
    "video_id": "gTuLiWcqabg",
    "zaman": "2026-11-26T20:00:16.166012+03:00"
   }
+ },
+ "2026-11-27-1230": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/DgPWDKElYVF/",
+   "medya_id": "18360514027223123",
+   "muzik": "Piano for Brian – Brent Bourgeois",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18083807924446848",
+   "zaman": "2026-11-27T12:30:07.927017+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/hZRuT3FMD-k",
+   "video_id": "hZRuT3FMD-k",
+   "zaman": "2026-11-27T12:30:17.131069+03:00"
+  }
  }
 }
