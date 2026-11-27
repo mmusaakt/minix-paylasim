@@ -875,5 +875,22 @@
    "yorum_id": "18134370416498348",
    "zaman": "2026-11-27T16:00:07.091294+03:00"
   }
+ },
+ "2026-11-27-2000": {
+  "instagram": {
+   "durum": "paylasildi",
+   "link": "https://www.instagram.com/reel/DgQJmifE_8S/",
+   "medya_id": "18379096006242949",
+   "muzik": "Dreamy Autumn – Flow Loris",
+   "ses_turu": "MUSIC",
+   "yorum_id": "18110367545359872",
+   "zaman": "2026-11-27T20:00:07.840910+03:00"
+  },
+  "youtube": {
+   "durum": "paylasildi",
+   "link": "https://youtube.com/shorts/BbgIyJvKcRw",
+   "video_id": "BbgIyJvKcRw",
+   "zaman": "2026-11-27T20:00:17.468204+03:00"
+  }
  }
 }
